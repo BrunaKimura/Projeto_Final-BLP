@@ -12,6 +12,18 @@ class Tabuleiro():
         self.tabuleiro = tk.Tk()
         self.tabuleiro.title("Jogo da Memória ANIMAL")
         
+#Label com a imagem de um cifrão
+        self.label_cifrao = tk.Label(self.tabuleiro, text = '$')
+        self.label_cifrao.grid(row=0, column=0)
+        
+#Label da contagem das moedas
+        self.label_moeda = tk.Label(self.tabuleiro, text = 'Dinheiro do jogador')
+        self.label_moeda.grid(row=0, column=1)
+
+#Botão para ir à loja
+        self.botao_loja = tk.Button(self.tabuleiro, text = 'LOJA', height = 3, width = 30)
+        self.botao_loja.grid(row=0, column=2, columnspan=2)
+        
 #Botões de jogo     
         self.botao1 = tk.Button(self.tabuleiro, height = 6, width = 14)
         self.botao1.grid(row=1, column=0)
@@ -63,7 +75,7 @@ class Tabuleiro():
         
         
     def iniciar(self):
-        self.tabuleiro.geometry('600x600')
+        self.tabuleiro.geometry('440x460')
         self.tabuleiro.mainloop()
         
         
