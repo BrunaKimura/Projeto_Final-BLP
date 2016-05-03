@@ -17,11 +17,12 @@ class Tabuleiro():
         self.label_cifrao.grid(row=0, column=0)
         
 #Label da contagem das moedas
-        self.label_moeda = tk.Label(self.tabuleiro, text = 'Dinheiro do jogador')
+        self.label_moeda = tk.Label(self.tabuleiro, text = 'Moedas')
         self.label_moeda.grid(row=0, column=1)
 
 #Botão para ir à loja
         self.botao_loja = tk.Button(self.tabuleiro, text = 'LOJA', height = 3, width = 30)
+        
         self.botao_loja.grid(row=0, column=2, columnspan=2)
         
 #Botões de jogo     
