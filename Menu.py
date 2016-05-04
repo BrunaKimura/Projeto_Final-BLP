@@ -62,11 +62,7 @@ class Menu():
     def abrir_cadastro(self):
         self.cadastrinho = Cadastro()
         self.cadastrinho.iniciar()
-        
-    def fechar(self): 
-        self.menu.destroy()
-            
-        
+                
     def iniciar(self):
         self.menu.geometry('190x230')
         self.menu.mainloop()

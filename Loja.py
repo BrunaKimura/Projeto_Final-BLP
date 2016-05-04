@@ -21,6 +21,7 @@ class Loja():
         
 #Botão para voltar ao jogo
         self.botao_voltar = tk.Button(self.loja, text = 'Voltar', height = 3, width = 8, bg = 'orange')
+        self.botao_voltar.configure(command = self.fechar_janela)
         self.botao_voltar.grid(row=0, column=2, columnspan=2)
         
 #Label para ajustar os espaçamentos dos botões
@@ -43,11 +44,8 @@ class Loja():
         self.botao4 = tk.Button(self.loja, height = 8, width = 16)
         self.botao4.grid(row=4, column=2 )
         
-
-        
-        
-        
-        
+    def fechar_janela(self):
+            self.loja.destroy()      
         
         
     def iniciar(self):
