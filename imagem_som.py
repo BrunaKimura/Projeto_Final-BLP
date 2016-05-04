@@ -15,7 +15,7 @@ class Imagens_sons:
         self.Icavalo = PhotoImage(file=".gif")
         self.Iporco = PhotoImage(file=".gif")
 
-#* sons dos animais principais        
+#8 sons dos animais principais        
         self.Scachorro = ws.PlaySound('latido.wav', ws.SND_FILENAME)
         self.Sgato =  ws.PlaySound('', ws.SND_FILENAME)
         self.Sarara =  ws.PlaySound('', ws.SND_FILENAME)
@@ -29,7 +29,13 @@ class Imagens_sons:
         self.Ipanda = PhotoImage(file=".gif")
         self.Ileao = PhotoImage(file=".gif")
         self.Ielefante = PhotoImage(file=".gif")
-        self.Igalo = PhotoImage(file=".gif")       
+        self.Igalo = PhotoImage(file=".gif")   
+    
+#4 sons dos animais principais        
+        self.Spanda = ws.PlaySound('', ws.SND_FILENAME)
+        self.Sleao =  ws.PlaySound('', ws.SND_FILENAME)
+        self.Selefante =  ws.PlaySound('', ws.SND_FILENAME)
+        self.Sgalo =  ws.PlaySound('', ws.SND_FILENAME)
 
         
         
