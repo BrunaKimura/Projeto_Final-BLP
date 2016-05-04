@@ -37,14 +37,14 @@ class Menu():
         self.entry_senha.grid(row=5, column=0)
         
 #Botao para iniciar o jogo
-        self.botao_jogar = tk.Button(self.menu, text = 'Jogar')
+        self.botao_jogar = tk.Button(self.menu, text = 'Jogar', bg = 'brown')
         self.botao_jogar.grid(row=6, column=0)
         
 #Botao que leva o usuario ao cadastro
         self.label_cadastrar = tk.Label(self.menu, text = 'Não possui um cadastro ainda ? ')
         self.label_cadastrar.grid(row=8, column=0)
         
-        self.botao_cadastrar = tk.Button(self.menu, text = 'Cadastrar')
+        self.botao_cadastrar = tk.Button(self.menu, text = 'Cadastrar', bg = 'gray')
         self.botao_cadastrar.grid(row=9, column=0)  
         
         
