@@ -20,12 +20,12 @@ class Loja():
         self.label_moeda.grid(row=0, column=1)   
         
 #Botão para voltar ao jogo
-        self.botao_voltar = tk.Button(self.loja, text = 'Voltar', height = 3, width = 10)
-        self.botao_voltar.grid(row=0, column=2, columnspan=1)
+        self.botao_voltar = tk.Button(self.loja, text = 'Voltar', height = 3, width = 8)
+        self.botao_voltar.grid(row=0, column=2, columnspan=2)
         
 #Label para ajustar os espaçamentos dos botões
-        self.label_ajuste = tk.Label(self.loja, text = '')
-        self.label_ajuste.grid(row=2, column=1, rowspan=3)
+        self.label_ajuste1 = tk.Label(self.loja, text = '')
+        self.label_ajuste1.grid(row=2, column=1, rowspan=3)
         
         self.label_ajuste2 = tk.Label(self.loja, text = '')
         self.label_ajuste2.grid(row=1, column=0, columnspan=3)
@@ -45,6 +45,8 @@ class Loja():
         
         self.botao4 = tk.Button(self.loja, height = 8, width = 16)
         self.botao4.grid(row=4, column=2 )
+        
+
         
         
         
