@@ -1,11 +1,7 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon May  2 15:50:26 2016
-
-@author: Lucas
-"""
 
 import tkinter as tk
+
+from Loja import Loja
 
 class Tabuleiro(): 
     def __init__(self):
@@ -18,11 +14,11 @@ class Tabuleiro():
         
 #Label da contagem das moedas
         self.label_moeda = tk.Label(self.tabuleiro, text = 'Moedas')
-        self.label_moeda.grid(row=0, column=1)
+        self.label_moeda.grid(row=0, column=1,sticky='w')
 
 #Botão para ir à loja
         self.botao_loja = tk.Button(self.tabuleiro, text = 'LOJA', height = 3, width = 30, bg = 'purple')
-        
+        self.botao_loja.configure(command = self.abrir_janela)        
         self.botao_loja.grid(row=0, column=2, columnspan=2)
         
 #Botões de jogo     
@@ -73,28 +69,14 @@ class Tabuleiro():
         
         self.botao16 = tk.Button(self.tabuleiro, height = 6, width = 14)
         self.botao16.grid(row=4, column=3)
-        
+
+
+
+    def abrir_janela(self):
+        self.lojinha = Loja()
+        self.lojinha.iniciar()        
         
     def iniciar(self):
         self.tabuleiro.geometry('440x460')
-        self.tabuleiro.mainloop()
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-memoria = Tabuleiro()
-memoria.iniciar()
+        self.tabuleiro.mainloop()  
+                

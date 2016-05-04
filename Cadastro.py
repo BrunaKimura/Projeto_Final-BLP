@@ -46,29 +46,11 @@ class Cadastro():
         self.botao_finalizar = tk.Button(self.cadastro, text = 'Finalizar', bg = 'yellow')
         self.botao_finalizar.grid(row=9)
                 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         
     def iniciar(self):
         self.cadastro.geometry('190x230')
         self.cadastro.mainloop()
         
-cadastroo = Cadastro()
-cadastroo.iniciar()
+
     

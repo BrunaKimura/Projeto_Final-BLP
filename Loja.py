@@ -17,7 +17,7 @@ class Loja():
         
 #Label da contagem das moedas
         self.label_moeda = tk.Label(self.loja, text = 'Moedas')
-        self.label_moeda.grid(row=0, column=1)   
+        self.label_moeda.grid(row=0, column=1, sticky ='w')   
         
 #Botão para voltar ao jogo
         self.botao_voltar = tk.Button(self.loja, text = 'Voltar', height = 3, width = 8, bg = 'orange')
@@ -54,5 +54,3 @@ class Loja():
         self.loja.geometry('294x364')
         self.loja.mainloop()
         
-loja = Loja()
-loja.iniciar()

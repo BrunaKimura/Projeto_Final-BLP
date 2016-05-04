@@ -7,6 +7,10 @@ Created on Mon May  2 16:29:25 2016
 
 import tkinter as tk
 
+from Interface import Tabuleiro
+
+from Cadastro import Cadastro
+
 class Menu():
     def __init__(self):
         self.menu = tk.Tk()
@@ -38,6 +42,7 @@ class Menu():
         
 #Botao para iniciar o jogo
         self.botao_jogar = tk.Button(self.menu, text = 'Jogar', bg = 'brown')
+        self.botao_jogar.configure(command = self.abrir_jogo)
         self.botao_jogar.grid(row=6, column=0)
         
 #Botao que leva o usuario ao cadastro
@@ -45,9 +50,16 @@ class Menu():
         self.label_cadastrar.grid(row=8, column=0)
         
         self.botao_cadastrar = tk.Button(self.menu, text = 'Cadastrar', bg = 'gray')
+        self.botao_cadastrar.configure(command = self.abrir_cadastro)
         self.botao_cadastrar.grid(row=9, column=0)  
         
+    def abrir_jogo(self):
+        self.joguinho = Tabuleiro()
+        self.joguinho.iniciar()
         
+    def abrir_cadastro(self):
+        self.cadastrinho = Cadastro()
+        self.cadastrinho.iniciar()
         
     def iniciar(self):
         self.menu.geometry('190x230')
