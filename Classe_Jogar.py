@@ -3,7 +3,7 @@ import numpy as np
 class jogo():
 
     def __init__(self):
-        self.Lista_Animais=["Cachorro","Gato","Arara","Vaca","Hamster","Pato","Cavalo","Porco"] #Lista de animais, já contém os animais iniciais.
+        self.Lista_Animais=["Cachorro","Gato","Arara","Vaca","Macaco","Pato","Cavalo","Porco"] #Lista de animais, já contém os animais iniciais.
         self.Lista_Escolhida=[]
         self.Lista_Dobrada=[]
         self.Lista_Embaralhada=[]
