@@ -8,8 +8,7 @@ class jogo():
         self.Lista_Dobrada=[]
         self.Lista_Embaralhada=[]
         self.Tabuleiro=[]
-        self.Lista_Jogada=[]
-        self.Dinheiro=0     
+        self.Lista_Jogada=[]   
         
     def embaralhar(self):
         self.Lista_Escolhida=np.random.choice(self.Lista_Animais, 8, replace=False)
@@ -26,15 +25,25 @@ class jogo():
         if len(self.Lista_Jogada)==0:
             return 0
         elif self.Lista_Jogada[0]==self.Lista_Jogada[1]: 
+            for i in range(4):
+                for e in range(4):
+                    if self.Tabuleiro[i][e]==self.Lista_Jogada[0]:
+                        self.Tabuleiro[i][e]="z"
+                    elif self.Tabuleiro[i][e]==self.Lista_Jogada[1]:
+                        self.Tabuleiro[i][e]="z"
             return 1
         elif self.Lista_Jogada[0]!=self.Lista_Jogada[1]:
              return -1
-
-        
+    
+    def verifica_fim(self):
+        if (self.Tabuleiro[0][0]=="z" and self.Tabuleiro[0][1]=="z" and self.Tabuleiro[0][2]=="z" and self.Tabuleiro[0][3]=="z" and self.Tabuleiro[1][0]=="z" and self.Tabuleiro[1][1]=="z" and self.Tabuleiro[1][2]=="z" and self.Tabuleiro[1][3]=="z" and self.Tabuleiro[2][0]=="z" and self.Tabuleiro[2][1]=="z" and self.Tabuleiro[2][2]=="z" and self.Tabuleiro[2][3]=="z" and self.Tabuleiro[3][0]=="z" and self.Tabuleiro[3][1]=="z" and self.Tabuleiro[3][2]=="z" and self.Tabuleiro[3][3]=="z"):
+            return 1
+        else:
+            return -1
+    
     def limpa_jogada(self):
         self.Lista_Jogada=[]
-    
-
+           
         
         
 v=jogo()
@@ -43,8 +52,9 @@ v.embaralhar()
 v.recebe_jogada(3,2)
 v.recebe_jogada(1,2)
 v.verifica_jogada(v.Lista_Jogada)
+v.verifica_fim()
 
-
+print(v.verifica_fim())
 print(v.verifica_jogada(v.Lista_Jogada))
 print(v.Lista_Jogada)
 print(v.Tabuleiro)
