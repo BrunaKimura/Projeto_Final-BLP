@@ -54,12 +54,18 @@ class Menu():
         self.botao_cadastrar.grid(row=9, column=0)  
         
     def abrir_jogo(self):
+        self.menu.destroy()
         self.joguinho = Tabuleiro()
         self.joguinho.iniciar()
-        
+        self.fechar()
+                
     def abrir_cadastro(self):
         self.cadastrinho = Cadastro()
         self.cadastrinho.iniciar()
+        
+    def fechar(self): 
+        self.menu.destroy()
+            
         
     def iniciar(self):
         self.menu.geometry('190x230')
