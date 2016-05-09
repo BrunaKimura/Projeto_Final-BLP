@@ -63,7 +63,6 @@ class Menu():
     def abrir_jogo(self):
         self.menu.destroy()
         self.jogo.embaralhar()
-        print (self.jogo.Lista_Animais)
         self.joguinho = Tabuleiro()
         self.joguinho.iniciar()
         
