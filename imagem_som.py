@@ -26,10 +26,10 @@ class Imagens_sons:
         self.Sporco =  ws.PlaySound('', ws.SND_FILENAME)
         
 #4 imagens dos animais da loja
-        self.Ipanda = PhotoImage(file=".gif")
-        self.Ileao = PhotoImage(file=".gif")
-        self.Ielefante = PhotoImage(file=".gif")
-        self.Igalo = PhotoImage(file=".gif")   
+        self.Ipanda = PhotoImage(file="Ipanda.gif")
+        self.Ileao = PhotoImage(file="Ileao.gif")
+        self.Ielefante = PhotoImage(file="Ielefante.gif")
+        self.Igalo = PhotoImage(file="Igalo.gif")   
     
 #4 sons dos animais principais        
         self.Spanda = ws.PlaySound('', ws.SND_FILENAME)
