@@ -9,6 +9,7 @@ class Jogo():
         self.Lista_Embaralhada=[]
         self.Tabuleiro=[]
         self.Lista_Jogada=[]
+        self.Lista_Botão=[]        
         
     def embaralhar(self):
         self.Lista_Escolhida=np.random.choice(self.Lista_Animais, 8, replace=False)
@@ -20,6 +21,7 @@ class Jogo():
         
     def recebe_jogada(self, linha, coluna):
         self.Lista_Jogada.append(self.Tabuleiro[linha][coluna])
+        self.Lista_Botão.append([linha][coluna])
         if self.Tabuleiro[linha][coluna]=="Cachorro":
             return "Cachorro"
         elif self.Tabuleiro[linha][coluna]=="Gato":
@@ -59,6 +61,6 @@ class Jogo():
     
     def limpa_jogada(self):
         self.Lista_Jogada=[]
-
+        self.Lista_Botão=[]
 
 
