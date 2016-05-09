@@ -37,5 +37,6 @@ class Imagens_sons:
         self.Selefante =  ws.PlaySound('', ws.SND_FILENAME)
         self.Sgalo =  ws.PlaySound('', ws.SND_FILENAME)
 
+
         
         
