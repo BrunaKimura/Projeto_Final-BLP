@@ -1,16 +1,17 @@
 import numpy as np
 from imagem_som import Imagens_sons as IS
 
+
 class Jogo():
 
     def __init__(self):
         self.Is = IS()       
-        self.Lista_Animais=[self.Is.Icachorro, self.Is.Igato, self.Is.Iarara, self.Is.Ivaca, self.Is.Imacaco, self.Is.Ipato,self.Is.Icavalo, self.Is.Iporco] #Lista de animais, já contém os animais iniciais.
+        self.Lista_Animais=["Cachorro", "Gato", "Arara", "Vaca", "Macaco", "Pato", "Cavalo", "Porco"] #Lista de animais, já contém os animais iniciais.
         self.Lista_Escolhida=[]
         self.Lista_Dobrada=[]
         self.Lista_Embaralhada=[]
         self.Tabuleiro=[]
-        self.Lista_Jogada=[]   
+        self.Lista_Jogada=[]
         
     def embaralhar(self):
         self.Lista_Escolhida=np.random.choice(self.Lista_Animais, 8, replace=False)
@@ -22,7 +23,23 @@ class Jogo():
         
     def recebe_jogada(self, linha, coluna):
         self.Lista_Jogada.append(self.Tabuleiro[linha][coluna])
-    
+        if self.Tabuleiro[linha][coluna]=="Cachorro":
+            return self.Is.Icachorro
+        if self.Tabuleiro[linha][coluna]=="Gato":
+            return self.Is.Igato
+        if self.Tabuleiro[linha][coluna]=="Arara":
+            return self.Is.Iarara
+        if self.Tabuleiro[linha][coluna]=="Vaca":
+            return self.Is.Ivaca
+        if self.Tabuleiro[linha][coluna]=="Macaco":
+            return self.Is.Imacaco
+        if self.Tabuleiro[linha][coluna]=="Pato":
+            return self.Is.Ipato
+        if self.Tabuleiro[linha][coluna]=="Cavalo":
+            return self.Is.Icavalo
+        if self.Tabuleiro[linha][coluna]=="Porco":
+            return self.Is.Iporco
+            
     def verifica_jogada(self, Lista_Jogada):
         if len(self.Lista_Jogada)==0:
             return 0
@@ -45,4 +62,7 @@ class Jogo():
     
     def limpa_jogada(self):
         self.Lista_Jogada=[]
+
+v=Jogo()
+print(v.Lista_Animais)
 

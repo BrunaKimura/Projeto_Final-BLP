@@ -1,4 +1,4 @@
-class Cadastro():
+class cadastrar():
     
     def __init__(self):
         self.cadastros=dict

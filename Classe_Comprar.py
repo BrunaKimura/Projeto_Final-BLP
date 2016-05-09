@@ -1,5 +1,6 @@
 from imagem_som import Imagens_sons as IS
 
+
 class Compras:
     
     def __init__(self):
@@ -25,6 +26,3 @@ class Compras:
             return 1
         else:
             return -1
-        
-v=Comprar()
-print(v.compras)
