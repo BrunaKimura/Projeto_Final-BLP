@@ -1,11 +1,8 @@
 import numpy as np
-from imagem_som import Imagens_sons as IS
-
 
 class Jogo():
 
-    def __init__(self):
-        self.Is = IS()       
+    def __init__(self):      
         self.Lista_Animais=["Cachorro", "Gato", "Arara", "Vaca", "Macaco", "Pato", "Cavalo", "Porco"] #Lista de animais, já contém os animais iniciais.
         self.Lista_Escolhida=[]
         self.Lista_Dobrada=[]
@@ -24,21 +21,21 @@ class Jogo():
     def recebe_jogada(self, linha, coluna):
         self.Lista_Jogada.append(self.Tabuleiro[linha][coluna])
         if self.Tabuleiro[linha][coluna]=="Cachorro":
-            return self.Is.Icachorro
-        if self.Tabuleiro[linha][coluna]=="Gato":
-            return self.Is.Igato
-        if self.Tabuleiro[linha][coluna]=="Arara":
-            return self.Is.Iarara
-        if self.Tabuleiro[linha][coluna]=="Vaca":
-            return self.Is.Ivaca
-        if self.Tabuleiro[linha][coluna]=="Macaco":
-            return self.Is.Imacaco
-        if self.Tabuleiro[linha][coluna]=="Pato":
-            return self.Is.Ipato
-        if self.Tabuleiro[linha][coluna]=="Cavalo":
-            return self.Is.Icavalo
-        if self.Tabuleiro[linha][coluna]=="Porco":
-            return self.Is.Iporco
+            return "Cachorro"
+        elif self.Tabuleiro[linha][coluna]=="Gato":
+            return "Gato"
+        elif self.Tabuleiro[linha][coluna]=="Arara":
+            return "Arara"
+        elif self.Tabuleiro[linha][coluna]=="Vaca":
+            return "Vaca"
+        elif self.Tabuleiro[linha][coluna]=="Macaco":
+            return "Macaco"
+        elif self.Tabuleiro[linha][coluna]=="Pato":
+            return "Pato"
+        elif self.Tabuleiro[linha][coluna]=="Cavalo":
+            return "Cavalo"
+        elif self.Tabuleiro[linha][coluna]=="Porco":
+            return "Porco"
             
     def verifica_jogada(self, Lista_Jogada):
         if len(self.Lista_Jogada)==0:
@@ -63,6 +60,5 @@ class Jogo():
     def limpa_jogada(self):
         self.Lista_Jogada=[]
 
-v=Jogo()
-print(v.Lista_Animais)
+
 
