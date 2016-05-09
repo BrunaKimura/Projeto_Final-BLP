@@ -44,5 +44,3 @@ class Jogar():
     def limpa_jogada(self):
         self.Lista_Jogada=[]
            
-        
-        

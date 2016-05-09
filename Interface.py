@@ -69,6 +69,70 @@ class Tabuleiro():
         
         self.botao16 = tk.Button(self.tabuleiro, height = 6, width = 14)
         self.botao16.grid(row=4, column=3)
+        
+    def click1(self):
+        self.jogo.recebe_jogada(0,0)
+        self.jogo.verifica_jogada()
+        print(self.jogo.verifica_jogada)
+    def click2(self):
+        self.jogo.recebe_jogada(0,1)
+        
+        
+    def click3(self):
+        self.jogo.recebe_jogada(0,2)
+        
+    def click4(self):
+        self.jogo.recebe_jogada(0,3)       
+        
+    def click5(self):
+        self.jogo.recebe_jogada(1,0)
+        
+        
+    def click6(self):
+        self.jogo.recebe_jogada(1,1)
+        
+        
+    def click7(self):
+        self.jogo.recebe_jogada(1,2)
+        
+        
+    def click8(self):
+        self.jogo.recebe_jogada(1,3)
+        
+        
+    def click9(self):
+        self.jogo.recebe_jogada(2,0)
+        
+    
+    def click10(self):
+        self.jogo.recebe_jogada(2,1)
+        
+        
+    def click11(self):
+        self.jogo.recebe_jogada(2,2)
+        
+        
+    def click12(self):
+        self.jogo.recebe_jogada(2,3)
+        
+        
+    def click13(self):
+        self.jogo.recebe_jogada(3,0)
+        
+        
+    def click14(self):
+        self.jogo.recebe_jogada(3,1)
+        
+        
+    def click15(self):
+        self.jogo.recebe_jogada(3,2)
+        
+        
+    def click16(self):
+        self.jogo.recebe_jogada(3,3)
+        
+        
+    
 
 
 
