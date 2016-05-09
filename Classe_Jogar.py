@@ -1,6 +1,6 @@
 import numpy as np
 
-class jogar():
+class Jogar():
 
     def __init__(self):
         self.Lista_Animais=["Cachorro","Gato","Arara","Vaca","Macaco","Pato","Cavalo","Porco"] #Lista de animais, já contém os animais iniciais.

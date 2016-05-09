@@ -1,4 +1,4 @@
-class comprar:
+class Comprar:
     
     def __init__(self):
         self.moeda=0

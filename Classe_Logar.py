@@ -1,4 +1,4 @@
-class logar():
+class Logar():
     
     def __init__(self):
         self.usuarios=dict
