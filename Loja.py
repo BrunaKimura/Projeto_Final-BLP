@@ -12,7 +12,7 @@ class Loja():
         self.loja.title("Jogo da Memória ANIMAL")
         
 #Label com a imagem de um cifrão
-        self.label_cifrao = tk.Label(self.loja, text = '$')
+        self.label_cifrao = tk.Label(self.loja, text = '$', font ='Arial')
         self.label_cifrao.grid(row=0, column=0)
         
 #Label da contagem das moedas

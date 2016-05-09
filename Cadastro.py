@@ -44,10 +44,11 @@ class Cadastro():
         
 #botao que termina o cadastro
         self.botao_finalizar = tk.Button(self.cadastro, text = 'Finalizar', bg = 'yellow')
+        self.botao_finalizar.configure(command = self.fechar_janela)
         self.botao_finalizar.grid(row=9)
         
-    
-                
+    def fechar_janela(self):
+        self.cadastro.destroy()                
 
         
     def iniciar(self):

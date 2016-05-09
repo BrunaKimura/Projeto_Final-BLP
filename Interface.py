@@ -9,7 +9,7 @@ class Tabuleiro():
         self.tabuleiro.title("Jogo da Memória ANIMAL")
         
 #Label com a imagem de um cifrão
-        self.label_cifrao = tk.Label(self.tabuleiro, text = '$')
+        self.label_cifrao = tk.Label(self.tabuleiro, text = '$', font ='Arial')
         self.label_cifrao.grid(row=0, column=0)
         
 #Label da contagem das moedas

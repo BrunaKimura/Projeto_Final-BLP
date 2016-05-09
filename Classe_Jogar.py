@@ -46,15 +46,3 @@ class Jogar():
            
         
         
-v=jogo()
-
-v.embaralhar()
-v.recebe_jogada(3,2)
-v.recebe_jogada(1,2)
-v.verifica_jogada(v.Lista_Jogada)
-v.verifica_fim()
-
-print(v.verifica_fim())
-print(v.verifica_jogada(v.Lista_Jogada))
-print(v.Lista_Jogada)
-print(v.Tabuleiro)
