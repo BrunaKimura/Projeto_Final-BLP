@@ -10,3 +10,13 @@ class Firebase:
     def Salvar_cadastro(self, Dicionario):
         self.memoria_firecall.put_sync(point="/Dados_usuario", data=Dicionario)
         
+    #Retonar o jogador para teste
+    def Checar_jogador(self):
+        self.memoria_firecall.get_sync(point="/Dados_usuario")
+
+
+        
+
+
+        
+        
