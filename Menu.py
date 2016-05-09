@@ -1,17 +1,10 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon May  2 16:29:25 2016
-
-@author: Lucas
-"""
-
 import tkinter as tk
 
 from Interface import Tabuleiro
 
 from Cadastro import Cadastro
 
-from Classe_Jogar import Jogar
+from Classe_Jogar import Jogo
 
 class Menu():
     def __init__(self):
@@ -20,7 +13,7 @@ class Menu():
         self.menu.title("Jogo da Memória ANIMAL")
         
 #Objeto da clsse jogo do arquivo Classe_jogar
-        self.jogo = Jogar()
+        self.jogo = Jogo()
         
 #Label de boas vindas
         self.label1 = tk.Label(self.menu, text = 'Bem Vindo !!')
@@ -64,11 +57,9 @@ class Menu():
         self.menu.destroy()
         self.jogo.embaralhar()
         self.joguinho = Tabuleiro()
-        self.joguinho.iniciar()
+        self.joguinho.iniciar()       
         
-        
-        
-                
+                   
     def abrir_cadastro(self):
         self.cadastrinho = Cadastro()
         self.cadastrinho.iniciar()
