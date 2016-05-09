@@ -91,19 +91,28 @@ class Tabuleiro():
         
     def click1(self):
         self.jogo.recebe_jogada(0,0)
-        print(self.jogo.Lista_Jogada)
         self.jogo.verifica_jogada()
         self.jogo.virifica_fim()
+        
+        if self.jogo.verifica_jogada == 1:
+            self.jogo.limpa_jogada()
+            
         
     def click2(self):
         self.jogo.recebe_jogada(0,1)
         self.jogo.verifica_jogada()
-        self.jogo.virifica_fim()        
+        self.jogo.virifica_fim() 
+        
+        if self.jogo.verifica_jogada == 1:
+            self.jogo.limpa_jogada()
         
     def click3(self):
         self.jogo.recebe_jogada(0,2)
         self.jogo.verifica_jogada()
         self.jogo.virifica_fim()
+        
+        if self.jogo.verifica_jogada == 1:
+            self.jogo.limpa_jogada()
         
     def click4(self):
         self.jogo.recebe_jogada(0,3)
@@ -113,62 +122,98 @@ class Tabuleiro():
     def click5(self):
         self.jogo.recebe_jogada(1,0)
         self.jogo.verifica_jogada()
-        self.jogo.virifica_fim()        
+        self.jogo.virifica_fim()
+
+        if self.jogo.verifica_jogada == 1:
+            self.jogo.limpa_jogada()        
         
     def click6(self):
         self.jogo.recebe_jogada(1,1)
         self.jogo.verifica_jogada()
         self.jogo.virifica_fim()
         
+        if self.jogo.verifica_jogada == 1:
+            self.jogo.limpa_jogada()
+        
     def click7(self):
         self.jogo.recebe_jogada(1,2)
         self.jogo.verifica_jogada()
-        self.jogo.virifica_fim()        
+        self.jogo.virifica_fim()  
+        
+        if self.jogo.verifica_jogada == 1:
+            self.jogo.limpa_jogada()
         
     def click8(self):
         self.jogo.recebe_jogada(1,3)
         self.jogo.verifica_jogada()     
         self.jogo.virifica_fim()
         
+        if self.jogo.verifica_jogada == 1:
+            self.jogo.limpa_jogada()
+        
     def click9(self):
         self.jogo.recebe_jogada(2,0)
         self.jogo.verifica_jogada() 
         self.jogo.virifica_fim()
+        
+        if self.jogo.verifica_jogada == 1:
+            self.jogo.limpa_jogada()
     
     def click10(self):
         self.jogo.recebe_jogada(2,1)
         self.jogo.verifica_jogada() 
         self.jogo.virifica_fim()
         
+        if self.jogo.verifica_jogada == 1:
+            self.jogo.limpa_jogada()
+        
     def click11(self):
         self.jogo.recebe_jogada(2,2)
         self.jogo.verifica_jogada()
         self.jogo.virifica_fim()
+        
+        if self.jogo.verifica_jogada == 1:
+            self.jogo.limpa_jogada()
         
     def click12(self):
         self.jogo.recebe_jogada(2,3)
         self.jogo.verifica_jogada()
         self.jogo.virifica_fim()
         
+        if self.jogo.verifica_jogada == 1:
+            self.jogo.limpa_jogada()
+        
     def click13(self):
         self.jogo.recebe_jogada(3,0)
         self.jogo.verifica_jogada()
         self.jogo.virifica_fim()
+        
+        if self.jogo.verifica_jogada == 1:
+            self.jogo.limpa_jogada()
         
     def click14(self):
         self.jogo.recebe_jogada(3,1)
         self.jogo.verifica_jogada()
         self.jogo.virifica_fim()
         
+        if self.jogo.verifica_jogada == 1:
+            self.jogo.limpa_jogada()
+        
     def click15(self):
         self.jogo.recebe_jogada(3,2)
         self.jogo.verifica_jogada()
         self.jogo.virifica_fim()
         
+        if self.jogo.verifica_jogada == 1:
+            self.jogo.limpa_jogada()
+        
     def click16(self):
         self.jogo.recebe_jogada(3,3)
         self.jogo.verifica_jogada()
         self.jogo.virifica_fim()
+        
+        if self.jogo.verifica_jogada == 1:
+            self.jogo.limpa_jogada()
            
     def abrir_loja(self):
         self.lojinha = Loja()
@@ -179,5 +224,4 @@ class Tabuleiro():
         self.tabuleiro.mainloop()  
         
         
-
                 
