@@ -6,14 +6,14 @@ class Imagens_sons:
     def __init__(self):
         
 #8 animais principais:
-        self.Icachorro = PhotoImage(file=".gif")
-        self.Igato = PhotoImage(file=".gif")
-        self.Iarara = PhotoImage(file=".gif")
-        self.Ivaca = PhotoImage(file=".gif")
-        self.Imacaco = PhotoImage(file=".gif")
-        self.Ipato = PhotoImage(file=".gif")
-        self.Icavalo = PhotoImage(file=".gif")
-        self.Iporco = PhotoImage(file=".gif")
+        self.Icachorro = PhotoImage(file="Icachorro.gif")
+        self.Igato = PhotoImage(file="Igato.gif")
+        self.Iarara = PhotoImage(file="Irara.gif")
+        self.Ivaca = PhotoImage(file="Ivaca.gif")
+        self.Imacaco = PhotoImage(file="Imacaco.gif")
+        self.Ipato = PhotoImage(file="Ipato.gif")
+        self.Icavalo = PhotoImage(file="Icavalo.gif")
+        self.Iporco = PhotoImage(file="Iporco.gif")
 
 #8 sons dos animais principais        
         self.Scachorro = ws.PlaySound('latido.wav', ws.SND_FILENAME)
