@@ -1,3 +1,5 @@
+
+
 import tkinter as tk
 
 from Interface import Tabuleiro
@@ -13,7 +15,7 @@ class Menu():
         self.menu.title("Jogo da Memória ANIMAL")
         
 #Objeto da clsse jogo do arquivo Classe_jogar
-        self.jogo = Jogo()
+        
         
 #Label de boas vindas
         self.label1 = tk.Label(self.menu, text = 'Bem Vindo !!')
@@ -55,7 +57,7 @@ class Menu():
         
     def abrir_jogo(self):
         self.menu.destroy()
-        self.jogo.embaralhar()
+        
         self.joguinho = Tabuleiro()
         self.joguinho.iniciar()       
         
