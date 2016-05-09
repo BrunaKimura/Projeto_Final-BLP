@@ -1,13 +1,15 @@
-
 import tkinter as tk
 
 from Loja import Loja
 
+from Classe_Jogar import Jogo
 
 class Tabuleiro(): 
     def __init__(self):
         self.tabuleiro = tk.Tk()
         self.tabuleiro.title("Jogo da Memória ANIMAL")
+        
+        self.jogo = Jogo()
         
 #Label com a imagem de um cifrão
         self.label_cifrao = tk.Label(self.tabuleiro, text = '$', font ='Arial')
@@ -167,12 +169,8 @@ class Tabuleiro():
         self.jogo.recebe_jogada(3,3)
         self.jogo.verifica_jogada()
         self.jogo.virifica_fim()
-        
-    
-
-
-
-    def abrir_janela(self):
+           
+    def abrir_loja(self):
         self.lojinha = Loja()
         self.lojinha.iniciar()        
         
@@ -181,6 +179,5 @@ class Tabuleiro():
         self.tabuleiro.mainloop()  
         
         
-x= Tabuleiro()
-x.iniciar()
+
                 
