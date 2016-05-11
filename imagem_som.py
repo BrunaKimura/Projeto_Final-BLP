@@ -8,7 +8,7 @@ class Imagens_sons:
 #8 animais principais:
         self.Icachorro = PhotoImage(file="Icachorro.gif")
         self.Igato = PhotoImage(file="Igato.gif")
-        self.Iarara = PhotoImage(file="Irara.gif")
+        self.Iarara = PhotoImage(file="Iarara.gif")
         self.Ivaca = PhotoImage(file="Ivaca.gif")
         self.Imacaco = PhotoImage(file="Imacaco.gif")
         self.Ipato = PhotoImage(file="Ipato.gif")
