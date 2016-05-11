@@ -21,7 +21,7 @@ class Jogo():
         
     def recebe_jogada(self, linha, coluna):
         self.Lista_Jogada.append(self.Tabuleiro[linha][coluna])
-        self.Lista_Botão.append([linha][coluna])
+        self.Lista_Botão.append([linha, coluna])
         if self.Tabuleiro[linha][coluna]=="Cachorro":
             return "Cachorro"
         elif self.Tabuleiro[linha][coluna]=="Gato":
