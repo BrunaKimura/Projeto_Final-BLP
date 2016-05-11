@@ -11,8 +11,15 @@ class Firebase:
         self.memoria_firecall.put_sync(point="/Dados_usuario", data=Dicionario)
         
     #Retonar o jogador para teste
-    def Checar_jogador(self):
-        self.memoria_firecall.get_sync(point="/Dados_usuario")
+    def Checar_jogador(self, login):
+        C = self.memoria_firecall.get_sync(point="/Dados_usuario")
+        baite = str.encode(login)
+        if baite in C:
+            return 1
+        else:
+            return -1
+        
+    
 
 
         
