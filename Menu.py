@@ -6,16 +6,13 @@ from Interface import Tabuleiro
 
 from Cadastro import Cadastro
 
-from Classe_Jogar import Jogo
+
 
 class Menu():
     def __init__(self):
 #Janela 
         self.menu = tk.Tk()
         self.menu.title("Jogo da Memória ANIMAL")
-        
-#Objeto da clsse jogo do arquivo Classe_jogar
-        self.jogo = Jogo()
         
 #Label de boas vindas
         self.label1 = tk.Label(self.menu, text = 'Bem Vindo !!')
@@ -57,7 +54,6 @@ class Menu():
         
     def abrir_jogo(self):
         self.menu.destroy()
-        self.jogo.embaralhar()
         self.joguinho = Tabuleiro()
         self.joguinho.iniciar()       
         
@@ -69,9 +65,6 @@ class Menu():
     def iniciar(self):
         self.menu.geometry('180x230')
         self.menu.mainloop()
-        
-    
-        
         
 entrada = Menu()
 entrada.iniciar()
