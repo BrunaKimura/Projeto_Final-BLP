@@ -30,67 +30,67 @@ class Tabuleiro():
         self.botao_loja.grid(row=0, column=2, columnspan=2)
         
 #Botões de jogo     
-        self.botao1 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao1 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'green')
         self.botao1.configure(command = self.click1)
         self.botao1.grid(row=1, column=0)
         
-        self.botao2 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao2 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'blue')
         self.botao2.configure(command = self.click2)
         self.botao2.grid(row=1, column=1)
         
-        self.botao3 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao3 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'green')
         self.botao3.configure(command = self.click3)
         self.botao3.grid(row=1, column=2)
         
-        self.botao4 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao4 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'blue')
         self.botao4.configure(command = self.click4)
         self.botao4.grid(row=1, column=3)
         
-        self.botao5 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao5 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'blue')
         self.botao5.configure(command = self.click5)
         self.botao5.grid(row=2, column=0)
         
-        self.botao6 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao6 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'green')
         self.botao6.configure(command = self.click6)
         self.botao6.grid(row=2, column=1)
         
-        self.botao7 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao7 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'blue')
         self.botao7.configure(command = self.click7)
         self.botao7.grid(row=2, column=2)
         
-        self.botao8 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao8 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'green')
         self.botao8.configure(command = self.click8)
         self.botao8.grid(row=2, column=3)
         
-        self.botao9 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao9 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'green')
         self.botao9.configure(command = self.click9)
         self.botao9.grid(row=3, column=0)
         
-        self.botao10 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao10 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'blue')
         self.botao10.configure(command = self.click10)
         self.botao10.grid(row=3, column=1)
         
-        self.botao11 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao11 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'green')
         self.botao11.configure(command = self.click11)
         self.botao11.grid(row=3, column=2)
         
-        self.botao12 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao12 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'blue')
         self.botao12.configure(command = self.click12)
         self.botao12.grid(row=3, column=3)
         
-        self.botao13 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao13 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'blue')
         self.botao13.configure(command = self.click13)
         self.botao13.grid(row=4, column=0)
         
-        self.botao14 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao14 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'green')
         self.botao14.configure(command = self.click14)
         self.botao14.grid(row=4, column=1)
         
-        self.botao15 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao15 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'blue')
         self.botao15.configure(command = self.click15)
         self.botao15.grid(row=4, column=2)
         
-        self.botao16 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao16 = tk.Button(self.tabuleiro, height = 6, width = 14, bg = 'green')
         self.botao16.configure(command = self.click16)
         self.botao16.grid(row=4, column=3)
         
@@ -98,7 +98,8 @@ class Tabuleiro():
         self.jogo.recebe_jogada(0,0)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
         self.jogo.verifica_fim() 
-        
+
+#Código para aparecer a imagem no botão        
         if self.jogo.recebe_jogada(0,0) == "Cachorro":
             self.botao1.configure(image = self.imagens.Icachorro)
             
@@ -121,7 +122,11 @@ class Tabuleiro():
             self.botao1.configure(image = self.imagens.Icavalo)
        
         elif self.jogo.recebe_jogada(0,0) == "Porco":
-            self.botao1.configure(image = self.imagens.Iporco)            
+            self.botao1.configure(image = self.imagens.Iporco)  
+            
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()
               
             
     def click2(self):
@@ -129,6 +134,7 @@ class Tabuleiro():
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
         self.jogo.verifica_fim()   
         
+#Código para aparecer a imagem no botão  
         if self.jogo.recebe_jogada(0,1) == "Cachorro":
             self.botao2.configure(image = self.imagens.Icachorro)
             
@@ -152,13 +158,20 @@ class Tabuleiro():
        
         elif self.jogo.recebe_jogada(0,1) == "Porco":
             self.botao2.configure(image = self.imagens.Iporco)
+            
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()
+            
 
         
     def click3(self):
         self.jogo.recebe_jogada(0,2)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
         self.jogo.verifica_fim()
-
+        
+        
+#Código para aparecer a imagem no botão  
         if self.jogo.recebe_jogada(0,2) == "Cachorro":
             self.botao3.configure(image = self.imagens.Icachorro)
             
@@ -181,13 +194,18 @@ class Tabuleiro():
             self.botao3.configure(image = self.imagens.Icavalo)
        
         elif self.jogo.recebe_jogada(0,2) == "Porco":
-            self.botao3.configure(image = self.imagens.Iporco)           
+            self.botao3.configure(image = self.imagens.Iporco)  
+            
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()
         
     def click4(self):
         self.jogo.recebe_jogada(0,3)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
         self.jogo.verifica_fim()
 
+#Código para aparecer a imagem no botão  
         if self.jogo.recebe_jogada(0,3) == "Cachorro":
             self.botao4.configure(image = self.imagens.Icachorro)
             
@@ -210,13 +228,18 @@ class Tabuleiro():
             self.botao4.configure(image = self.imagens.Icavalo)
        
         elif self.jogo.recebe_jogada(0,3) == "Porco":
-            self.botao4.configure(image = self.imagens.Iporco)           
+            self.botao4.configure(image = self.imagens.Iporco)
+            
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()
         
     def click5(self):
         self.jogo.recebe_jogada(1,0)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
         self.jogo.verifica_fim()
 
+#Código para aparecer a imagem no botão  
         if self.jogo.recebe_jogada(1,0) == "Cachorro":
             self.botao5.configure(image = self.imagens.Icachorro)
             
@@ -239,13 +262,18 @@ class Tabuleiro():
             self.botao5.configure(image = self.imagens.Icavalo)
        
         elif self.jogo.recebe_jogada(1,0) == "Porco":
-            self.botao5.configure(image = self.imagens.Iporco)                 
+            self.botao5.configure(image = self.imagens.Iporco)
+
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()               
         
     def click6(self):
         self.jogo.recebe_jogada(1,1)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
         self.jogo.verifica_fim() 
-        
+
+#Código para aparecer a imagem no botão          
         if self.jogo.recebe_jogada(1,1) == "Cachorro":
             self.botao6.configure(image = self.imagens.Icachorro)
             
@@ -268,7 +296,11 @@ class Tabuleiro():
             self.botao6.configure(image = self.imagens.Icavalo)
        
         elif self.jogo.recebe_jogada(1,1) == "Porco":
-            self.botao6.configure(image = self.imagens.Iporco) 
+            self.botao6.configure(image = self.imagens.Iporco)
+            
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()
         
         
         
@@ -277,6 +309,7 @@ class Tabuleiro():
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
         self.jogo.verifica_fim() 
 
+#Código para aparecer a imagem no botão  
         if self.jogo.recebe_jogada(1,2) == "Cachorro":
             self.botao7.configure(image = self.imagens.Icachorro)
             
@@ -299,13 +332,18 @@ class Tabuleiro():
             self.botao7.configure(image = self.imagens.Icavalo)
        
         elif self.jogo.recebe_jogada(1,2) == "Porco":
-            self.botao7.configure(image = self.imagens.Iporco)          
+            self.botao7.configure(image = self.imagens.Iporco)
+            
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()
         
     def click8(self):
         self.jogo.recebe_jogada(1,3)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)     
         self.jogo.verifica_fim() 
 
+#Código para aparecer a imagem no botão  
         if self.jogo.recebe_jogada(1,3) == "Cachorro":
             self.botao8.configure(image = self.imagens.Icachorro)
             
@@ -328,13 +366,18 @@ class Tabuleiro():
             self.botao8.configure(image = self.imagens.Icavalo)
        
         elif self.jogo.recebe_jogada(1,3) == "Porco":
-            self.botao8.configure(image = self.imagens.Iporco)           
+            self.botao8.configure(image = self.imagens.Iporco)
+            
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()
         
     def click9(self):
         self.jogo.recebe_jogada(2,0)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada) 
         self.jogo.verifica_fim()   
 
+#Código para aparecer a imagem no botão  
         if self.jogo.recebe_jogada(2,0) == "Cachorro":
             self.botao9.configure(image = self.imagens.Icachorro)
             
@@ -357,13 +400,18 @@ class Tabuleiro():
             self.botao9.configure(image = self.imagens.Icavalo)
        
         elif self.jogo.recebe_jogada(2,0) == "Porco":
-            self.botao9.configure(image = self.imagens.Iporco)         
+            self.botao9.configure(image = self.imagens.Iporco)
+            
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()
     
     def click10(self):
         self.jogo.recebe_jogada(2,1)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada) 
         self.jogo.verifica_fim() 
 
+#Código para aparecer a imagem no botão  
         if self.jogo.recebe_jogada(2,1) == "Cachorro":
             self.botao10.configure(image = self.imagens.Icachorro)
             
@@ -386,13 +434,18 @@ class Tabuleiro():
             self.botao10.configure(image = self.imagens.Icavalo)
        
         elif self.jogo.recebe_jogada(2,1) == "Porco":
-            self.botao10.configure(image = self.imagens.Iporco)           
+            self.botao10.configure(image = self.imagens.Iporco)
+            
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()
         
     def click11(self):
         self.jogo.recebe_jogada(2,2)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
         self.jogo.verifica_fim() 
 
+#Código para aparecer a imagem no botão  
         if self.jogo.recebe_jogada(2,2) == "Cachorro":
             self.botao1.configure(image = self.imagens.Icachorro)
             
@@ -415,13 +468,18 @@ class Tabuleiro():
             self.botao11.configure(image = self.imagens.Icavalo)
        
         elif self.jogo.recebe_jogada(2,2) == "Porco":
-            self.botao11.configure(image = self.imagens.Iporco)           
+            self.botao11.configure(image = self.imagens.Iporco)
+            
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()
         
     def click12(self):
         self.jogo.recebe_jogada(2,3)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
         self.jogo.verifica_fim()  
 
+#Código para aparecer a imagem no botão  
         if self.jogo.recebe_jogada(2,3) == "Cachorro":
             self.botao12.configure(image = self.imagens.Icachorro)
             
@@ -444,13 +502,18 @@ class Tabuleiro():
             self.botao12.configure(image = self.imagens.Icavalo)
        
         elif self.jogo.recebe_jogada(2,3) == "Porco":
-            self.botao12.configure(image = self.imagens.Iporco)          
+            self.botao12.configure(image = self.imagens.Iporco)
+            
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()
         
     def click13(self):
         self.jogo.recebe_jogada(3,0)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
         self.jogo.verifica_fim() 
 
+#Código para aparecer a imagem no botão  
         if self.jogo.recebe_jogada(3,0) == "Cachorro":
             self.botao13.configure(image = self.imagens.Icachorro)
             
@@ -473,13 +536,18 @@ class Tabuleiro():
             self.botao13.configure(image = self.imagens.Icavalo)
        
         elif self.jogo.recebe_jogada(3,0) == "Porco":
-            self.botao13.configure(image = self.imagens.Iporco)           
+            self.botao13.configure(image = self.imagens.Iporco)
+            
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()
         
     def click14(self):
         self.jogo.recebe_jogada(3,1)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
         self.jogo.verifica_fim() 
 
+#Código para aparecer a imagem no botão  
         if self.jogo.recebe_jogada(3,1) == "Cachorro":
             self.botao14.configure(image = self.imagens.Icachorro)
             
@@ -502,13 +570,18 @@ class Tabuleiro():
             self.botao14.configure(image = self.imagens.Icavalo)
        
         elif self.jogo.recebe_jogada(3,1) == "Porco":
-            self.botao14.configure(image = self.imagens.Iporco)           
+            self.botao14.configure(image = self.imagens.Iporco)
+            
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()
         
     def click15(self):
         self.jogo.recebe_jogada(3,2)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
         self.jogo.verifica_fim()
 
+#Código para aparecer a imagem no botão  
         if self.jogo.recebe_jogada(3,2) == "Cachorro":
             self.botao15.configure(image = self.imagens.Icachorro)
             
@@ -531,13 +604,18 @@ class Tabuleiro():
             self.botao15.configure(image = self.imagens.Icavalo)
        
         elif self.jogo.recebe_jogada(3,2) == "Porco":
-            self.botao15.configure(image = self.imagens.Iporco)            
+            self.botao15.configure(image = self.imagens.Iporco)
+
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()            
         
     def click16(self):
         self.jogo.recebe_jogada(3,3)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
         self.jogo.verifica_fim()
-        
+
+#Código para aparecer a imagem no botão       
         if self.jogo.recebe_jogada(3,3) == "Cachorro":
             self.botao16.configure(image = self.imagens.Icachorro)
             
@@ -561,6 +639,10 @@ class Tabuleiro():
        
         elif self.jogo.recebe_jogada(3,3) == "Porco":
             self.botao16.configure(image = self.imagens.Iporco) 
+            
+#Código para verificar se as duas imagens são iguais
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.botao1.configure()
          
     def abrir_loja(self):
         self.lojinha = Loja()
