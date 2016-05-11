@@ -50,12 +50,8 @@ class Jogo():
                             self.Tabuleiro[i][e]="z"
                         elif self.Tabuleiro[i][e]==self.Lista_Jogada[1]:
                             self.Tabuleiro[i][e]="z"
-                self.Lista_Jogada=[]
-                self.Lista_Botão=[]
                 return 1
             elif self.Lista_Jogada[0]!=self.Lista_Jogada[1]:
-                self.Lista_Jogada=[]
-                self.Lista_Botão=[]
                 return -1
         else:
             return -2
