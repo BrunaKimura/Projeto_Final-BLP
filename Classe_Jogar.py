@@ -53,7 +53,7 @@ class Jogo():
                 return 1
             elif self.Lista_Jogada[0]!=self.Lista_Jogada[1]:
                 return -1
-        elif len(self.lista_Jogada)==1:
+        elif len(self.Lista_Jogada)==1:
             return -2
     
     def verifica_fim(self):
