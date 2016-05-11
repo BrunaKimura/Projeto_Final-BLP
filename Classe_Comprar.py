@@ -7,7 +7,7 @@ class Compras:
         self.Is = IS() 
         self.moeda=0
         self.preco=50
-        self.compras=[self.Is.Ipanda, self.Is.Ileao, self.Is.Ielefante, self.Is.Igalo]
+        self.compras=["Panda", "Leão", "Elefante", "Galo"]
     
     def comprar(self, linha, coluna):
         if self.preco<=self.moeda:
@@ -15,14 +15,17 @@ class Compras:
             self.preco+=50
             if linha==2:
                 if coluna==0:
-                    self.compras.remove(self.Is.Ipanda)
+                    self.compras.remove("Panda")
+                    return "Panda"                    
                 if coluna==2:
-                    self.compras.remove(self.Is.Ileao)
+                    self.compras.remove("Leão")
+                    return "Leão"
             elif linha==4:
                 if coluna==0:
-                    self.compras.remove(self.Is.Ielefante)
+                    self.compras.remove("Elefante")
+                    return "Elefante"
                 if coluna==2:
-                    self.compras.remove(self.Is.Igalo)
-            return 1
+                    self.compras.remove("Galo")
+                    return "Galo"
         else:
             return -1
