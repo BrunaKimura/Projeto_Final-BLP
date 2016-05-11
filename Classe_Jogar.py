@@ -42,16 +42,21 @@ class Jogo():
     def verifica_jogada(self, Lista_Jogada):
         if len(self.Lista_Jogada)==0:
             return 0
-        elif self.Lista_Jogada[0]==self.Lista_Jogada[1]: 
-            for i in range(4):
-                for e in range(4):
-                    if self.Tabuleiro[i][e]==self.Lista_Jogada[0]:
-                        self.Tabuleiro[i][e]="z"
-                    elif self.Tabuleiro[i][e]==self.Lista_Jogada[1]:
-                        self.Tabuleiro[i][e]="z"
-            return 1
-        elif self.Lista_Jogada[0]!=self.Lista_Jogada[1]:
-             return -1
+        elif len(self.Lista_Jogada)==2: 
+            if self.Lista_Jogada[0]==self.Lista_Jogada[1]: 
+                for i in range(4):
+                    for e in range(4):
+                        if self.Tabuleiro[i][e]==self.Lista_Jogada[0]:
+                            self.Tabuleiro[i][e]="z"
+                        elif self.Tabuleiro[i][e]==self.Lista_Jogada[1]:
+                            self.Tabuleiro[i][e]="z"
+                self.Lista_Jogada=[]
+                return 1
+            elif self.Lista_Jogada[0]!=self.Lista_Jogada[1]:
+                self.Lista_Jogada=[]
+                return -1
+        else:
+            return 0
     
     def verifica_fim(self):
         if (self.Tabuleiro[0][0]=="z" and self.Tabuleiro[0][1]=="z" and self.Tabuleiro[0][2]=="z" and self.Tabuleiro[0][3]=="z" and self.Tabuleiro[1][0]=="z" and self.Tabuleiro[1][1]=="z" and self.Tabuleiro[1][2]=="z" and self.Tabuleiro[1][3]=="z" and self.Tabuleiro[2][0]=="z" and self.Tabuleiro[2][1]=="z" and self.Tabuleiro[2][2]=="z" and self.Tabuleiro[2][3]=="z" and self.Tabuleiro[3][0]=="z" and self.Tabuleiro[3][1]=="z" and self.Tabuleiro[3][2]=="z" and self.Tabuleiro[3][3]=="z"):
