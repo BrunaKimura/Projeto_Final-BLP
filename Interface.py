@@ -125,8 +125,7 @@ class Tabuleiro():
             self.botao1.configure(image = self.imagens.Iporco)  
             
 #Código para verificar se as duas imagens são iguais
-        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao1.configure()
+        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
               
             
     def click2(self):
