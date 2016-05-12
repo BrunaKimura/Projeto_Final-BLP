@@ -6,6 +6,8 @@ from Classe_Jogar import Jogo
 
 from imagem_som import Imagens_sons
 
+import tkinter.messagebox as tkm
+
 class Tabuleiro(): 
     def __init__(self):
         self.tabuleiro = tk.Tk()
@@ -124,12 +126,16 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[0] == "Porco":
             self.botao1.configure(image = self.imagens.Iporco)
+            
+        print (self.jogo.Tabuleiro)
                    
             
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao1.configure()
             self.jogo.limpa_jogada()
+            
+            
         
     def click2(self):
         self.jogo.recebe_jogada(0,1)
@@ -493,7 +499,7 @@ class Tabuleiro():
 
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[11]== "Cachorro":
-            self.botao1.configure(image = self.imagens.Icachorro)
+            self.botao12.configure(image = self.imagens.Icachorro)
             
         elif self.jogo.Lista_Embaralhada[11] == "Gato":
             self.botao12.configure(image = self.imagens.Igato)
@@ -598,7 +604,7 @@ class Tabuleiro():
 
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[14]== "Cachorro":
-            self.botao1.configure(image = self.imagens.Icachorro)
+            self.botao15.configure(image = self.imagens.Icachorro)
             
         elif self.jogo.Lista_Embaralhada[14] == "Gato":
             self.botao15.configure(image = self.imagens.Igato)
