@@ -40,9 +40,7 @@ class Jogo():
             return "Porco"
             
     def verifica_jogada(self, Lista_Jogada):
-        if len(self.Lista_Jogada)==0:
-            return 0
-        elif len(self.Lista_Jogada)==2: 
+        if len(self.Lista_Jogada)==2: 
             if self.Lista_Jogada[0]==self.Lista_Jogada[1]: 
                 for i in range(4):
                     for e in range(4):
@@ -50,14 +48,10 @@ class Jogo():
                             self.Tabuleiro[i][e]="z"
                         elif self.Tabuleiro[i][e]==self.Lista_Jogada[1]:
                             self.Tabuleiro[i][e]="z"
-                self.Lista_Jogada=[]
-                self.Lista_Botão=[]
                 return 1
             elif self.Lista_Jogada[0]!=self.Lista_Jogada[1]:
-                self.Lista_Jogada=[]
-                self.Lista_Botão=[]
                 return -1
-        else:
+        elif len(self.Lista_Jogada)==1:
             return -2
     
     def verifica_fim(self):
@@ -69,5 +63,6 @@ class Jogo():
     def limpa_jogada(self):
         self.Lista_Jogada=[]
         self.Lista_Botão=[]
+
 
 
