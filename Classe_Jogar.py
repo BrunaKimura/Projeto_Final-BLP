@@ -65,4 +65,3 @@ class Jogo():
         self.Lista_Botão=[]
 
 
-
