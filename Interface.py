@@ -8,6 +8,8 @@ from imagem_som import Imagens_sons
 
 import tkinter.messagebox as tkm
 
+import time
+
 class Tabuleiro(): 
     def __init__(self):
         self.tabuleiro = tk.Tk()
@@ -96,11 +98,11 @@ class Tabuleiro():
         self.botao16.configure(command = self.click16)
         self.botao16.grid(row=4, column=3)
         
-    def click1(self):
+    def click1(self):        
         self.jogo.recebe_jogada(0,0)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
         self.jogo.verifica_fim() 
-        
+               
 
 #Código para aparecer a imagem no botão        
         if self.jogo.Lista_Embaralhada[0]== "Cachorro":
@@ -127,14 +129,24 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[0] == "Porco":
             self.botao1.configure(image = self.imagens.Iporco)
             
-        print (self.jogo.Tabuleiro)
-                   
+        time.sleep(1)
+        
+                              
             
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao1.configure()
+            self.botao1.configure(image = '')
+            self.botao2.configure(image = '')
             self.jogo.limpa_jogada()
             
+        elif self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == 1:
+            #fazer um for aqui para travar os botoes
+            self.jogo.limpa_jogada()
+            
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.jogo.embaralhar()
+            self.jogo.limpa_jogada()
             
         
     def click2(self):
@@ -172,6 +184,10 @@ class Tabuleiro():
             self.botao2.configure()
             self.jogo.limpa_jogada()
             
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.jogo.embaralhar()
+            self.jogo.limpa_jogada()
 
         
     def click3(self):
@@ -209,7 +225,12 @@ class Tabuleiro():
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao3.configure()
             self.jogo.limpa_jogada()
-        
+            
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.jogo.embaralhar()            
+            self.jogo.limpa_jogada()            
+            
     def click4(self):
         self.jogo.recebe_jogada(0,3)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
@@ -244,7 +265,12 @@ class Tabuleiro():
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao4.configure()
             self.jogo.limpa_jogada()
-        
+            
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.jogo.embaralhar()
+            self.jogo.limpa_jogada()
+            
     def click5(self):
         self.jogo.recebe_jogada(1,0)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
@@ -278,8 +304,13 @@ class Tabuleiro():
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao5.configure()   
-            self.jogo.limpa_jogada()            
-        
+            self.jogo.limpa_jogada()
+
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")            
+            self.jogo.embaralhar()
+            self.jogo.limpa_jogada()
+            
     def click6(self):
         self.jogo.recebe_jogada(1,1)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
@@ -314,9 +345,12 @@ class Tabuleiro():
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao6.configure()
             self.jogo.limpa_jogada()
-        
-        
-        
+            
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")        
+            self.jogo.embaralhar()
+            self.jogo.limpa_jogada()
+            
     def click7(self):
         self.jogo.recebe_jogada(1,2)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
@@ -351,7 +385,12 @@ class Tabuleiro():
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao7.configure()
             self.jogo.limpa_jogada()
-        
+            
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.jogo.embaralhar()
+            self.jogo.limpa_jogada()
+            
     def click8(self):
         self.jogo.recebe_jogada(1,3)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)     
@@ -386,7 +425,12 @@ class Tabuleiro():
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao8.configure()
             self.jogo.limpa_jogada()
-        
+            
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.jogo.embaralhar()            
+            self.jogo.limpa_jogada()
+            
     def click9(self):
         self.jogo.recebe_jogada(2,0)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada) 
@@ -421,7 +465,12 @@ class Tabuleiro():
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao9.configure()
             self.jogo.limpa_jogada()
-    
+            
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.jogo.embaralhar()
+            self.jogo.limpa_jogada()
+            
     def click10(self):
         self.jogo.recebe_jogada(2,1)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada) 
@@ -456,7 +505,12 @@ class Tabuleiro():
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao10.configure()
             self.jogo.limpa_jogada()
-        
+            
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.jogo.embaralhar()
+            self.jogo.limpa_jogada()
+            
     def click11(self):
         self.jogo.recebe_jogada(2,2)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
@@ -491,7 +545,12 @@ class Tabuleiro():
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao11.configure()
             self.jogo.limpa_jogada()
-        
+            
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.jogo.embaralhar()
+            self.jogo.limpa_jogada()
+            
     def click12(self):
         self.jogo.recebe_jogada(2,3)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
@@ -526,7 +585,12 @@ class Tabuleiro():
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao12.configure()
             self.jogo.limpa_jogada()
-        
+            
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.jogo.embaralhar()
+            self.jogo.limpa_jogada()
+            
     def click13(self):
         self.jogo.recebe_jogada(3,0)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
@@ -561,7 +625,12 @@ class Tabuleiro():
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao13.configure()
             self.jogo.limpa_jogada()
-        
+            
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.jogo.embaralhar()
+            self.jogo.limpa_jogada()
+            
     def click14(self):
         self.jogo.recebe_jogada(3,1)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
@@ -596,7 +665,12 @@ class Tabuleiro():
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao14.configure()
             self.jogo.limpa_jogada()
-        
+            
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.jogo.embaralhar()
+            self.jogo.limpa_jogada()
+            
     def click15(self):
         self.jogo.recebe_jogada(3,2)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
@@ -631,7 +705,12 @@ class Tabuleiro():
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao15.configure()  
             self.jogo.limpa_jogada()
-        
+            
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.jogo.embaralhar()            
+            self.jogo.limpa_jogada()
+            
     def click16(self):
         self.jogo.recebe_jogada(3,3)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
@@ -666,7 +745,12 @@ class Tabuleiro():
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao16.configure()
             self.jogo.limpa_jogada()
-         
+            
+        if self.jogo.verifica_fim() == 1:
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.jogo.embaralhar()
+            self.jogo.limpa_jogada() 
+            
     def abrir_loja(self):
         self.lojinha = Loja()
         self.lojinha.iniciar()        

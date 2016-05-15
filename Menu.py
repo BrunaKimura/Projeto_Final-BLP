@@ -24,7 +24,7 @@ class Menu():
         
         self.label_ajuste2 = tk.Label(self.menu, text = '')
         self.label_ajuste2.grid(row=7, column=0)
-     
+             
 #Parte para colocar o login do usuário    
         self.label_login = tk.Label(self.menu, text = 'Login:')
         self.label_login.grid(row=2, column=0)
