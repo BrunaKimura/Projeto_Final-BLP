@@ -128,25 +128,24 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[0] == "Porco":
             self.botao1.configure(image = self.imagens.Iporco)
-            
-        time.sleep(1)
+                       
         
-                              
-            
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao1.configure(image = '')
-            self.botao2.configure(image = '')
+            for e in self.jogo.Lista_Botão:
+                e.configure(image = '')
+                
+                
             self.jogo.limpa_jogada()
             
         elif self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == 1:
-            #fazer um for aqui para travar os botoes
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
+            self.limpar_painel()
             
         
     def click2(self):
@@ -179,6 +178,7 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[1] == "Porco":
             self.botao2.configure(image = self.imagens.Iporco) 
             
+            
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.botao2.configure()
@@ -188,7 +188,7 @@ class Tabuleiro():
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
-
+            self.limpar_painel()
         
     def click3(self):
         self.jogo.recebe_jogada(0,2)
@@ -230,6 +230,7 @@ class Tabuleiro():
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.jogo.embaralhar()            
             self.jogo.limpa_jogada()            
+            self.limpar_painel()
             
     def click4(self):
         self.jogo.recebe_jogada(0,3)
@@ -270,6 +271,7 @@ class Tabuleiro():
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
+            self.limpar_painel()
             
     def click5(self):
         self.jogo.recebe_jogada(1,0)
@@ -310,6 +312,7 @@ class Tabuleiro():
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")            
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
+            self.limpar_painel()
             
     def click6(self):
         self.jogo.recebe_jogada(1,1)
@@ -350,6 +353,7 @@ class Tabuleiro():
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")        
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
+            self.limpar_painel()
             
     def click7(self):
         self.jogo.recebe_jogada(1,2)
@@ -390,6 +394,7 @@ class Tabuleiro():
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
+            self.limpar_painel()
             
     def click8(self):
         self.jogo.recebe_jogada(1,3)
@@ -430,6 +435,7 @@ class Tabuleiro():
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.jogo.embaralhar()            
             self.jogo.limpa_jogada()
+            self.limpar_painel()
             
     def click9(self):
         self.jogo.recebe_jogada(2,0)
@@ -470,6 +476,7 @@ class Tabuleiro():
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
+            self.limpar_painel()
             
     def click10(self):
         self.jogo.recebe_jogada(2,1)
@@ -510,6 +517,7 @@ class Tabuleiro():
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
+            self.limpar_painel()
             
     def click11(self):
         self.jogo.recebe_jogada(2,2)
@@ -550,6 +558,7 @@ class Tabuleiro():
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
+            self.limpar_painel()
             
     def click12(self):
         self.jogo.recebe_jogada(2,3)
@@ -590,6 +599,7 @@ class Tabuleiro():
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
+            self.limpar_painel()
             
     def click13(self):
         self.jogo.recebe_jogada(3,0)
@@ -630,6 +640,7 @@ class Tabuleiro():
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
+            self.limpar_painel()
             
     def click14(self):
         self.jogo.recebe_jogada(3,1)
@@ -670,6 +681,7 @@ class Tabuleiro():
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
+            self.limpar_painel()
             
     def click15(self):
         self.jogo.recebe_jogada(3,2)
@@ -710,6 +722,7 @@ class Tabuleiro():
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.jogo.embaralhar()            
             self.jogo.limpa_jogada()
+            self.limpar_painel()
             
     def click16(self):
         self.jogo.recebe_jogada(3,3)
@@ -750,6 +763,25 @@ class Tabuleiro():
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.jogo.embaralhar()
             self.jogo.limpa_jogada() 
+            self.limpar_painel()
+            
+    def limpar_painel(self):
+        self.botao1.configure(image = "", state="normal")
+        self.botao2.configure(image = "", state="normal")
+        self.botao3.configure(image = "", state="normal")
+        self.botao4.configure(image = "", state="normal")
+        self.botao5.configure(image = "", state="normal")
+        self.botao6.configure(image = "", state="normal")
+        self.botao7.configure(image = "", state="normal")
+        self.botao8.configure(image = "", state="normal")
+        self.botao9.configure(image = "", state="normal")
+        self.botao10.configure(image= "", state="normal")
+        self.botao11.configure(image = "", state="normal")
+        self.botao12.configure(image = "", state="normal")
+        self.botao13.configure(image = "", state="normal")
+        self.botao14.configure(image = "", state="normal")
+        self.botao15.configure(image = "", state="normal")
+        self.botao16.configure(image = "", state="normal")
             
     def abrir_loja(self):
         self.lojinha = Loja()
