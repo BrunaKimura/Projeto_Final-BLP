@@ -21,7 +21,38 @@ class Jogo():
         
     def recebe_jogada(self, linha, coluna):
         self.Lista_Jogada.append(self.Tabuleiro[linha][coluna])
-        self.Lista_Botão.append([linha, coluna])
+        if linha==0 and coluna==0:
+            self.Lista_Botão.append("botao1")
+        elif linha==0 and coluna==1:
+            self.Lista_Botão.append("botao2")
+        elif linha==0 and coluna==2:
+            self.Lista_Botão.append("botao3")
+        elif linha==0 and coluna==3:
+            self.Lista_Botão.append("botao4")
+        elif linha==1 and coluna==0:
+            self.Lista_Botão.append("botao5")
+        elif linha==1 and coluna==1:
+            self.Lista_Botão.append("botao6")
+        elif linha==1 and coluna==2:
+            self.Lista_Botão.append("botao7")
+        elif linha==1 and coluna==3:
+            self.Lista_Botão.append("botao8")
+        elif linha==2 and coluna==0:
+            self.Lista_Botão.append("botao9")
+        elif linha==2 and coluna==1:
+            self.Lista_Botão.append("botao10")
+        elif linha==2 and coluna==2:
+            self.Lista_Botão.append("botao11")
+        elif linha==2 and coluna==3:
+            self.Lista_Botão.append("botao12")
+        elif linha==3 and coluna==0:
+            self.Lista_Botão.append("botao13")
+        elif linha==3 and coluna==1:
+            self.Lista_Botão.append("botao14")
+        elif linha==3 and coluna==2:
+            self.Lista_Botão.append("botao15")
+        elif linha==3 and coluna==3:
+            self.Lista_Botão.append("botao16")
         if self.Tabuleiro[linha][coluna]=="Cachorro":
             return "Cachorro"
         elif self.Tabuleiro[linha][coluna]=="Gato":
