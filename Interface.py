@@ -129,11 +129,7 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[0] == "Porco":
             self.botao1.configure(image = self.imagens.Iporco, state = "disabled")
             
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
-        print (self.jogo.Lista_Embaralhada)
-            
-        
-        
+                  
     
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -145,10 +141,10 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
-            self.jogo.embaralhar()
-            self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
             
         
     def click2(self):
@@ -181,7 +177,7 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[1] == "Porco":
             self.botao2.configure(image = self.imagens.Iporco, state = "disabled") 
             
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -192,10 +188,10 @@ class Tabuleiro():
                         
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
-            self.jogo.embaralhar()
-            self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
         
     def click3(self):
         self.jogo.recebe_jogada(0,2)
@@ -228,7 +224,7 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[2] == "Porco":
             self.botao3.configure(image = self.imagens.Iporco, state = "disabled")  
             
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -239,10 +235,10 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
-            self.jogo.embaralhar()            
-            self.jogo.limpa_jogada()            
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
             
     def click4(self):
         self.jogo.recebe_jogada(0,3)
@@ -274,7 +270,7 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[3] == "Porco":
             self.botao4.configure(image = self.imagens.Iporco, state = "disabled")
             
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -285,10 +281,10 @@ class Tabuleiro():
                         
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
-            self.jogo.embaralhar()
-            self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
             
     def click5(self):
         self.jogo.recebe_jogada(1,0)
@@ -319,7 +315,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[4] == "Porco":
             self.botao5.configure(image = self.imagens.Iporco, state = "disabled") 
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()   
@@ -330,10 +326,10 @@ class Tabuleiro():
 
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")            
-            self.jogo.embaralhar()
-            self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
             
     def click6(self):
         self.jogo.recebe_jogada(1,1)
@@ -364,7 +360,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[5] == "Porco":
             self.botao6.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -375,10 +371,10 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")        
-            self.jogo.embaralhar()
-            self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
             
     def click7(self):
         self.jogo.recebe_jogada(1,2)
@@ -409,7 +405,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[6] == "Porco":
             self.botao7.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -420,10 +416,10 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
-            self.jogo.embaralhar()
-            self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
             
     def click8(self):
         self.jogo.recebe_jogada(1,3)
@@ -454,7 +450,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[7] == "Porco":
             self.botao8.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -465,10 +461,10 @@ class Tabuleiro():
                     
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
-            self.jogo.embaralhar()            
-            self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
             
     def click9(self):
         self.jogo.recebe_jogada(2,0)
@@ -499,7 +495,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[8] == "Porco":
             self.botao9.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -510,10 +506,10 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
-            self.jogo.embaralhar()
-            self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
             
     def click10(self):
         self.jogo.recebe_jogada(2,1)
@@ -544,7 +540,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[9] == "Porco":
             self.botao10.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -555,10 +551,10 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
-            self.jogo.embaralhar()
-            self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
             
     def click11(self):
         self.jogo.recebe_jogada(2,2)
@@ -589,7 +585,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[10] == "Porco":
             self.botao11.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -600,10 +596,10 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
-            self.jogo.embaralhar()
-            self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
             
     def click12(self):
         self.jogo.recebe_jogada(2,3)
@@ -634,7 +630,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[11] == "Porco":
             self.botao12.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -645,10 +641,10 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
-            self.jogo.embaralhar()
-            self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
             
     def click13(self):
         self.jogo.recebe_jogada(3,0)
@@ -679,7 +675,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[12] == "Porco":
             self.botao13.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -690,10 +686,10 @@ class Tabuleiro():
                     
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
-            self.jogo.embaralhar()
-            self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
             
     def click14(self):
         self.jogo.recebe_jogada(3,1)
@@ -724,7 +720,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[13] == "Porco":
             self.botao14.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -735,10 +731,10 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
-            self.jogo.embaralhar()
-            self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
             
     def click15(self):
         self.jogo.recebe_jogada(3,2)
@@ -769,7 +765,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[14] == "Porco":
             self.botao15.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()  
@@ -780,10 +776,10 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
-            self.jogo.embaralhar()            
-            self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
             
     def click16(self):
         self.jogo.recebe_jogada(3,3)
@@ -814,7 +810,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[15] == "Porco":
             self.botao16.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
                     
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -827,10 +823,10 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
-            self.jogo.embaralhar()
-            self.jogo.limpa_jogada() 
             self.limpar_painel()
+            self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.jogo.embaralhar()
             
     def limpar_painel(self):
         self.botao1.configure(image = "", state="normal")
