@@ -6,4 +6,11 @@ class cadastrar():
         self.firebase = Firebase()
         
     def adicionar_cadastro(self, login, senha, sexo, idade):
-        
+        if self.firebase.Checar_jogador(self, login, 1)==-1:        
+            self.firebase.Salvar_cadastro(login, senha, sexo, idade)
+            return 1
+        else:
+            return -1
+x = cadastrar()
+x.adicionar_cadastro("Patrick", 123, "M", 18)
+print(x.adicionar_cadastro("Patrick", 123, "M", 18))   
