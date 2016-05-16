@@ -53,6 +53,8 @@ class Jogo():
             self.Lista_Botão.append("botao15")
         elif linha==3 and coluna==3:
             self.Lista_Botão.append("botao16")
+        print(self.Lista_Jogada)
+        print(self.Tabuleiro)
         if self.Tabuleiro[linha][coluna]=="Cachorro":
             return "Cachorro"
         elif self.Tabuleiro[linha][coluna]=="Gato":
@@ -79,7 +81,7 @@ class Jogo():
                     for e in range(4):
                         if self.Tabuleiro[i][e]==self.Lista_Jogada[0]:
                             self.Tabuleiro[i][e]="z"
-                        elif self.Tabuleiro[i][e]==self.Lista_Jogada[1]:
+                        if self.Tabuleiro[i][e]==self.Lista_Jogada[1]:
                             self.Tabuleiro[i][e]="z"
                 return 1
             elif self.Lista_Jogada[0]!=self.Lista_Jogada[1]:
@@ -97,4 +99,10 @@ class Jogo():
         self.Lista_Jogada=[]
         self.Lista_Botão=[]
 
-
+    def limpa_jogo(self):
+        self.Lista_Escolhida=[]
+        self.Lista_Dobrada=[]
+        self.Lista_Embaralhada=[]
+        self.Tabuleiro=[]
+        self.Lista_Jogada=[]
+        self.Lista_Botão=[]  
