@@ -6,8 +6,9 @@ class Login():
         self.firebase = Firebase()
     
     def verifica(self, login, senha):
-        if self.firebase.""função da bruna"" (self, login, senha)==1:
+        if self.firebase.Checar_jogador(login, senha)==1:
             return 1
-        elif self.firebase.""função da bruna"" (self, login, senha)==-1:
+        elif self.firebase.Checar_jogador(login, senha)==-1:
+            return 0
+        elif self.firebase.Checar_jogador(login, senha)==0:
             return -1
-            

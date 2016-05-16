@@ -2,19 +2,21 @@ import tkinter as tk
 
 from imagem_som import Imagens_sons
 
+from Classe_Comprar import Compras
+
 class Loja():
     def __init__(self):
         self.loja = tk.Tk()
         self.loja.title("Jogo da Memória ANIMAL")
         
         self.imagem = Imagens_sons()
-        
+        self.compras = Compras()
 #Label com a imagem de um cifrão
         self.label_cifrao = tk.Label(self.loja, text = '$', font ='Arial')
         self.label_cifrao.grid(row=0, column=0)
         
 #Label da contagem das moedas
-        self.label_moeda = tk.Label(self.loja, text = 'Moedas')
+        self.label_moeda = tk.Label(self.loja, text = self.compras.moeda)
         self.label_moeda.grid(row=0, column=1, sticky ='w')   
         
 #Botão para voltar ao jogo
