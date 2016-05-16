@@ -13,11 +13,14 @@ class Firebase:
         self.memoria_firecall.put_sync(point="/Dados_usuario/{0}/idade".format(login), data=idade)
         
     #Retonar o jogador para teste
-    def Checar_jogador(self, login):
+    def Checar_jogador(self, login, senha):
         C = eval(self.memoria_firecall.get_sync(point="/Dados_usuario"))
         if login in C:
-            D = eval(self.memoria_firecall.get_sync(point="/Dados_usuario/{0}".format(login)"))
-            if senha in D
+            D = eval(self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/senha".format(login)))
+            if D == senha:
+                return 1
+            else:
+                return 0              
         else:
             return -1
         
