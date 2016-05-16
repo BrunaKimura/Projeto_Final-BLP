@@ -12,6 +12,3 @@ class Login():
             return 0
         elif self.firebase.Checar_jogador(login, senha)==0:
             return -1
-            
-x = Login()
-print(x.verifica("Brunamk", 1111))
