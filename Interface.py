@@ -129,7 +129,7 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[0] == "Porco":
             self.botao1.configure(image = self.imagens.Iporco, state = "disabled")
             
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+
             
         
         
@@ -179,7 +179,7 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[1] == "Porco":
             self.botao2.configure(image = self.imagens.Iporco, state = "disabled") 
             
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -225,7 +225,7 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[2] == "Porco":
             self.botao3.configure(image = self.imagens.Iporco, state = "disabled")  
             
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+         
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -270,7 +270,7 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[3] == "Porco":
             self.botao4.configure(image = self.imagens.Iporco, state = "disabled")
             
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+         
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -314,7 +314,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[4] == "Porco":
             self.botao5.configure(image = self.imagens.Iporco, state = "disabled") 
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+         
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()   
@@ -358,7 +358,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[5] == "Porco":
             self.botao6.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+         
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -402,7 +402,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[6] == "Porco":
             self.botao7.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+         
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -446,7 +446,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[7] == "Porco":
             self.botao8.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+         
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -490,7 +490,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[8] == "Porco":
             self.botao9.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+         
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -534,7 +534,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[9] == "Porco":
             self.botao10.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+         
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -578,7 +578,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[10] == "Porco":
             self.botao11.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+         
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -622,7 +622,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[11] == "Porco":
             self.botao12.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+         
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -666,7 +666,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[12] == "Porco":
             self.botao13.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+         
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -710,7 +710,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[13] == "Porco":
             self.botao14.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+         
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
@@ -754,7 +754,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[14] == "Porco":
             self.botao15.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+         
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()  
@@ -798,7 +798,7 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[15] == "Porco":
             self.botao16.configure(image = self.imagens.Iporco, state = "disabled")
-        print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+         
                     
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
