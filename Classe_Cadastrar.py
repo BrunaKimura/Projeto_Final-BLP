@@ -6,7 +6,4 @@ class cadastrar():
         self.firebase = Firebase()
         
     def adicionar_cadastro(self, login, senha, sexo, idade):
-        if not login in self.cadastros:        
-            self.cadastros[login]=[senha, sexo, idade]
-        else:
-            return -1
+        
