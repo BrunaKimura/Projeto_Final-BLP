@@ -8,7 +8,7 @@ from imagem_som import Imagens_sons
 
 import tkinter.messagebox as tkm
 
-import time
+
 
 class Tabuleiro(): 
     def __init__(self):
@@ -128,17 +128,10 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[0] == "Porco":
             self.botao1.configure(image = self.imagens.Iporco)
-                       
-        
+    
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            for e in self.jogo.Lista_Botão:
-                e.configure(image = '')
-                
-                
-            self.jogo.limpa_jogada()
-            
-        elif self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == 1:
+            self.virar_imagens()                                   
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
@@ -181,7 +174,7 @@ class Tabuleiro():
             
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao2.configure()
+            self.virar_imagens()
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
@@ -221,9 +214,10 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[2] == "Porco":
             self.botao3.configure(image = self.imagens.Iporco)  
             
+            
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao3.configure()
+            self.virar_imagens()
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
@@ -262,9 +256,10 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[3] == "Porco":
             self.botao4.configure(image = self.imagens.Iporco)
             
+            
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao4.configure()
+            self.virar_imagens()
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
@@ -305,7 +300,7 @@ class Tabuleiro():
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao5.configure()   
+            self.virar_imagens()   
             self.jogo.limpa_jogada()
 
         if self.jogo.verifica_fim() == 1:
@@ -346,7 +341,7 @@ class Tabuleiro():
             
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao6.configure()
+            self.virar_imagens()
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
@@ -387,7 +382,7 @@ class Tabuleiro():
             
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao7.configure()
+            self.virar_imagens()
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
@@ -428,7 +423,7 @@ class Tabuleiro():
             
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao8.configure()
+            self.virar_imagens()
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
@@ -469,7 +464,7 @@ class Tabuleiro():
             
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao9.configure()
+            self.virar_imagens()
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
@@ -510,7 +505,7 @@ class Tabuleiro():
             
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao10.configure()
+            self.virar_imagens()
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
@@ -551,7 +546,7 @@ class Tabuleiro():
             
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao11.configure()
+            self.virar_imagens()
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
@@ -592,7 +587,7 @@ class Tabuleiro():
             
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao12.configure()
+            self.virar_imagens()
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
@@ -633,7 +628,7 @@ class Tabuleiro():
             
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao13.configure()
+            self.virar_imagens()
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
@@ -674,7 +669,7 @@ class Tabuleiro():
             
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao14.configure()
+            self.virar_imagens()
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
@@ -715,7 +710,7 @@ class Tabuleiro():
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao15.configure()  
+            self.virar_imagens()  
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
@@ -754,10 +749,12 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[15] == "Porco":
             self.botao16.configure(image = self.imagens.Iporco)
             
+                    
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.botao16.configure()
+            self.virar_imagens()
             self.jogo.limpa_jogada()
+            
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
@@ -782,6 +779,541 @@ class Tabuleiro():
         self.botao14.configure(image = "", state="normal")
         self.botao15.configure(image = "", state="normal")
         self.botao16.configure(image = "", state="normal")
+        
+    def virar_imagens(self):
+        
+#combinação com o botao 1
+    
+        if self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao2'or self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao1':
+            self.botao1.configure(image = '')
+            self.botao2.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao3'or self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao1':
+            self.botao1.configure(image = '')
+            self.botao3.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao4'or self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao1':
+            self.botao1.configure(image = '')
+            self.botao4.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao5'or self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao1':
+            self.botao1.configure(image = '')
+            self.botao5.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao6'or self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao1':
+            self.botao1.configure(image = '')
+            self.botao6.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao7'or self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao1':
+            self.botao1.configure(image = '')
+            self.botao7.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao8'or self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao1':
+            self.botao1.configure(image = '')
+            self.botao8.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao1':
+            self.botao1.configure(image = '')
+            self.botao9.configure(image = '')
+        
+        elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao1':
+            self.botao1.configure(image = '')
+            self.botao10.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao1':
+            self.botao1.configure(image = '')
+            self.botao11.configure(image = '')
+    
+        elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao1':
+            self.botao1.configure(image = '')
+            self.botao12.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao1':
+            self.botao1.configure(image = '')
+            self.botao13.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao1':
+            self.botao1.configure(image = '')
+            self.botao14.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao1':
+            self.botao1.configure(image = '')
+            self.botao15.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao1':
+            self.botao1.configure(image = '')
+            self.botao16.configure(image = '')
+            
+#combinação para o segundo botao
+            
+        elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao3'or self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao2':
+            self.botao2.configure(image = '')
+            self.botao3.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao4'or self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao2':
+            self.botao2.configure(image = '')
+            self.botao4.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao5'or self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao2':
+            self.botao2.configure(image = '')
+            self.botao5.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao6'or self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao2':
+            self.botao2.configure(image = '')
+            self.botao6.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao7'or self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao2':
+            self.botao2.configure(image = '')
+            self.botao7.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao8'or self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao2':
+            self.botao2.configure(image = '')
+            self.botao8.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao2':
+            self.botao2.configure(image = '')
+            self.botao9.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao2':
+            self.botao2.configure(image = '')
+            self.botao10.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao2':
+            self.botao2.configure(image = '')
+            self.botao11.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao2':
+            self.botao2.configure(image = '')
+            self.botao12.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao2':
+            self.botao2.configure(image = '')
+            self.botao13.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao2':
+            self.botao2.configure(image = '')
+            self.botao14.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao2':
+            self.botao2.configure(image = '')
+            self.botao15.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao2':
+            self.botao2.configure(image = '')
+            self.botao16.configure(image = '')
+            
+#combinação com o batao 3
+        elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao4'or self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao3':
+            self.botao3.configure(image = '')
+            self.botao4.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao5'or self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao3':
+            self.botao3.configure(image = '')
+            self.botao5.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao6'or self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao3':
+            self.botao3.configure(image = '')
+            self.botao6.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao7'or self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao3':
+            self.botao3.configure(image = '')
+            self.botao7.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao8'or self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao3':
+            self.botao3.configure(image = '')
+            self.botao8.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao3':
+            self.botao3.configure(image = '')
+            self.botao9.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao3':
+            self.botao3.configure(image = '')
+            self.botao10.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao3':
+            self.botao3.configure(image = '')
+            self.botao11.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao3':
+            self.botao3.configure(image = '')
+            self.botao12.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao3':
+            self.botao3.configure(image = '')
+            self.botao13.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao3':
+            self.botao3.configure(image = '')
+            self.botao14.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao3':
+            self.botao3.configure(image = '')
+            self.botao15.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao3':
+            self.botao3.configure(image = '')
+            self.botao16.configure(image = '')
+            
+#combinação para o botao 4
+            
+        elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao5'or self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao4':
+            self.botao4.configure(image = '')
+            self.botao5.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao6'or self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao4':
+            self.botao4.configure(image = '')
+            self.botao6.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao7'or self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao4':
+            self.botao4.configure(image = '')
+            self.botao7.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao8'or self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao4':
+            self.botao4.configure(image = '')
+            self.botao8.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao4':
+            self.botao4.configure(image = '')
+            self.botao9.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao4':
+            self.botao4.configure(image = '')
+            self.botao10.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao4':
+            self.botao4.configure(image = '')
+            self.botao11.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao4':
+            self.botao4.configure(image = '')
+            self.botao12.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao4':
+            self.botao4.configure(image = '')
+            self.botao13.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao4':
+            self.botao4.configure(image = '')
+            self.botao14.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao4':
+            self.botao4.configure(image = '')
+            self.botao15.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao4':
+            self.botao4.configure(image = '')
+            self.botao16.configure(image = '')
+            
+#combinação para o botao 5
+            
+        elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao6'or self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao5':
+            self.botao5.configure(image = '')
+            self.botao6.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao7'or self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao5':
+            self.botao5.configure(image = '')
+            self.botao7.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao8'or self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao5':
+            self.botao5.configure(image = '')
+            self.botao8.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao5':
+            self.botao5.configure(image = '')
+            self.botao9.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao5':
+            self.botao5.configure(image = '')
+            self.botao10.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao5':
+            self.botao5.configure(image = '')
+            self.botao11.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao5':
+            self.botao5.configure(image = '')
+            self.botao12.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao5':
+            self.botao5.configure(image = '')
+            self.botao13.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao5':
+            self.botao5.configure(image = '')
+            self.botao14.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao5':
+            self.botao5.configure(image = '')
+            self.botao15.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao5':
+            self.botao5.configure(image = '')
+            self.botao16.configure(image = '')
+            
+#combinação para o botao 6 
+            
+        elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao7'or self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao6':
+            self.botao6.configure(image = '')
+            self.botao7.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao8'or self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao6':
+            self.botao6.configure(image = '')
+            self.botao8.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao6':
+            self.botao6.configure(image = '')
+            self.botao9.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao6':
+            self.botao6.configure(image = '')
+            self.botao10.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao6':
+            self.botao6.configure(image = '')
+            self.botao11.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao6':
+            self.botao6.configure(image = '')
+            self.botao12.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao6':
+            self.botao6.configure(image = '')
+            self.botao13.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao6':
+            self.botao6.configure(image = '')
+            self.botao14.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao6':
+            self.botao6.configure(image = '')
+            self.botao15.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao6':
+            self.botao6.configure(image = '')
+            self.botao16.configure(image = '')
+            
+#combinação para o botao 7
+            
+        elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao8'or self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao7':
+            self.botao7.configure(image = '')
+            self.botao8.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao7':
+            self.botao7.configure(image = '')
+            self.botao9.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao7':
+            self.botao7.configure(image = '')
+            self.botao10.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao7':
+            self.botao7.configure(image = '')
+            self.botao11.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao7':
+            self.botao7.configure(image = '')
+            self.botao12.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao7':
+            self.botao7.configure(image = '')
+            self.botao13.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao7':
+            self.botao7.configure(image = '')
+            self.botao14.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao7':
+            self.botao7.configure(image = '')
+            self.botao15.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao7':
+            self.botao7.configure(image = '')
+            self.botao16.configure(image = '')
+            
+#combinação para o botao 8
+            
+        elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao8':
+            self.botao8.configure(image = '')
+            self.botao9.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao8':
+            self.botao8.configure(image = '')
+            self.botao10.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao8':
+            self.botao8.configure(image = '')
+            self.botao11.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao8':
+            self.botao8.configure(image = '')
+            self.botao12.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao8':
+            self.botao8.configure(image = '')
+            self.botao13.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao8':
+            self.botao8.configure(image = '')
+            self.botao14.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao8':
+            self.botao8.configure(image = '')
+            self.botao15.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao8':
+            self.botao8.configure(image = '')
+            self.botao16.configure(image = '')
+            
+#combinação para o botao 9
+            
+        elif self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao9':
+            self.botao9.configure(image = '')
+            self.botao10.configure(image = '')
+        
+        elif self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao9':
+            self.botao9.configure(image = '')
+            self.botao11.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao9':
+            self.botao9.configure(image = '')
+            self.botao12.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao9':
+            self.botao9.configure(image = '')
+            self.botao13.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao9':
+            self.botao9.configure(image = '')
+            self.botao14.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao9':
+            self.botao9.configure(image = '')
+            self.botao15.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao9':
+            self.botao9.configure(image = '')
+            self.botao16.configure(image = '')
+            
+#combinação para o botao 10
+            
+        elif self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao10':
+            self.botao10.configure(image = '')
+            self.botao11.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao10':
+            self.botao10.configure(image = '')
+            self.botao12.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao10':
+            self.botao10.configure(image = '')
+            self.botao13.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao10':
+            self.botao10.configure(image = '')
+            self.botao14.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao10':
+            self.botao10.configure(image = '')
+            self.botao15.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao10':
+            self.botao10.configure(image = '')
+            self.botao16.configure(image = '')
+            
+#combinção para o botao 11
+            
+        elif self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao11':
+            self.botao11.configure(image = '')
+            self.botao12.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao11':
+            self.botao11.configure(image = '')
+            self.botao13.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao11':
+            self.botao11.configure(image = '')
+            self.botao14.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao11':
+            self.botao11.configure(image = '')
+            self.botao15.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao11':
+            self.botao11.configure(image = '')
+            self.botao16.configure(image = '')
+            
+#combinação para o botao 12
+            
+        elif self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao12':
+            self.botao12.configure(image = '')
+            self.botao13.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao12':
+            self.botao12.configure(image = '')
+            self.botao14.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao12':
+            self.botao12.configure(image = '')
+            self.botao15.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao12':
+            self.botao12.configure(image = '')
+            self.botao16.configure(image = '')
+            
+#combinação para o botao 13
+            
+        elif self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao13':
+            self.botao13.configure(image = '')
+            self.botao14.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao13':
+            self.botao13.configure(image = '')
+            self.botao15.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao13':
+            self.botao13.configure(image = '')
+            self.botao16.configure(image = '')
+            
+#combinação para o botao 14
+            
+        elif self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao14':
+            self.botao14.configure(image = '')
+            self.botao15.configure(image = '')
+            
+        elif self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao14':
+            self.botao14.configure(image = '')
+            self.botao16.configure(image = '')
+            
+#combinação para o botao 15
+            
+        elif self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao15':
+            self.botao15.configure(image = '')
+            self.botao16.configure(image = '')
+            
+            
+        
+            
+        
+            
+            
+            
+            
+            
+        
+            
+        
+            
+        
+            
+            
+        
+            
+        
+        
+            
+        
+        
             
     def abrir_loja(self):
         self.lojinha = Loja()
