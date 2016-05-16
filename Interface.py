@@ -130,6 +130,7 @@ class Tabuleiro():
             self.botao1.configure(image = self.imagens.Iporco, state = "disabled")
             
         print (self.jogo.verifica_jogada(self.jogo.Lista_Jogada))
+        print (self.jogo.Lista_Embaralhada)
             
         
         
@@ -147,6 +148,7 @@ class Tabuleiro():
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogo()
             
         
     def click2(self):
@@ -193,6 +195,7 @@ class Tabuleiro():
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogo()
         
     def click3(self):
         self.jogo.recebe_jogada(0,2)
@@ -239,6 +242,7 @@ class Tabuleiro():
             self.jogo.embaralhar()            
             self.jogo.limpa_jogada()            
             self.limpar_painel()
+            self.jogo.limpa_jogo()
             
     def click4(self):
         self.jogo.recebe_jogada(0,3)
@@ -284,6 +288,7 @@ class Tabuleiro():
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogo()
             
     def click5(self):
         self.jogo.recebe_jogada(1,0)
@@ -328,6 +333,7 @@ class Tabuleiro():
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogo()
             
     def click6(self):
         self.jogo.recebe_jogada(1,1)
@@ -372,6 +378,7 @@ class Tabuleiro():
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogo()
             
     def click7(self):
         self.jogo.recebe_jogada(1,2)
@@ -416,6 +423,7 @@ class Tabuleiro():
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogo()
             
     def click8(self):
         self.jogo.recebe_jogada(1,3)
@@ -460,6 +468,7 @@ class Tabuleiro():
             self.jogo.embaralhar()            
             self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogo()
             
     def click9(self):
         self.jogo.recebe_jogada(2,0)
@@ -504,6 +513,7 @@ class Tabuleiro():
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogo()
             
     def click10(self):
         self.jogo.recebe_jogada(2,1)
@@ -548,6 +558,7 @@ class Tabuleiro():
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogo()
             
     def click11(self):
         self.jogo.recebe_jogada(2,2)
@@ -592,6 +603,7 @@ class Tabuleiro():
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogo()
             
     def click12(self):
         self.jogo.recebe_jogada(2,3)
@@ -636,6 +648,7 @@ class Tabuleiro():
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogo()
             
     def click13(self):
         self.jogo.recebe_jogada(3,0)
@@ -680,6 +693,7 @@ class Tabuleiro():
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogo()
             
     def click14(self):
         self.jogo.recebe_jogada(3,1)
@@ -724,6 +738,7 @@ class Tabuleiro():
             self.jogo.embaralhar()
             self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogo()
             
     def click15(self):
         self.jogo.recebe_jogada(3,2)
@@ -768,6 +783,7 @@ class Tabuleiro():
             self.jogo.embaralhar()            
             self.jogo.limpa_jogada()
             self.limpar_painel()
+            self.jogo.limpa_jogo()
             
     def click16(self):
         self.jogo.recebe_jogada(3,3)
@@ -814,6 +830,7 @@ class Tabuleiro():
             self.jogo.embaralhar()
             self.jogo.limpa_jogada() 
             self.limpar_painel()
+            self.jogo.limpa_jogo()
             
     def limpar_painel(self):
         self.botao1.configure(image = "", state="normal")
