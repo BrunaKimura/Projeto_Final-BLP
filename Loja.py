@@ -1,9 +1,13 @@
 import tkinter as tk
 
+from imagem_som import Imagens_sons
+
 class Loja():
     def __init__(self):
         self.loja = tk.Tk()
         self.loja.title("Jogo da Memória ANIMAL")
+        
+        self.imagem = Imagens_sons()
         
 #Label com a imagem de um cifrão
         self.label_cifrao = tk.Label(self.loja, text = '$', font ='Arial')
@@ -26,23 +30,28 @@ class Loja():
         self.label_ajuste2.grid(row=3, column=0, columnspan=3 )
                 
 #Botões para comprar
-        self.botao1 = tk.Button(self.loja, height = 8, width = 16)
+        self.botao1 = tk.Button(self.loja, height = 6, width = 14)
+        self.botao1.configure(image = self.imagem.Ileao)
         self.botao1.grid(row=2, column=0 )
         
-        self.botao2 = tk.Button(self.loja, height = 8, width = 16)
+        self.botao2 = tk.Button(self.loja, height = 6, width = 14)
+        self.botao2.configure(image = self.imagem.Ipanda)
         self.botao2.grid(row=2, column=2 )
         
-        self.botao3 = tk.Button(self.loja, height = 8, width = 16)
+        self.botao3 = tk.Button(self.loja, height = 6, width = 14)
+        self.botao3.configure(image = self.imagem.Igalo)
         self.botao3.grid(row=4, column=0 )
         
-        self.botao4 = tk.Button(self.loja, height = 8, width = 16)
+        self.botao4 = tk.Button(self.loja, height = 6, width = 14)
+        self.botao4.configure(image = self.imagem.Ielefante)
         self.botao4.grid(row=4, column=2 )
         
     def fechar_janela(self):
-            self.loja.destroy()      
+        self.loja.destroy()      
         
         
     def iniciar(self):
-        self.loja.geometry('294x364')
+        self.loja.geometry('265x300')
         self.loja.mainloop()
         
+

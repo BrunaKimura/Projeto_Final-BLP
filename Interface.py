@@ -8,6 +8,8 @@ from imagem_som import Imagens_sons
 
 import tkinter.messagebox as tkm
 
+import time
+
 
 
 class Tabuleiro(): 
@@ -106,32 +108,33 @@ class Tabuleiro():
 
 #Código para aparecer a imagem no botão        
         if self.jogo.Lista_Embaralhada[0]== "Cachorro":
-            self.botao1.configure(image = self.imagens.Icachorro, state = "disabled")
+            self.botao1.configure(image = self.imagens.Icachorro, state = "disabled", width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[0] == "Gato":
-            self.botao1.configure(image = self.imagens.Igato, state = "disabled")
+            self.botao1.configure(image = self.imagens.Igato, state = "disabled", width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[0] == "Arara":
-            self.botao1.configure(image = self.imagens.Iarara, state = "disabled")
+            self.botao1.configure(image = self.imagens.Iarara, state = "disabled", width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[0] == "Vaca":
-            self.botao1.configure(image = self.imagens.Ivaca, state = "disabled")
+            self.botao1.configure(image = self.imagens.Ivaca, state = "disabled", width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[0]== "Macaco":
-            self.botao1.configure(image = self.imagens.Imacaco, state = "disabled")
+            self.botao1.configure(image = self.imagens.Imacaco, state = "disabled", width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[0] == "Pato":
-            self.botao1.configure(image = self.imagens.Ipato, state = "disabled")
+            self.botao1.configure(image = self.imagens.Ipato, state = "disabled", width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[0]== "Cavalo":
-            self.botao1.configure(image = self.imagens.Icavalo, state = "disabled")
+            self.botao1.configure(image = self.imagens.Icavalo, state = "disabled", width = 98, height = 95)
        
         elif self.jogo.Lista_Embaralhada[0] == "Porco":
-            self.botao1.configure(image = self.imagens.Iporco, state = "disabled")
+            self.botao1.configure(image = self.imagens.Iporco, state = "disabled", width = 98, height = 95)
             
     
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            time.sleep(2)
             self.virar_imagens()                                   
             self.jogo.limpa_jogada()
             
@@ -153,34 +156,35 @@ class Tabuleiro():
         
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[1]== "Cachorro":
-            self.botao2.configure(image = self.imagens.Icachorro, state = "disabled")
+            self.botao2.configure(image = self.imagens.Icachorro, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[1] == "Gato":
-            self.botao2.configure(image = self.imagens.Igato, state = "disabled")
+            self.botao2.configure(image = self.imagens.Igato, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[1] == "Arara":
-            self.botao2.configure(image = self.imagens.Iarara, state = "disabled")
+            self.botao2.configure(image = self.imagens.Iarara, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[1] == "Vaca":
-            self.botao2.configure(image = self.imagens.Ivaca, state = "disabled")
+            self.botao2.configure(image = self.imagens.Ivaca, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[1]== "Macaco":
-            self.botao2.configure(image = self.imagens.Imacaco, state = "disabled")
+            self.botao2.configure(image = self.imagens.Imacaco, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[1] == "Pato":
-            self.botao2.configure(image = self.imagens.Ipato, state = "disabled")
+            self.botao2.configure(image = self.imagens.Ipato, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[1]== "Cavalo":
-            self.botao2.configure(image = self.imagens.Icavalo, state = "disabled")
+            self.botao2.configure(image = self.imagens.Icavalo, state = "disabled",width = 98, height = 95)
        
         elif self.jogo.Lista_Embaralhada[1] == "Porco":
-            self.botao2.configure(image = self.imagens.Iporco, state = "disabled") 
+            self.botao2.configure(image = self.imagens.Iporco, state = "disabled",width = 98, height = 95) 
             
         
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
             self.virar_imagens()
             self.jogo.limpa_jogada()
+            
             
         elif self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == 1:
             self.jogo.limpa_jogada()
@@ -200,32 +204,33 @@ class Tabuleiro():
         
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[2]== "Cachorro":
-            self.botao3.configure(image = self.imagens.Icachorro, state = "disabled")
+            self.botao3.configure(image = self.imagens.Icachorro, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[2] == "Gato":
-            self.botao3.configure(image = self.imagens.Igato, state = "disabled")
+            self.botao3.configure(image = self.imagens.Igato, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[2] == "Arara":
-            self.botao3.configure(image = self.imagens.Iarara, state = "disabled")
+            self.botao3.configure(image = self.imagens.Iarara, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[2] == "Vaca":
-            self.botao3.configure(image = self.imagens.Ivaca, state = "disabled")
+            self.botao3.configure(image = self.imagens.Ivaca, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[2]== "Macaco":
-            self.botao3.configure(image = self.imagens.Imacaco, state = "disabled")
+            self.botao3.configure(image = self.imagens.Imacaco, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[2] == "Pato":
-            self.botao3.configure(image = self.imagens.Ipato, state = "disabled")
+            self.botao3.configure(image = self.imagens.Ipato, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[2]== "Cavalo":
-            self.botao3.configure(image = self.imagens.Icavalo, state = "disabled")
+            self.botao3.configure(image = self.imagens.Icavalo, state = "disabled",width = 98, height = 95)
        
         elif self.jogo.Lista_Embaralhada[2] == "Porco":
-            self.botao3.configure(image = self.imagens.Iporco, state = "disabled")  
+            self.botao3.configure(image = self.imagens.Iporco, state = "disabled",width = 98, height = 95)  
             
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            time.sleep(2)
             self.virar_imagens()
             self.jogo.limpa_jogada()
             
@@ -246,28 +251,28 @@ class Tabuleiro():
 
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[3]== "Cachorro":
-            self.botao4.configure(image = self.imagens.Icachorro, state = "disabled")
+            self.botao4.configure(image = self.imagens.Icachorro, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[3] == "Gato":
-            self.botao4.configure(image = self.imagens.Igato, state = "disabled")
+            self.botao4.configure(image = self.imagens.Igato, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[3] == "Arara":
-            self.botao4.configure(image = self.imagens.Iarara, state = "disabled")
+            self.botao4.configure(image = self.imagens.Iarara, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[3] == "Vaca":
-            self.botao4.configure(image = self.imagens.Ivaca, state = "disabled")
+            self.botao4.configure(image = self.imagens.Ivaca, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[3]== "Macaco":
-            self.botao4.configure(image = self.imagens.Imacaco, state = "disabled")
+            self.botao4.configure(image = self.imagens.Imacaco, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[3] == "Pato":
-            self.botao4.configure(image = self.imagens.Ipato, state = "disabled")
+            self.botao4.configure(image = self.imagens.Ipato, state = "disabled",width = 98, height = 95)
             
         elif self.jogo.Lista_Embaralhada[3]== "Cavalo":
-            self.botao4.configure(image = self.imagens.Icavalo, state = "disabled")
+            self.botao4.configure(image = self.imagens.Icavalo, state = "disabled",width = 98, height = 95)
        
         elif self.jogo.Lista_Embaralhada[3] == "Porco":
-            self.botao4.configure(image = self.imagens.Iporco, state = "disabled")
+            self.botao4.configure(image = self.imagens.Iporco, state = "disabled",width = 98, height = 95)
             
 
 #Código para verificar se as duas imagens são iguais
