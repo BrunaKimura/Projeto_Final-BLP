@@ -11,6 +11,3 @@ class cadastrar():
             return 1
         else:
             return -1
-x = cadastrar()
-x.adicionar_cadastro("Patrick", 123, "M", 18)
-print(x.adicionar_cadastro("Patrick", 123, "M", 18))   
