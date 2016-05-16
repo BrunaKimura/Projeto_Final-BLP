@@ -32,20 +32,16 @@ class Loja():
         self.label_ajuste2.grid(row=3, column=0, columnspan=3 )
                 
 #Botões para comprar
-        self.botao1 = tk.Button(self.loja, height = 6, width = 14)
-        self.botao1.configure(image = self.imagem.Ileao)
+        self.botao1 = tk.Button(self.loja, image = self.imagem.Ileao, height = 102, width = 95)        
         self.botao1.grid(row=2, column=0 )
         
-        self.botao2 = tk.Button(self.loja, height = 6, width = 14)
-        self.botao2.configure(image = self.imagem.Ipanda)
+        self.botao2 = tk.Button(self.loja, image = self.imagem.Ipanda, height = 102, width = 95)        
         self.botao2.grid(row=2, column=2 )
         
-        self.botao3 = tk.Button(self.loja, height = 6, width = 14)
-        self.botao3.configure(image = self.imagem.Igalo)
+        self.botao3 = tk.Button(self.loja, image = self.imagem.Igalo, height = 102, width = 95)        
         self.botao3.grid(row=4, column=0 )
         
-        self.botao4 = tk.Button(self.loja, height = 6, width = 14)
-        self.botao4.configure(image = self.imagem.Ielefante)
+        self.botao4 = tk.Button(self.loja, image = self.imagem.Ielefante, height = 102, width = 95)        
         self.botao4.grid(row=4, column=2 )
         
     def fechar_janela(self):
