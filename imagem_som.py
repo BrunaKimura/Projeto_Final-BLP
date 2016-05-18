@@ -36,6 +36,13 @@ class Imagens_sons:
         self.Sleao =  ws.PlaySound('', ws.SND_FILENAME)
         self.Selefante =  ws.PlaySound('', ws.SND_FILENAME)
         self.Sgalo =  ws.PlaySound('', ws.SND_FILENAME)
+        
+#Fundo das telas!
+        self.Imenu = PhotoImage(file="fundo_menu.gif")
+        self.Icadastro = PhotoImage(file = "fundo_cadastro.gif")
+        self.Iinterface = PhotoImage(file = "fundo_interface.gif")
+        self.Iloja = PhotoImage(file = "fundo_loja.gif")
+        self.Icarta = PhotoImage(file = "fundo_carta.gif")
 
 
         

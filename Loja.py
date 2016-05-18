@@ -32,17 +32,36 @@ class Loja():
         self.label_ajuste2.grid(row=3, column=0, columnspan=3 )
                 
 #Botões para comprar
-        self.botao1 = tk.Button(self.loja, image = self.imagem.Ileao, height = 102, width = 95)        
+        self.botao1 = tk.Button(self.loja, image = self.imagem.Ileao, height = 102, width = 95)
+        self.botao1.configure(command = self.click1)
         self.botao1.grid(row=2, column=0 )
         
-        self.botao2 = tk.Button(self.loja, image = self.imagem.Ipanda, height = 102, width = 95)        
+        
+        self.botao2 = tk.Button(self.loja, image = self.imagem.Ipanda, height = 102, width = 95) 
+        self.botao2.configure(command = self.click2)
         self.botao2.grid(row=2, column=2 )
         
-        self.botao3 = tk.Button(self.loja, image = self.imagem.Igalo, height = 102, width = 95)        
+        self.botao3 = tk.Button(self.loja, image = self.imagem.Igalo, height = 102, width = 95)
+        self.botao3.configure(command = self.click3)        
         self.botao3.grid(row=4, column=0 )
         
-        self.botao4 = tk.Button(self.loja, image = self.imagem.Ielefante, height = 102, width = 95)        
+        self.botao4 = tk.Button(self.loja, image = self.imagem.Ielefante, height = 102, width = 95)
+        self.botao4.configure(command = self.click4)        
         self.botao4.grid(row=4, column=2 )
+        
+    def click1(self):
+        self.botao1.configure(state = 'disabled')
+        
+    def click2(self):
+        self.botao2.configure(state = 'disabled')
+        
+    def click3(self):
+        self.botao3.configure(state = 'disabled')
+        
+    def click4(self):
+        self.botao4.configure(state = 'disabled')
+        
+    
         
     def fechar_janela(self):
         self.loja.destroy()      
@@ -51,5 +70,4 @@ class Loja():
     def iniciar(self):
         self.loja.geometry('220x330')
         self.loja.mainloop()
-        
         
