@@ -2,7 +2,6 @@ import tkinter as tk
 
 from Classe_Cadastrar import cadastrar
 
-
 import tkinter.messagebox as tkm
 
 class Cadastro():
