@@ -6,6 +6,11 @@ from Interface import Tabuleiro
 
 from Cadastro import Cadastro
 
+from Classe_Logar import Login
+
+
+import tkinter.messagebox as tkm
+
 
 
 class Menu():
@@ -13,6 +18,8 @@ class Menu():
 #Janela 
         self.menu = tk.Tk()
         self.menu.title("Jogo da Memória ANIMAL")
+        
+        self.login = Login()
         
 #Label de boas vindas
         self.label1 = tk.Label(self.menu, text = 'Bem Vindo !!')
@@ -41,7 +48,7 @@ class Menu():
         
 #Botao para iniciar o jogo
         self.botao_jogar = tk.Button(self.menu, text = 'Jogar', bg = 'brown')
-        self.botao_jogar.configure(command = self.abrir_jogo)
+        self.botao_jogar.configure(command = self.verificar_login)
         self.botao_jogar.grid(row=6, column=0)
         
 #Botao que leva o usuario ao cadastro
@@ -50,7 +57,27 @@ class Menu():
         
         self.botao_cadastrar = tk.Button(self.menu, text = 'Cadastrar', bg = 'gray')
         self.botao_cadastrar.configure(command = self.abrir_cadastro)
-        self.botao_cadastrar.grid(row=9, column=0)  
+        self.botao_cadastrar.grid(row=9, column=0) 
+        
+    def verificar_login(self):
+        self.login.verifica(self.entry_login.get(), self.entry_senha.get())
+        
+        if self.login.verifica(self.entry_login.get(), self.entry_senha.get()) == 0:
+            tkm.showinfo(title = "Login", message = "O Usuário Não Existe")
+            self.entry_login.configure(text = '')
+            self.entry_senha.configure(text = '')
+        
+        elif self.login.verifica(self.entry_login.get(), self.entry_senha.get()) == -1:
+            tkm.showinfo(title = "Login", message = "Senha Incorreta")
+            self.entry_login.configure(text = '')
+            self.entry_senha.configure(text = '')
+        
+        elif self.login.verifica(self.entry_login.get(), self.entry_senha.get()) == 1:
+            self.abrir_jogo()
+        
+            
+            
+            
         
     def abrir_jogo(self):
         self.menu.destroy()

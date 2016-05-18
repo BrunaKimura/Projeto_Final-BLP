@@ -1,9 +1,15 @@
 import tkinter as tk
 
+from Classe_Cadastrar import cadastrar
+
+from Interface import Tabuleiro
+
 class Cadastro():
     def __init__(self):
         self.cadastro = tk.Tk()
         self.cadastro.title('Jogo da Memória ANIMAL')
+        
+        self.objeto_cadastro = cadastrar()
         
 #Local onde coloca o login a ser criado
         self.label_login = tk.Label(self.cadastro, text = 'Login:')
@@ -23,11 +29,8 @@ class Cadastro():
         self.label_sexo = tk.Label(self.cadastro, text = 'Sexo:')
         self.label_sexo.grid(row=4, column=0, sticky='w')        
         
-        self.botao_masculino = tk.Button(self.cadastro, text = 'Masculino', bg = 'blue')
-        self.botao_masculino.grid(row=5, column=0, sticky='w')
-        
-        self.botao_feminino = tk.Button(self.cadastro, text = 'Feminino', bg = 'red')
-        self.botao_feminino.grid(row=5, column=0, sticky='e')
+        self.entry_sexo = tk.Entry(self.cadastro)
+        self.entry_sexo.grid(row =5, column=0)
         
 #Local onde coloca a idade do usuário
         self.label_idade = tk.Label(self.cadastro, text = 'Idade:')
@@ -38,16 +41,31 @@ class Cadastro():
         
 #botao que termina o cadastro
         self.botao_finalizar = tk.Button(self.cadastro, text = 'Finalizar', bg = 'yellow')
-        self.botao_finalizar.configure(command = self.fechar_janela)
+        self.botao_finalizar.configure(command = self.Cadastrar)
         self.botao_finalizar.grid(row=9)
         
-    def fechar_janela(self):
-        self.cadastro.destroy()                
+    
+        
+    def Cadastrar(self):
+        self.objeto_cadastro.adicionar_cadastro(self.entry_login.get(), self.entry_senha.get(), self.entry.sexo.get(), self.entry_idade.get())
+        
+        if self.objeto_cadastro.adicionar_cadastro(self.entry_login.get(), self.entry_senha.get(), self.entry.sexo.get(), self.entry_idade.get()) == 1:
+            self.abrir_jogo()
+        
+        #else:
+            
+        
+
+    def abrir_jogo(self):
+        self.cadastro.destroy()
+        self.joguinho = Tabuleiro()
+        self.joguinho.iniciar()               
 
         
     def iniciar(self):
         self.cadastro.geometry('190x230')
         self.cadastro.mainloop()
         
-
+x = Cadastro()
+x.iniciar()
     
