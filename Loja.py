@@ -53,4 +53,3 @@ class Loja():
         self.loja.mainloop()
         
         
-

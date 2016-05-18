@@ -1373,7 +1373,6 @@ class Tabuleiro():
         self.tabuleiro.mainloop()
         
         
-x = Tabuleiro()
-x.iniciar()
+
 
                
