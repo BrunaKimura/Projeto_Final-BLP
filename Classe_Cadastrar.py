@@ -9,5 +9,6 @@ class cadastrar():
         if self.firebase.Checar_jogador(login, 1)==-1:        
             self.firebase.Salvar_cadastro(login, senha, sexo, idade)
             return 1
+        
         else:
             return -1

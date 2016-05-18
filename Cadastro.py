@@ -4,12 +4,15 @@ from Classe_Cadastrar import cadastrar
 
 from Interface import Tabuleiro
 
+import tkinter.messagebox as tkm
+
 class Cadastro():
     def __init__(self):
         self.cadastro = tk.Tk()
         self.cadastro.title('Jogo da Memória ANIMAL')
         
         self.objeto_cadastro = cadastrar()
+        
         
 #Local onde coloca o login a ser criado
         self.label_login = tk.Label(self.cadastro, text = 'Login:')
@@ -47,25 +50,23 @@ class Cadastro():
     
         
     def Cadastrar(self):
-        self.objeto_cadastro.adicionar_cadastro(self.entry_login.get(), self.entry_senha.get(), self.entry.sexo.get(), self.entry_idade.get())
+        self.objeto_cadastro.adicionar_cadastro(self.entry_login.get(), self.entry_senha.get(), self.entry_sexo.get(), self.entry_idade.get())
         
-        if self.objeto_cadastro.adicionar_cadastro(self.entry_login.get(), self.entry_senha.get(), self.entry.sexo.get(), self.entry_idade.get()) == 1:
-            self.abrir_jogo()
-        
-        #else:
+        if self.objeto_cadastro.adicionar_cadastro(self.entry_login.get(), self.entry_senha.get(), self.entry_sexo.get(), self.entry_idade.get()) == 1:
+            tkm.showinfo(title = "Login", message = "Você Foi Cadastrado")
+            self.cadastro.destroy()            
+            
+        else:
+            tkm.showinfo(title = "Login", message = "O Usuário Já Existe")
             
         
 
-    def abrir_jogo(self):
-        self.cadastro.destroy()
-        self.joguinho = Tabuleiro()
-        self.joguinho.iniciar()               
+                   
 
         
     def iniciar(self):
         self.cadastro.geometry('190x230')
         self.cadastro.mainloop()
         
-x = Cadastro()
-x.iniciar()
+
     

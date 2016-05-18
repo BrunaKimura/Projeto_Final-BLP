@@ -64,20 +64,16 @@ class Menu():
         
         if self.login.verifica(self.entry_login.get(), self.entry_senha.get()) == 0:
             tkm.showinfo(title = "Login", message = "O Usuário Não Existe")
-            self.entry_login.configure(text = '')
-            self.entry_senha.configure(text = '')
+            
         
         elif self.login.verifica(self.entry_login.get(), self.entry_senha.get()) == -1:
             tkm.showinfo(title = "Login", message = "Senha Incorreta")
-            self.entry_login.configure(text = '')
-            self.entry_senha.configure(text = '')
+            
         
         elif self.login.verifica(self.entry_login.get(), self.entry_senha.get()) == 1:
-            self.abrir_jogo()
+            self.abrir_jogo()      
+            
         
-            
-            
-            
         
     def abrir_jogo(self):
         self.menu.destroy()
