@@ -8,7 +8,7 @@ from imagem_som import Imagens_sons
 
 import tkinter.messagebox as tkm
 
-
+import time
 
 
 class Tabuleiro(): 
@@ -103,7 +103,7 @@ class Tabuleiro():
         self.jogo.recebe_jogada(0,0)
         self.jogo.verifica_jogada(self.jogo.Lista_Jogada)
         self.jogo.verifica_fim() 
-               
+                       
 
 #Código para aparecer a imagem no botão        
         if self.jogo.Lista_Embaralhada[0]== "Cachorro":
@@ -129,13 +129,13 @@ class Tabuleiro():
        
         elif self.jogo.Lista_Embaralhada[0] == "Porco":
             self.botao1.configure(image = self.imagens.Iporco, state = "disabled", width = 102, height = 95)
-                        
-        self.tabuleiro.update()
+                    
         
 #Código para verificar se as duas imagens são iguais
-        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
-            self.virar_imagens()                                   
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:            
+            self.virar_imagens()
             self.jogo.limpa_jogada()
+            
             
         elif self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == 1:
             self.jogo.limpa_jogada()
@@ -1372,5 +1372,8 @@ class Tabuleiro():
         self.tabuleiro.geometry('440x460')
         self.tabuleiro.mainloop()
         
+        
+x = Tabuleiro()
+x.iniciar()
 
                

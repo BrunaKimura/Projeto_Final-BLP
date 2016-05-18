@@ -49,7 +49,7 @@ class Loja():
         
         
     def iniciar(self):
-        self.loja.geometry('265x300')
+        self.loja.geometry('220x330')
         self.loja.mainloop()
         
 
