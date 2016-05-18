@@ -2,7 +2,6 @@ import tkinter as tk
 
 from Classe_Cadastrar import cadastrar
 
-from Interface import Tabuleiro
 
 import tkinter.messagebox as tkm
 
@@ -58,11 +57,8 @@ class Cadastro():
             
         else:
             tkm.showinfo(title = "Login", message = "O Usuário Já Existe")
-            
+                       
         
-
-                   
-
         
     def iniciar(self):
         self.cadastro.geometry('190x230')
