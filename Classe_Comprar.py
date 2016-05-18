@@ -11,6 +11,8 @@ class Compras:
         self.compras=["Panda", "Leão", "Elefante", "Galo"]
     
     def comprar(self, linha, coluna):
+        if self.jogo.verifica_fim==1:
+            self.moeda+=50
         if self.preco<=self.moeda:
             self.moeda-=self.preco
             self.preco+=50
@@ -34,3 +36,6 @@ class Compras:
                     return "Galo"
         else:
             return -1
+        
+        
+    
