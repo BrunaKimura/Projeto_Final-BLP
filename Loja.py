@@ -6,7 +6,7 @@ from Classe_Comprar import Compras
 
 class Loja():
     def __init__(self):
-        self.loja = tk.Tk()
+        self.loja = tk.Toplevel()
         self.loja.title("Jogo da Memória ANIMAL")
         
         self.imagem = Imagens_sons()
@@ -51,5 +51,6 @@ class Loja():
     def iniciar(self):
         self.loja.geometry('220x330')
         self.loja.mainloop()
+        
         
 
