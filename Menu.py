@@ -8,7 +8,6 @@ from Cadastro import Cadastro
 
 from Classe_Logar import Login
 
-
 import tkinter.messagebox as tkm
 
 
@@ -16,9 +15,12 @@ import tkinter.messagebox as tkm
 class Menu():
     def __init__(self):
 #Janela 
+    
+        
+            
         self.menu = tk.Tk()
         self.menu.title("Jogo da Memória ANIMAL")
-        
+               
         self.login = Login()
         
 #Label de boas vindas

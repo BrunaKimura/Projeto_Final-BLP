@@ -59,8 +59,7 @@ class Loja():
         self.botao3.configure(state = 'disabled')
         
     def click4(self):
-        self.botao4.configure(state = 'disabled')
-        
+        self.botao4.configure(state = 'disabled')       
     
         
     def fechar_janela(self):

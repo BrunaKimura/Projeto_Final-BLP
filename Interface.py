@@ -8,7 +8,7 @@ from imagem_som import Imagens_sons
 
 import tkinter.messagebox as tkm
 
-import time
+from time import sleep
 
 
 class Tabuleiro(): 
@@ -35,67 +35,67 @@ class Tabuleiro():
         self.botao_loja.grid(row=0, column=2, columnspan=2)
         
 #Botões de jogo     
-        self.botao1 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao1 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)
         self.botao1.configure(command = self.click1)
         self.botao1.grid(row=1, column=0)
         
-        self.botao2 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao2 = tk.Button(self.tabuleiro, height = 95, width = 102,  image = self.imagens.Icarta)
         self.botao2.configure(command = self.click2)
         self.botao2.grid(row=1, column=1)
         
-        self.botao3 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao3 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)
         self.botao3.configure(command = self.click3)
         self.botao3.grid(row=1, column=2)
         
-        self.botao4 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao4 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)
         self.botao4.configure(command = self.click4)
         self.botao4.grid(row=1, column=3)
         
-        self.botao5 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao5 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)
         self.botao5.configure(command = self.click5)
         self.botao5.grid(row=2, column=0)
         
-        self.botao6 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao6 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)
         self.botao6.configure(command = self.click6)
         self.botao6.grid(row=2, column=1)
         
-        self.botao7 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao7 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)
         self.botao7.configure(command = self.click7)
         self.botao7.grid(row=2, column=2)
         
-        self.botao8 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao8 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)
         self.botao8.configure(command = self.click8)
         self.botao8.grid(row=2, column=3)
         
-        self.botao9 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao9 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)
         self.botao9.configure(command = self.click9)
         self.botao9.grid(row=3, column=0)
         
-        self.botao10 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao10 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)
         self.botao10.configure(command = self.click10)
         self.botao10.grid(row=3, column=1)
         
-        self.botao11 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao11 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)
         self.botao11.configure(command = self.click11)
         self.botao11.grid(row=3, column=2)
         
-        self.botao12 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao12 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)
         self.botao12.configure(command = self.click12)
         self.botao12.grid(row=3, column=3)
         
-        self.botao13 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao13 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)
         self.botao13.configure(command = self.click13)
         self.botao13.grid(row=4, column=0)
         
-        self.botao14 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao14 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)
         self.botao14.configure(command = self.click14)
         self.botao14.grid(row=4, column=1)
         
-        self.botao15 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao15 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)
         self.botao15.configure(command = self.click15)
         self.botao15.grid(row=4, column=2)
         
-        self.botao16 = tk.Button(self.tabuleiro, height = 6, width = 14)
+        self.botao16 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)
         self.botao16.configure(command = self.click16)
         self.botao16.grid(row=4, column=3)
         
@@ -132,7 +132,9 @@ class Tabuleiro():
                     
         
 #Código para verificar se as duas imagens são iguais
-        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:            
+        if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1: # -1 é quando a figura esta diferente 
+            self.tabuleiro.update()
+            sleep(1)          
             self.virar_imagens()
             self.jogo.limpa_jogada()
             
@@ -182,6 +184,8 @@ class Tabuleiro():
         
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.tabuleiro.update()
+            sleep(1)
             self.virar_imagens()
             self.jogo.limpa_jogada()
             
@@ -230,6 +234,9 @@ class Tabuleiro():
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.tabuleiro.update()
+            sleep(1)
+            #chique ou nem ???
             self.virar_imagens()
             self.jogo.limpa_jogada()
             
@@ -276,6 +283,8 @@ class Tabuleiro():
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.tabuleiro.update()
+            sleep(1)
             self.virar_imagens()
             self.jogo.limpa_jogada()
             
@@ -321,6 +330,8 @@ class Tabuleiro():
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.tabuleiro.update()
+            sleep(1)
             self.virar_imagens()   
             self.jogo.limpa_jogada()
             
@@ -366,6 +377,8 @@ class Tabuleiro():
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.tabuleiro.update()
+            sleep(1)
             self.virar_imagens()
             self.jogo.limpa_jogada()
             
@@ -411,6 +424,8 @@ class Tabuleiro():
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.tabuleiro.update()
+            sleep(1)
             self.virar_imagens()
             self.jogo.limpa_jogada()
             
@@ -456,6 +471,8 @@ class Tabuleiro():
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.tabuleiro.update()
+            sleep(1)
             self.virar_imagens()
             self.jogo.limpa_jogada()
             
@@ -501,6 +518,8 @@ class Tabuleiro():
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.tabuleiro.update()
+            sleep(1)
             self.virar_imagens()
             self.jogo.limpa_jogada()
             
@@ -546,6 +565,8 @@ class Tabuleiro():
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.tabuleiro.update()
+            sleep(1)
             self.virar_imagens()
             self.jogo.limpa_jogada()
             
@@ -592,6 +613,8 @@ class Tabuleiro():
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.tabuleiro.update()
+            sleep(1)
             self.virar_imagens()
             self.jogo.limpa_jogada()
             
@@ -637,6 +660,8 @@ class Tabuleiro():
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.tabuleiro.update()
+            sleep(1)
             self.virar_imagens()
             self.jogo.limpa_jogada()
             
@@ -682,6 +707,8 @@ class Tabuleiro():
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.tabuleiro.update()
+            sleep(1)
             self.virar_imagens()
             self.jogo.limpa_jogada()
             
@@ -727,6 +754,8 @@ class Tabuleiro():
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.tabuleiro.update()
+            sleep(1)
             self.virar_imagens()
             self.jogo.limpa_jogada()
         
@@ -772,6 +801,8 @@ class Tabuleiro():
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.tabuleiro.update()
+            sleep(1)
             self.virar_imagens()  
             self.jogo.limpa_jogada()
         
@@ -818,6 +849,8 @@ class Tabuleiro():
                     
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
+            self.tabuleiro.update()
+            sleep(1)
             self.virar_imagens()
             self.jogo.limpa_jogada()
         
@@ -833,533 +866,532 @@ class Tabuleiro():
             self.jogo.embaralhar()
             
     def limpar_painel(self):
-        self.botao1.configure(image = "", state="normal", height = 6, width = 14)
-        self.botao2.configure(image = "", state="normal", height = 6, width = 14)
-        self.botao3.configure(image = "", state="normal", height = 6, width = 14)
-        self.botao4.configure(image = "", state="normal", height = 6, width = 14)
-        self.botao5.configure(image = "", state="normal", height = 6, width = 14)
-        self.botao6.configure(image = "", state="normal", height = 6, width = 14)
-        self.botao7.configure(image = "", state="normal", height = 6, width = 14)
-        self.botao8.configure(image = "", state="normal", height = 6, width = 14)
-        self.botao9.configure(image = "", state="normal", height = 6, width = 14)
-        self.botao10.configure(image= "", state="normal", height = 6, width = 14)
-        self.botao11.configure(image = "", state="normal", height = 6, width = 14)
-        self.botao12.configure(image = "", state="normal", height = 6, width = 14)
-        self.botao13.configure(image = "", state="normal", height = 6, width = 14)
-        self.botao14.configure(image = "", state="normal", height = 6, width = 14)
-        self.botao15.configure(image = "", state="normal", height = 6, width = 14)
-        self.botao16.configure(image = "", state="normal", height = 6, width = 14)
+        self.botao1.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)
+        self.botao2.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)
+        self.botao3.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)
+        self.botao4.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)
+        self.botao5.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)
+        self.botao6.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)
+        self.botao7.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)
+        self.botao8.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)
+        self.botao9.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)
+        self.botao10.configure(image= self.imagens.Icarta, state="normal", height = 95, width = 102)
+        self.botao11.configure(image = self.imagens.Icarta, state="normal", height = 96, width = 102)
+        self.botao12.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)
+        self.botao13.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)
+        self.botao14.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)
+        self.botao15.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)
+        self.botao16.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)
         
     def virar_imagens(self):
         
 #combinação com o botao 1
     
         if self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao2'or self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao1':
-            self.botao1.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao2.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao1.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao2.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao3'or self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao1':
-            self.botao1.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao3.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao1.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao3.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao4'or self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao1':
-            self.botao1.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao4.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao1.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao4.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao5'or self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao1':
-            self.botao1.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao5.configure(image = '', state = "normal", height = 6, width = 14)
-            
+            self.botao1.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao5.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+        
         elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao6'or self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao1':
-            self.botao1.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao6.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao1.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao6.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao7'or self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao1':
-            self.botao1.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao7.configure(image = '', state = "normal", height = 6, width = 14)
-            
+            self.botao1.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao7.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+        
         elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao8'or self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao1':
-            self.botao1.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao8.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao1.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao8.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao1':
-            self.botao1.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao9.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao1.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao9.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
         
         elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao1':
-            self.botao1.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao10.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao1.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao10.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao1':
-            self.botao1.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao11.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao1.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao11.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
     
         elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao1':
-            self.botao1.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao12.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao1.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao12.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao1':
-            self.botao1.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao13.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao1.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao13.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao1':
-            self.botao1.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao14.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao1.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao14.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao1':
-            self.botao1.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao15.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao1.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao15.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao1' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao1':
-            self.botao1.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao16.configure(image = '', state = "normal", height = 6, width = 14)
-            
+            self.botao1.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao16.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
 #combinação para o segundo botao
             
         elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao3'or self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao2':
-            self.botao2.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao3.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao2.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao3.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao4'or self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao2':
-            self.botao2.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao4.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao2.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao4.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao5'or self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao2':
-            self.botao2.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao5.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao2.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao5.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao6'or self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao2':
-            self.botao2.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao6.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao2.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao6.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao7'or self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao2':
-            self.botao2.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao7.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao2.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao7.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao8'or self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao2':
-            self.botao2.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao8.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao2.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao8.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao2':
-            self.botao2.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao9.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao2.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao9.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao2':
-            self.botao2.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao10.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao2.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao10.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao2':
-            self.botao2.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao11.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao2.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao11.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao2':
-            self.botao2.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao12.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao2.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao12.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao2':
-            self.botao2.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao13.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao2.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao13.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao2':
-            self.botao2.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao14.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao2.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao14.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao2':
-            self.botao2.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao15.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao2.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao15.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao2' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao2':
-            self.botao2.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao16.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao2.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao16.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
 #combinação com o batao 3
         elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao4'or self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao3':
-            self.botao3.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao4.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao3.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao4.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao5'or self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao3':
-            self.botao3.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao5.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao3.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao5.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao6'or self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao3':
-            self.botao3.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao6.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao3.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao6.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao7'or self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao3':
-            self.botao3.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao7.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao3.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao7.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao8'or self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao3':
-            self.botao3.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao8.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao3.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao8.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao3':
-            self.botao3.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao9.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao3.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao9.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao3':
-            self.botao3.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao10.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao3.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao10.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao3':
-            self.botao3.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao11.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao3.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao11.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao3':
-            self.botao3.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao12.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao3.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao12.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao3':
-            self.botao3.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao13.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao3.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao13.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao3':
-            self.botao3.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao14.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao3.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao14.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao3':
-            self.botao3.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao15.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao3.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao15.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao3' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao3':
-            self.botao3.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao16.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao3.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao16.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
 #combinação para o botao 4
             
         elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao5'or self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao4':
-            self.botao4.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao5.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao4.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao5.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao6'or self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao4':
-            self.botao4.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao6.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao4.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao6.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao7'or self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao4':
-            self.botao4.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao7.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao4.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao7.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao8'or self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao4':
-            self.botao4.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao8.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao4.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao8.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao4':
-            self.botao4.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao9.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao4.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao9.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao4':
-            self.botao4.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao10.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao4.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao10.configure(image =self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao4':
-            self.botao4.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao11.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao4.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao11.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao4':
-            self.botao4.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao12.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao4.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao12.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao4':
-            self.botao4.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao13.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao4.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao13.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao4':
-            self.botao4.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao14.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao4.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao14.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao4':
-            self.botao4.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao15.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao4.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao15.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao4' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao4':
-            self.botao4.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao16.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao4.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao16.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
 #combinação para o botao 5
             
         elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao6'or self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao5':
-            self.botao5.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao6.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao5.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao6.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao7'or self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao5':
-            self.botao5.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao7.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao5.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao7.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao8'or self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao5':
-            self.botao5.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao8.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao5.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao8.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao5':
-            self.botao5.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao9.configure(image = '', state = "normal", height = 6, width = 14)
-            
+            self.botao5.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao9.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+        
         elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao5':
-            self.botao5.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao10.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao5.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao10.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao5':
-            self.botao5.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao11.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao5.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao11.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao5':
-            self.botao5.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao12.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao5.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao12.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao5':
-            self.botao5.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao13.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao5.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao13.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao5':
-            self.botao5.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao14.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao5.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao14.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao5':
-            self.botao5.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao15.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao5.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao15.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao5' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao5':
-            self.botao5.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao16.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao5.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao16.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
 #combinação para o botao 6 
             
         elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao7'or self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao6':
-            self.botao6.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao7.configure(image = '', state = "normal", height = 6, width = 14)
-            
+            self.botao6.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao7.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+        
         elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao8'or self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao6':
-            self.botao6.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao8.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao6.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao8.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao6':
-            self.botao6.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao9.configure(image = '', state = "normal", height = 6, width = 14)
-            
+            self.botao6.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao9.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+        
         elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao6':
-            self.botao6.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao10.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao6.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao10.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao6':
-            self.botao6.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao11.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao6.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao11.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao6':
-            self.botao6.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao12.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao6.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao12.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao6':
-            self.botao6.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao13.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao6.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao13.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao6':
-            self.botao6.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao14.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao6.configure(image =self.imagens.Icarta,  state = "normal", height = 95, width = 102)
+            self.botao14.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao6':
-            self.botao6.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao15.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao6.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao15.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao6' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao6':
-            self.botao6.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao16.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao6.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao16.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
 #combinação para o botao 7
             
         elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao8'or self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao7':
-            self.botao7.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao8.configure(image = '', state = "normal", height = 6, width = 14)
-            
+            self.botao7.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao8.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+        
         elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao7':
-            self.botao7.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao9.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao7.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao9.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao7':
-            self.botao7.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao10.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao7.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao10.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao7':
-            self.botao7.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao11.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao7.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao11.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao7':
-            self.botao7.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao12.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao7.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao12.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao7':
-            self.botao7.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao13.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao7.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao13.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao7':
-            self.botao7.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao14.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao7.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao14.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao7':
-            self.botao7.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao15.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao7.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao15.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao7' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao7':
-            self.botao7.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao16.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao7.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao16.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
 #combinação para o botao 8
             
         elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao9'or self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao8':
-            self.botao8.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao9.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao8.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao9.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao8':
-            self.botao8.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao10.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao8.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao10.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao8':
-            self.botao8.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao11.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao8.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao11.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao8':
-            self.botao8.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao12.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao8.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao12.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao8':
-            self.botao8.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao13.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao8.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao13.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao8':
-            self.botao8.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao14.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao8.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao14.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao8':
-            self.botao8.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao15.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao8.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao15.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao8' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao8':
-            self.botao8.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao16.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao8.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao16.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
 #combinação para o botao 9
             
         elif self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao10'or self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao9':
-            self.botao9.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao10.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao9.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao10.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
         
         elif self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao9':
-            self.botao9.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao11.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao9.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao11.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao9':
-            self.botao9.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao12.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao9.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao12.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao9':
-            self.botao9.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao13.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao9.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao13.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao9':
-            self.botao9.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao14.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao9.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao14.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao9':
-            self.botao9.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao15.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao9.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao15.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao9' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao9':
-            self.botao9.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao16.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao9.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao16.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
 #combinação para o botao 10
             
         elif self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao11'or self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao10':
-            self.botao10.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao11.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao10.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao11.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao10':
-            self.botao10.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao12.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao10.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao12.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao10':
-            self.botao10.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao13.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao10.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao13.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao10':
-            self.botao10.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao14.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao10.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao14.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao10':
-            self.botao10.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao15.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao10.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao15.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao10' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao10':
-            self.botao10.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao16.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao10.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao16.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
 #combinção para o botao 11
             
         elif self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao12'or self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao11':
-            self.botao11.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao12.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao11.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao12.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao11':
-            self.botao11.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao13.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao11.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao13.configure(image = self.imagens.Icarta , state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao11':
-            self.botao11.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao14.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao11.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao14.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao11':
-            self.botao11.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao15.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao11.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao15.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao11' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao11':
-            self.botao11.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao16.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao11.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao16.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
 #combinação para o botao 12
             
         elif self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao13'or self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao12':
-            self.botao12.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao13.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao12.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao13.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao12':
-            self.botao12.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao14.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao12.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao14.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao12':
-            self.botao12.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao15.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao12.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao15.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao12' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao12':
-            self.botao12.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao16.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao12.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao16.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
 #combinação para o botao 13
             
         elif self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao14'or self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao13':
-            self.botao13.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao14.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao13.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao14.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao13':
-            self.botao13.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao15.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao13.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao15.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao13' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao13':
-            self.botao13.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao16.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao13.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao16.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
 #combinação para o botao 14
             
         elif self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao15'or self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao14':
-            self.botao14.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao15.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao14.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao15.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
         elif self.jogo.Lista_Botão[0] == 'botao14' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao14':
-            self.botao14.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao16.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao14.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao16.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
 #combinação para o botao 15
             
         elif self.jogo.Lista_Botão[0] == 'botao15' and self.jogo.Lista_Botão[1] == 'botao16'or self.jogo.Lista_Botão[0] == 'botao16' and self.jogo.Lista_Botão[1] == 'botao15':
-            self.botao15.configure(image = '', state = "normal", height = 6, width = 14)
-            self.botao16.configure(image = '', state = "normal", height = 6, width = 14)
+            self.botao15.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
+            self.botao16.configure(image = self.imagens.Icarta, state = "normal", height = 95, width = 102)
             
             
         
@@ -1372,7 +1404,7 @@ class Tabuleiro():
         self.tabuleiro.geometry('440x460')
         self.tabuleiro.mainloop()
         
+
         
-
-
+        
                
