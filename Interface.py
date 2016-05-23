@@ -4,6 +4,8 @@ from Loja import Loja
 
 from Classe_Jogar import Jogo
 
+from Classe_Comprar import Compras
+
 from imagem_som import Imagens_sons
 
 import tkinter.messagebox as tkm
@@ -21,6 +23,8 @@ class Tabuleiro():
         self.jogo.embaralhar()
         
         self.imagens = Imagens_sons()
+        
+        self.compra = Compras()
         
 #Label com a imagem de um cifrão
         self.label_cifrao = tk.Label(self.tabuleiro, text = '$', font ='Arial')
@@ -148,6 +152,7 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
         
@@ -199,6 +204,7 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.compra.somar_moeda()
             self.jogo.embaralhar()
         
     def click3(self):
@@ -249,6 +255,7 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click4(self):
@@ -344,6 +351,7 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click6(self):
@@ -391,6 +399,7 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click7(self):
@@ -438,6 +447,7 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click8(self):
@@ -485,6 +495,7 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click9(self):
@@ -532,6 +543,7 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click10(self):
@@ -579,6 +591,7 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click11(self):
@@ -627,6 +640,7 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click12(self):
@@ -674,6 +688,7 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click13(self):
@@ -721,6 +736,7 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click14(self):
@@ -768,6 +784,7 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click15(self):
@@ -815,6 +832,7 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click16(self):
@@ -864,6 +882,7 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
+            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def limpar_painel(self):

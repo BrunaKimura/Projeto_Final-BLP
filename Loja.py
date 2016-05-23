@@ -29,8 +29,17 @@ class Loja():
         self.label_ajuste1 = tk.Label(self.loja, text = '')
         self.label_ajuste1.grid(row=1, column=0, columnspan=3)
         
-        self.label_ajuste2 = tk.Label(self.loja, text = '')
-        self.label_ajuste2.grid(row=3, column=0, columnspan=3 )
+        self.label_preco1 = tk.Label(self.loja, text = 'Preço')
+        self.label_preco1.grid(row=3, column=0, columnspan=1 )
+        
+        self.label_preco2 = tk.Label(self.loja, text = 'Preço')
+        self.label_preco2.grid(row=3, column=2, columnspan=1 )
+        
+        self.label_preco3 = tk.Label(self.loja, text = 'Preço')
+        self.label_preco3.grid(row=5, column=0, columnspan=1 )
+        
+        self.label_preco3 = tk.Label(self.loja, text = 'Preço')
+        self.label_preco3.grid(row=5, column=2, columnspan=1 )
                 
 #Botões para comprar
         self.botao1 = tk.Button(self.loja, image = self.imagem.Ileao, height = 102, width = 95)
@@ -68,6 +77,9 @@ class Loja():
         
         
     def iniciar(self):
-        self.loja.geometry('220x330')
+        self.loja.geometry('220x340')
         self.loja.mainloop()
+        
+x = Loja()
+x.iniciar()
         
