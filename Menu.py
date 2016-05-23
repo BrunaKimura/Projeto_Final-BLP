@@ -10,6 +10,8 @@ from Classe_Logar import Login
 
 import tkinter.messagebox as tkm
 
+
+from imagem_som import Imagens_sons
  
 
 
@@ -21,6 +23,11 @@ class Menu():
         self.menu.resizable ( 0 ,  0 )
                
         self.login = Login()
+        
+        self.imagem = Imagens_sons()
+        
+        self.label_fundo = tk.Label(self.menu, image = self.imagem.Imenu)
+        self.label_fundo.place(x = 0, y = 0)
         
 #Label de boas vindas
         self.label1 = tk.Label(self.menu, text = 'Bem Vindo !!')
