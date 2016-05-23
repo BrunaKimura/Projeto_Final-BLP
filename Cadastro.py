@@ -8,7 +8,7 @@ class Cadastro():
     def __init__(self):
         self.cadastro = tk.Tk()
         self.cadastro.title('Jogo da Memória ANIMAL')
-        self.cadastro.resizable ( 0 ,  0 )
+        
         
         self.objeto_cadastro = cadastrar()
         
@@ -41,10 +41,13 @@ class Cadastro():
         self.entry_idade = tk.Entry(self.cadastro)
         self.entry_idade.grid(row=8, sticky='w')
         
+        self.label_ajuste = tk.Label(self.cadastro)
+        self.label_ajuste.grid(row=9)
+        
 #botao que termina o cadastro
         self.botao_finalizar = tk.Button(self.cadastro, text = 'Finalizar', bg = 'yellow')
         self.botao_finalizar.configure(command = self.Cadastrar)
-        self.botao_finalizar.grid(row=9)
+        self.botao_finalizar.grid(row=10, sticky=tk.W+tk.E+tk.S+tk.N)
         
     
         
@@ -63,4 +66,3 @@ class Cadastro():
         self.cadastro.mainloop()
         
 
-    
