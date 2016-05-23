@@ -16,14 +16,14 @@ class Imagens_sons:
         self.Iporco = PhotoImage(file="Iporco.gif")
 
 #8 sons dos animais principais        
-        self.Scachorro = ws.PlaySound('latido.wav', ws.SND_FILENAME)
-        self.Sgato =  ws.PlaySound('', ws.SND_FILENAME)
-        self.Sarara =  ws.PlaySound('', ws.SND_FILENAME)
-        self.Svaca =  ws.PlaySound('', ws.SND_FILENAME)
-        self.Smacaco =  ws.PlaySound('', ws.SND_FILENAME)
-        self.Spato =  ws.PlaySound('', ws.SND_FILENAME)
-        self.Scavalo =  ws.PlaySound('', ws.SND_FILENAME)
-        self.Sporco =  ws.PlaySound('', ws.SND_FILENAME)
+        self.Scachorro = ws.PlaySound('scachorro.wav', ws.SND_FILENAME)
+        self.Sgato =  ws.PlaySound('sgato.wav', ws.SND_FILENAME)
+        self.Sarara =  ws.PlaySound('sarara.wav', ws.SND_FILENAME)
+        self.Svaca =  ws.PlaySound('svaca.wav', ws.SND_FILENAME)
+        self.Smacaco =  ws.PlaySound('smacaco.wav', ws.SND_FILENAME)
+        self.Spato =  ws.PlaySound('spato.wav', ws.SND_FILENAME)
+        self.Scavalo =  ws.PlaySound('scavalo.wav', ws.SND_FILENAME)
+        self.Sporco =  ws.PlaySound('sporco.wav', ws.SND_FILENAME)
         
 #4 imagens dos animais da loja
         self.Ipanda = PhotoImage(file="Ipanda.gif")
@@ -32,10 +32,10 @@ class Imagens_sons:
         self.Igalo = PhotoImage(file="Igalo.gif")   
     
 #4 sons dos animais principais        
-        self.Spanda = ws.PlaySound('', ws.SND_FILENAME)
-        self.Sleao =  ws.PlaySound('', ws.SND_FILENAME)
-        self.Selefante =  ws.PlaySound('', ws.SND_FILENAME)
-        self.Sgalo =  ws.PlaySound('', ws.SND_FILENAME)
+        self.Spanda = ws.PlaySound('spanda.wav', ws.SND_FILENAME)
+        self.Sleao =  ws.PlaySound('sleao.wav', ws.SND_FILENAME)
+        self.Selefante =  ws.PlaySound('selefante.wav', ws.SND_FILENAME)
+        self.Sgalo =  ws.PlaySound('sgalo.wav', ws.SND_FILENAME)
         
 #Fundo das telas!
         self.Imenu = PhotoImage(file="fundo_menu.gif")
