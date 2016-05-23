@@ -8,6 +8,7 @@ class Loja():
     def __init__(self):
         self.loja = tk.Toplevel()
         self.loja.title("Jogo da Memória ANIMAL")
+        self.loja.resizable ( 0 ,  0 )
         
         self.imagem = Imagens_sons()
         self.compras = Compras()

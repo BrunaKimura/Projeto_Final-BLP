@@ -8,6 +8,7 @@ class Cadastro():
     def __init__(self):
         self.cadastro = tk.Tk()
         self.cadastro.title('Jogo da Memória ANIMAL')
+        self.cadastro.resizable ( 0 ,  0 )
         
         self.objeto_cadastro = cadastrar()
         

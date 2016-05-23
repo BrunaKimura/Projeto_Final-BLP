@@ -15,6 +15,7 @@ class Tabuleiro():
     def __init__(self):
         self.tabuleiro = tk.Tk()
         self.tabuleiro.title("Jogo da Memória ANIMAL")
+        self.tabuleiro.resizable ( 0 ,  0 )
         
         self.jogo = Jogo()
         self.jogo.embaralhar()

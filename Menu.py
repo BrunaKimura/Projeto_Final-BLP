@@ -18,6 +18,7 @@ class Menu():
         
         self.menu = tk.Tk()
         self.menu.title("Jogo da Memória ANIMAL")
+        self.menu.resizable ( 0 ,  0 )
                
         self.login = Login()
         
