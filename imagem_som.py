@@ -16,14 +16,14 @@ class Imagens_sons:
         self.Iporco = PhotoImage(file="Iporco.gif")
 
 #8 sons dos animais principais        
-        self.Scachorro = ws.PlaySound('scachorro.wav', ws.SND_FILENAME)
-        self.Sgato =  ws.PlaySound('sgato.wav', ws.SND_FILENAME)
-        self.Sarara =  ws.PlaySound('sarara.wav', ws.SND_FILENAME)
-        self.Svaca =  ws.PlaySound('svaca.wav', ws.SND_FILENAME)
-        self.Smacaco =  ws.PlaySound('smacaco.wav', ws.SND_FILENAME)
-        self.Spato =  ws.PlaySound('spato.wav', ws.SND_FILENAME)
-        self.Scavalo =  ws.PlaySound('scavalo.wav', ws.SND_FILENAME)
-        self.Sporco =  ws.PlaySound('sporco.wav', ws.SND_FILENAME)
+        self.Scachorro = ws.PlaySound('scachorro.wav', ws.SND_ASYNC)
+        self.Sgato =  ws.PlaySound('sgato.wav', ws.SND_ASYNC)
+        self.Sarara =  ws.PlaySound('sarara.wav', ws.SND_ASYNC)
+        self.Svaca =  ws.PlaySound('svaca.wav', ws.SND_ASYNC)
+        self.Smacaco =  ws.PlaySound('smacaco.wav', ws.SND_ASYNC)
+        self.Spato =  ws.PlaySound('spato.wav', ws.SND_ASYNC)
+        self.Scavalo =  ws.PlaySound('scavalo.wav', ws.SND_ASYNC)
+        self.Sporco =  ws.PlaySound('sporco.wav', ws.SND_ASYNC)
         
 #4 imagens dos animais da loja
         self.Ipanda = PhotoImage(file="Ipanda.gif")
@@ -32,10 +32,10 @@ class Imagens_sons:
         self.Igalo = PhotoImage(file="Igalo.gif")   
     
 #4 sons dos animais principais        
-        self.Spanda = ws.PlaySound('spanda.wav', ws.SND_FILENAME)
-        self.Sleao =  ws.PlaySound('sleao.wav', ws.SND_FILENAME)
-        self.Selefante =  ws.PlaySound('selefante.wav', ws.SND_FILENAME)
-        self.Sgalo =  ws.PlaySound('sgalo.wav', ws.SND_FILENAME)
+        self.Spanda = ws.PlaySound('spanda.wav', ws.SND_ASYNC)
+        self.Sleao =  ws.PlaySound('sleao.wav', ws.SND_ASYNC)
+        self.Selefante =  ws.PlaySound('selefante.wav', ws.SND_ASYNC)
+        self.Sgalo =  ws.PlaySound('sgalo.wav', ws.SND_ASYNC)
         
 #Fundo das telas!
         self.Imenu = PhotoImage(file="fundo_menu.gif")
@@ -43,7 +43,7 @@ class Imagens_sons:
         self.Iinterface = PhotoImage(file = "fundo_interface.gif")
         self.Iloja = PhotoImage(file = "fundo_loja.gif")
         self.Icarta = PhotoImage(file = "fundo_carta.gif")
-
+        
 
         
         
