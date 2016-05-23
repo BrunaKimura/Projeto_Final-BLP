@@ -1,16 +1,9 @@
 import numpy as np
 
-from Menu import Menu
-
-from Classe_Firebase import Firebase
 
 class Jogo():
 
-    def __init__(self):  
-        self.menu=Menu()
-        self.firebase=Firebase()
-        self.jogador=self.menu.login
-        self.moeda=self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/moedas".format(self.jogador))
+    def __init__(self):
         self.Lista_Animais=["Cachorro", "Gato", "Arara", "Vaca", "Macaco", "Pato", "Cavalo", "Porco"] #Lista de animais, já contém os animais iniciais.
         self.Lista_Escolhida=[]
         self.Lista_Dobrada=[]
