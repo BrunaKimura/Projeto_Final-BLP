@@ -76,7 +76,7 @@ class Menu():
             tkm.showinfo(title = "Login", message = "O Usuário Não Existe")
             
         
-        elif self.login.verifica(self.login, self.senha == -1:
+        elif self.login.verifica(self.login, self.senha) == -1:
             tkm.showinfo(title = "Login", message = "Senha Incorreta")
             
         
