@@ -1,9 +1,12 @@
 import numpy as np
 
+from Menu import Menu
+
 class Jogo():
 
-    def __init__(self):      
-        self.jogador=""        
+    def __init__(self):  
+        self.menu=Menu()
+        self.jogador=self.menu.   
         self.Lista_Animais=["Cachorro", "Gato", "Arara", "Vaca", "Macaco", "Pato", "Cavalo", "Porco"] #Lista de animais, já contém os animais iniciais.
         self.Lista_Escolhida=[]
         self.Lista_Dobrada=[]
