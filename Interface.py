@@ -6,6 +6,8 @@ from Classe_Jogar import Jogo
 
 from Classe_Comprar import Compras
 
+from imagem_som import Imagens_sons
+
 import tkinter.messagebox as tkm
 
 from time import sleep
@@ -20,7 +22,9 @@ class Tabuleiro():
         
         self.jogo = Jogo(self.login)
         self.jogo.embaralhar()
-                
+        
+        self.imagens = Imagens_sons()
+        
         self.compra = Compras(self.login)
         
 #Label com a imagem de um cifrão
