@@ -18,7 +18,7 @@ class Loja():
         self.label_cifrao.grid(row=0, column=0)
         
 #Label da contagem das moedas
-        self.label_moeda = tk.Label(self.loja, text = self.compras.moeda)
+        self.label_moeda = tk.Label(self.loja, text = self.compras.cofre)
         self.label_moeda.grid(row=0, column=1, sticky ='w')   
         
 #Botão para voltar ao jogo

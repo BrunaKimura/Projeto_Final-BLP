@@ -5,14 +5,14 @@ class Compras:
     
     def __init__(self, login):
         self.jogo= Jogo(login)
-        self.moeda=0
+        self.cofre=self.jogo.moeda
         self.preco=50
         self.compras=["Panda", "Leão", "Elefante", "Galo"]
         self.firebase=Firebase()     
         
     def comprar(self, linha, coluna):
-        if self.preco<=self.moeda:
-            self.moeda-=self.preco
+        if self.preco<=self.cofre:
+            self.cofre-=self.preco
             self.preco=len((self.jogo.Lista_Animais-8)*50+50) 
             if linha==2:
                 if coluna==0:
@@ -48,7 +48,7 @@ class Compras:
             return -1
             
     def somar_moeda(self):
-        self.moeda+=50
+        self.cofre+=50
             
             
             
