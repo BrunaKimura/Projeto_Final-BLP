@@ -1418,7 +1418,7 @@ class Tabuleiro():
         
             
     def abrir_loja(self):
-        self.lojinha = Loja()
+        self.lojinha = Loja(self.login)
         self.lojinha.iniciar()        
         
     def iniciar(self):
