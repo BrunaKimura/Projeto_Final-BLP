@@ -69,17 +69,18 @@ class Menu():
         
         
     def verificar_login(self):
-        self.login.verifica(self.entry_login.get(), self.entry_senha.get())
+        self.login = self.entry_login.get()
+        self.senha = self.entry_senha.get()
         
-        if self.login.verifica(self.entry_login.get(), self.entry_senha.get()) == 0:
+        if self.login.verifica(self.login, self.senha) == 0:
             tkm.showinfo(title = "Login", message = "O Usuário Não Existe")
             
         
-        elif self.login.verifica(self.entry_login.get(), self.entry_senha.get()) == -1:
+        elif self.login.verifica(self.login, self.senha == -1:
             tkm.showinfo(title = "Login", message = "Senha Incorreta")
             
         
-        elif self.login.verifica(self.entry_login.get(), self.entry_senha.get()) == 1:
+        elif self.login.verifica(self.login, self.senha) == 1:
             self.abrir_jogo()      
             
         
