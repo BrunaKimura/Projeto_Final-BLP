@@ -10,14 +10,12 @@ from Classe_Logar import Login
 
 import tkinter.messagebox as tkm
 
+ 
 
 
 class Menu():
     def __init__(self):
-#Janela 
-    
         
-            
         self.menu = tk.Tk()
         self.menu.title("Jogo da Memória ANIMAL")
                
@@ -49,7 +47,7 @@ class Menu():
         self.entry_senha.grid(row=5, column=0)
         
 #Botao para iniciar o jogo
-        self.botao_jogar = tk.Button(self.menu, text = 'Jogar', bg = 'brown')
+        self.botao_jogar = tk.Button(self.menu, text = 'Jogar', bg = 'brown', )
         self.botao_jogar.configure(command = self.verificar_login)
         self.botao_jogar.grid(row=6, column=0)
         
@@ -59,7 +57,8 @@ class Menu():
         
         self.botao_cadastrar = tk.Button(self.menu, text = 'Cadastrar', bg = 'gray')
         self.botao_cadastrar.configure(command = self.abrir_cadastro)
-        self.botao_cadastrar.grid(row=9, column=0) 
+        self.botao_cadastrar.grid(row=9, column=0)
+        
         
     def verificar_login(self):
         self.login.verifica(self.entry_login.get(), self.entry_senha.get())

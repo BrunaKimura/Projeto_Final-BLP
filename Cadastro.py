@@ -50,7 +50,7 @@ class Cadastro():
     def Cadastrar(self):
         self.objeto_cadastro.adicionar_cadastro(self.entry_login.get(), self.entry_senha.get(), self.entry_sexo.get(), self.entry_idade.get())
         
-        if self.objeto_cadastro.adicionar_cadastro(self.entry_login.get(), self.entry_senha.get(), self.entry_sexo.get(), self.entry_idade.get()) == 1:
+        if self.objeto_cadastro.adicionar_cadastro(self.entry_login.get(), self.entry_senha.get(), self.entry_sexo.get(), self.entry_idade.get()) == -1:
             tkm.showinfo(title = "Login", message = "Você Foi Cadastrado")
             self.cadastro.destroy()            
             
