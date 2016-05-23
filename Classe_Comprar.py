@@ -3,8 +3,8 @@ from Classe_Firebase import Firebase
 
 class Compras:
     
-    def __init__(self):
-        self.jogo= Jogo()
+    def __init__(self, login):
+        self.jogo= Jogo(login)
         self.moeda=0
         self.preco=50
         self.compras=["Panda", "Leão", "Elefante", "Galo"]

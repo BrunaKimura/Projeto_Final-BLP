@@ -14,17 +14,18 @@ from time import sleep
 
 
 class Tabuleiro(): 
-    def __init__(self):
+    def __init__(self, login):
+        self.login = login
         self.tabuleiro = tk.Tk()
         self.tabuleiro.title("Jogo da Memória ANIMAL")
         self.tabuleiro.resizable ( 0 ,  0 )
         
-        self.jogo = Jogo()
+        self.jogo = Jogo(self.login)
         self.jogo.embaralhar()
         
         self.imagens = Imagens_sons()
         
-        self.compra = Compras()
+        self.compra = Compras(self.login)
         
 #Label com a imagem de um cifrão
         self.label_cifrao = tk.Label(self.tabuleiro, text = '$', font ='Arial')
@@ -1428,7 +1429,5 @@ class Tabuleiro():
         self.tabuleiro.mainloop()
         
 
-        
-        
-x = Tabuleiro()
-x.iniciar()              
+
+            

@@ -16,13 +16,13 @@ from imagem_som import Imagens_sons
 
 
 class Menu():
-    def __init__(self):
-        
+    def __init__(self, login):
+        self.login= login
         self.menu = tk.Tk()
         self.menu.title("Jogo da Memória ANIMAL")
         self.menu.resizable ( 0 ,  0 )
                
-        self.login = Login()
+        self.Login = Login(login)
         
         self.imagem = Imagens_sons()
         
@@ -72,22 +72,22 @@ class Menu():
         self.login = self.entry_login.get()
         self.senha = self.entry_senha.get()
         
-        if self.login.verifica(self.login, self.senha) == 0:
+        if self.Login.verifica(self.login, self.senha) == 0:
             tkm.showinfo(title = "Login", message = "O Usuário Não Existe")
             
 
-        elif self.login.verifica(self.login, self.senha) == -1:
+        elif self.Login.verifica(self.login, self.senha) == -1:
             tkm.showinfo(title = "Login", message = "Senha Incorreta")
             
         
-        elif self.login.verifica(self.login, self.senha) == 1:
+        elif self.Login.verifica(self.login, self.senha) == 1:
             self.abrir_jogo()      
             
         
         
     def abrir_jogo(self):
         self.menu.destroy()
-        self.joguinho = Tabuleiro()
+        self.joguinho = Tabuleiro(self.login)
         self.joguinho.iniciar()       
         
                    
@@ -99,6 +99,6 @@ class Menu():
         self.menu.geometry('180x230')
         self.menu.mainloop()
         
-entrada = Menu()
+entrada = Menu("start")
 entrada.iniciar()
     
