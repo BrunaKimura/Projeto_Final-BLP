@@ -145,6 +145,22 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[0] == "Porco":
             self.botao1.configure(image = self.imagens.Iporco, state = "disabled", width = 102, height = 95)
             Som.play_music(Sporco.play)
+        
+        elif self.jogo.Lista_Embaralhada[0] == "Elefante":
+            self.botao1.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[0] == "Leao":
+            self.botao1.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[0] == "Panda":
+            self.botao1.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[0] == "Galo":
+            self.botao1.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
                     
         
 #Código para verificar se as duas imagens são iguais
@@ -205,6 +221,22 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[1] == "Porco":
             self.botao2.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
             Som.play_music(Sporco.play)
+            
+        elif self.jogo.Lista_Embaralhada[1] == "Elefante":
+            self.botao2.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[1] == "Leao":
+            self.botao2.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[1] == "Panda":
+            self.botao2.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[1] == "Galo":
+            self.botao2.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
  
             
         
@@ -267,6 +299,22 @@ class Tabuleiro():
             self.botao3.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95) 
             Som.play_music(Sporco.play)
             
+        elif self.jogo.Lista_Embaralhada[2] == "Elefante":
+            self.botao3.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[2] == "Leao":
+            self.botao3.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[2] == "Panda":
+            self.botao3.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[2] == "Galo":
+            self.botao3.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
+            
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -326,6 +374,22 @@ class Tabuleiro():
             self.botao4.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
             Som.play_music(Sporco.play)
             
+        elif self.jogo.Lista_Embaralhada[3] == "Elefante":
+            self.botao4.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[3] == "Leao":
+            self.botao4.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[3] == "Panda":
+            self.botao4.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[3] == "Galo":
+            self.botao4.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
+            
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -383,6 +447,22 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[4] == "Porco":
             self.botao5.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
             Som.play_music(Sporco.play)
+            
+        elif self.jogo.Lista_Embaralhada[4] == "Elefante":
+            self.botao5.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[4] == "Leao":
+            self.botao5.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[4] == "Panda":
+            self.botao5.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[4] == "Galo":
+            self.botao5.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -440,6 +520,22 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[5] == "Porco":
             self.botao6.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
             Som.play_music(Sporco.play)
+            
+        elif self.jogo.Lista_Embaralhada[5] == "Elefante":
+            self.botao6.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[5] == "Leao":
+            self.botao6.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[5] == "Panda":
+            self.botao6.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[5] == "Galo":
+            self.botao6.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -497,6 +593,22 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[6] == "Porco":
             self.botao7.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
             Som.play_music(Sporco.play)
+            
+        elif self.jogo.Lista_Embaralhada[6] == "Elefante":
+            self.botao7.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[6] == "Leao":
+            self.botao7.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[6] == "Panda":
+            self.botao7.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[6] == "Galo":
+            self.botao7.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -554,6 +666,22 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[7] == "Porco":
             self.botao8.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
             Som.play_music(Sporco.play)
+            
+        elif self.jogo.Lista_Embaralhada[7] == "Elefante":
+            self.botao8.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[7] == "Leao":
+            self.botao8.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[7] == "Panda":
+            self.botao8.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[7] == "Galo":
+            self.botao8.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -611,6 +739,22 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[8] == "Porco":
             self.botao9.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
             Som.play_music(Sporco.play)
+        
+        elif self.jogo.Lista_Embaralhada[8] == "Elefante":
+            self.botao9.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[8] == "Leao":
+            self.botao9.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[8] == "Panda":
+            self.botao9.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[8] == "Galo":
+            self.botao9.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -668,6 +812,22 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[9] == "Porco":
             self.botao10.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
             Som.play_music(Sporco.play)
+            
+        elif self.jogo.Lista_Embaralhada[9] == "Elefante":
+            self.botao10.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[9] == "Leao":
+            self.botao10.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[9] == "Panda":
+            self.botao10.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[9] == "Galo":
+            self.botao10.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -725,6 +885,22 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[10] == "Porco":
             self.botao11.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
             Som.play_music(Sporco.play)
+            
+        elif self.jogo.Lista_Embaralhada[10] == "Elefante":
+            self.botao11.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[10] == "Leao":
+            self.botao11.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[10] == "Panda":
+            self.botao11.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[10] == "Galo":
+            self.botao11.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
 
 
 #Código para verificar se as duas imagens são iguais
@@ -783,6 +959,22 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[11] == "Porco":
             self.botao12.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
             Som.play_music(Sporco.play)
+            
+        elif self.jogo.Lista_Embaralhada[11] == "Elefante":
+            self.botao12.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[11] == "Leao":
+            self.botao12.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[11] == "Panda":
+            self.botao12.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[11] == "Galo":
+            self.botao12.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -840,6 +1032,22 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[12] == "Porco":
             self.botao13.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
             Som.play_music(Sporco.play)
+            
+        elif self.jogo.Lista_Embaralhada[12] == "Elefante":
+            self.botao13.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[12] == "Leao":
+            self.botao13.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[12] == "Panda":
+            self.botao13.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[12] == "Galo":
+            self.botao13.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -897,6 +1105,22 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[13] == "Porco":
             self.botao14.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
             Som.play_music(Sporco.play)
+            
+        elif self.jogo.Lista_Embaralhada[13] == "Elefante":
+            self.botao14.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[13] == "Leao":
+            self.botao14.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[13] == "Panda":
+            self.botao14.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[13] == "Galo":
+            self.botao14.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -954,6 +1178,22 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[14] == "Porco":
             self.botao15.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
             Som.play_music(Sporco.play)
+            
+        elif self.jogo.Lista_Embaralhada[14] == "Elefante":
+            self.botao15.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[14] == "Leao":
+            self.botao15.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[14] == "Panda":
+            self.botao15.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[14] == "Galo":
+            self.botao15.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -1012,6 +1252,22 @@ class Tabuleiro():
         elif self.jogo.Lista_Embaralhada[15] == "Porco":
             self.botao16.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
             Som.play_music(Sporco.play)
+            
+        elif self.jogo.Lista_Embaralhada[15] == "Elefante":
+            self.botao16.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
+            Som.play_music(Selefante.play)
+            
+        elif self.jogo.Lista_Embaralhada[15] == "Leao":
+            self.botao16.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sleao.play)
+            
+        elif self.jogo.Lista_Embaralhada[15] == "Panda":
+            self.botao16.configure(image = self.imagens.Ipanda, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spanda.play)
+            
+        elif self.jogo.Lista_Embaralhada[15] == "Galo":
+            self.botao16.configure(image = self.imagens.Igalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgalo.play)
 
                     
 #Código para verificar se as duas imagens são iguais
