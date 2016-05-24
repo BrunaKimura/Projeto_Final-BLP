@@ -40,7 +40,7 @@ class Firebase:
    
    #tirar moedas na compra
     def comprar (self, login, moeda):
-       a = self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/moedas".format(login))
+       a = eval(self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/moedas".format(login)))
        eval(self.memoria_firecall.put_sync(point="/Dados_usuario/{0}/moedas".format(login), data = a - moeda))
        
   
@@ -52,7 +52,7 @@ class Firebase:
         
     #guardar os animais já comprados
     def Compras (self, login, animal):
-        A = self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/compras".format(login))
+        A = eval(self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/compras".format(login)))
         if animal in A:
             return -1
         else:
