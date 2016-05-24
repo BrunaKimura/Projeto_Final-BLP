@@ -35,7 +35,7 @@ class Firebase:
 
    #armazenar moedas
     def somar_moedas(self, login, moeda):
-        a = self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/moedas".format(login))
+        a = eval(self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/moedas".format(login)))
         eval(self.memoria_firecall.put_sync(point="/Dados_usuario/{0}/moedas".format(login), data = a + moeda))
    
    #tirar moedas na compra
