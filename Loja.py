@@ -32,16 +32,16 @@ class Loja():
         self.label_ajuste1 = tk.Label(self.loja, text = '')
         self.label_ajuste1.grid(row=1, column=0, columnspan=3)
         
-        self.label_preco1 = tk.Label(self.loja, text = 'Preço')
+        self.label_preco1 = tk.Label(self.loja, text = self.compras.preco)
         self.label_preco1.grid(row=3, column=0, columnspan=1 )
         
-        self.label_preco2 = tk.Label(self.loja, text = 'Preço')
+        self.label_preco2 = tk.Label(self.loja, text = self.compras.preco)
         self.label_preco2.grid(row=3, column=2, columnspan=1 )
         
-        self.label_preco3 = tk.Label(self.loja, text = 'Preço')
+        self.label_preco3 = tk.Label(self.loja, text = self.compras.preco)
         self.label_preco3.grid(row=5, column=0, columnspan=1 )
         
-        self.label_preco3 = tk.Label(self.loja, text = 'Preço')
+        self.label_preco3 = tk.Label(self.loja, text = self.compras.preco)
         self.label_preco3.grid(row=5, column=2, columnspan=1 )
                 
 #Botões para comprar
@@ -64,7 +64,12 @@ class Loja():
         
     def click1(self):
         if self.compras.comprar(0,0) == 1:
-            self.botao1.configure(state = 'disabled')
+            self.botao1.configure(state = 'disabled') 
+            
+            self.label_preco1.configure(text = self.compras.preco)
+            self.label_preco2.configure(text = self.compras.preco)
+            self.label_preco3.configure(text = self.compras.preco)
+            self.label_preco4.configure(text = self.compras.preco)
             
         else: 
             tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
@@ -73,20 +78,35 @@ class Loja():
     def click2(self):
         if self.compras.comprar(0,1) == 1:
             self.botao2.configure(state = 'disabled')
+                
+            self.label_preco1.configure(text = self.compras.preco)
+            self.label_preco2.configure(text = self.compras.preco)
+            self.label_preco3.configure(text = self.compras.preco)
+            self.label_preco4.configure(text = self.compras.preco)
             
         else: 
             tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
         
     def click3(self):
         if self.compras.comprar(1,0) == 1:
-            self.botao3.configure(state = 'disabled')
+            self.botao3.configure(state = 'disabled') 
+            
+            self.label_preco1.configure(text = self.compras.preco)
+            self.label_preco2.configure(text = self.compras.preco)
+            self.label_preco3.configure(text = self.compras.preco)
+            self.label_preco4.configure(text = self.compras.preco)
             
         else: 
             tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
         
     def click4(self):
         if self.compras.comprar(1,1) == 1:
-            self.botao4.configure(state = 'disabled') 
+            self.botao4.configure(state = 'disabled')  
+            
+            self.label_preco1.configure(text = self.compras.preco)
+            self.label_preco2.configure(text = self.compras.preco)
+            self.label_preco3.configure(text = self.compras.preco)
+            self.label_preco4.configure(text = self.compras.preco)
             
         else: 
             tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
@@ -101,3 +121,5 @@ class Loja():
         self.loja.mainloop()
 
         
+x = Loja("stard")
+x.iniciar()
