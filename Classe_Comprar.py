@@ -38,6 +38,5 @@ class Compras:
             
     def somar_moeda(self):
         self.cofre+=50
-        print(self.cofre)
-        print(self.preco)
+        
      

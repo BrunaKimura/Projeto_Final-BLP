@@ -26,6 +26,13 @@ class Firebase:
         else:
             return -1
         
+  #para que seja possivel mostrar a quantidade de moeda no jogo
+    def moedas (self, login):
+        a = eval(self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/moedas".format(login)))
+        return a
+        
+
+
    #armazenar moedas
     def somar_moedas(self, login, moeda):
         a = self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/moedas".format(login))
