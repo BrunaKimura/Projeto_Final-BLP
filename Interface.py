@@ -12,6 +12,8 @@ import tkinter.messagebox as tkm
 
 from time import sleep
 
+from classe_som import *
+
 
 class Tabuleiro(): 
     def __init__(self, login):
