@@ -304,21 +304,27 @@ class Tabuleiro():
             
         elif self.jogo.Lista_Embaralhada[3] == "Arara":
             self.botao4.configure(image = self.imagens.Iarara, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[3] == "Vaca":
             self.botao4.configure(image = self.imagens.Ivaca, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[3]== "Macaco":
             self.botao4.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[3] == "Pato":
             self.botao4.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[3]== "Cavalo":
             self.botao4.configure(image = self.imagens.Icavalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[3] == "Porco":
             self.botao4.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sporco.play)
             
 
 #Código para verificar se as duas imagens são iguais
