@@ -4,6 +4,8 @@ from imagem_som import Imagens_sons
 
 from Classe_Comprar import Compras
 
+import tkinter.messagebox as tkm
+
 class Loja():
     def __init__(self, login):
         self.login = login        
@@ -61,16 +63,33 @@ class Loja():
         self.botao4.grid(row=4, column=2 )
         
     def click1(self):
-        self.botao1.configure(state = 'disabled')
+        if self.compras.comprar(0,0) == 1:
+            self.botao1.configure(state = 'disabled')
+            
+        else: 
+            tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
+            
         
     def click2(self):
-        self.botao2.configure(state = 'disabled')
+        if self.compras.comprar(0,1) == 1:
+            self.botao2.configure(state = 'disabled')
+            
+        else: 
+            tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
         
     def click3(self):
-        self.botao3.configure(state = 'disabled')
+        if self.compras.comprar(1,0) == 1:
+            self.botao3.configure(state = 'disabled')
+            
+        else: 
+            tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
         
     def click4(self):
-        self.botao4.configure(state = 'disabled')       
+        if self.compras.comprar(1,1) == 1:
+            self.botao4.configure(state = 'disabled') 
+            
+        else: 
+            tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
     
         
     def fechar_janela(self):
