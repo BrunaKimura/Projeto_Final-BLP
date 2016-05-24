@@ -116,27 +116,35 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão        
         if self.jogo.Lista_Embaralhada[0]== "Cachorro":
             self.botao1.configure(image = self.imagens.Icachorro, state = "disabled", width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[0] == "Gato":
             self.botao1.configure(image = self.imagens.Igato, state = "disabled", width = 102, height = 95)
+            Som.play_music(Sgato.play)
             
         elif self.jogo.Lista_Embaralhada[0] == "Arara":
             self.botao1.configure(image = self.imagens.Iarara, state = "disabled", width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[0] == "Vaca":
             self.botao1.configure(image = self.imagens.Ivaca, state = "disabled", width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[0]== "Macaco":
             self.botao1.configure(image = self.imagens.Imacaco, state = "disabled", width = 102, height = 95)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[0] == "Pato":
             self.botao1.configure(image = self.imagens.Ipato, state = "disabled", width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[0]== "Cavalo":
             self.botao1.configure(image = self.imagens.Icavalo, state = "disabled", width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[0] == "Porco":
             self.botao1.configure(image = self.imagens.Iporco, state = "disabled", width = 102, height = 95)
+            Som.play_music(Sporco.play)
                     
         
 #Código para verificar se as duas imagens são iguais
@@ -155,7 +163,6 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
-            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
         
@@ -167,27 +174,35 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[1]== "Cachorro":
             self.botao2.configure(image = self.imagens.Icachorro, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[1] == "Gato":
             self.botao2.configure(image = self.imagens.Igato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgato.play)
             
         elif self.jogo.Lista_Embaralhada[1] == "Arara":
             self.botao2.configure(image = self.imagens.Iarara, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[1] == "Vaca":
             self.botao2.configure(image = self.imagens.Ivaca, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[1]== "Macaco":
             self.botao2.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[1] == "Pato":
             self.botao2.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[1]== "Cavalo":
             self.botao2.configure(image = self.imagens.Icavalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[1] == "Porco":
             self.botao2.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sporco.play)
  
             
         
@@ -207,7 +222,6 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
-            self.compra.somar_moeda()
             self.jogo.embaralhar()
         
     def click3(self):
@@ -219,27 +233,35 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[2]== "Cachorro":
             self.botao3.configure(image = self.imagens.Icachorro, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[2] == "Gato":
             self.botao3.configure(image = self.imagens.Igato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgato.play)
             
         elif self.jogo.Lista_Embaralhada[2] == "Arara":
             self.botao3.configure(image = self.imagens.Iarara, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[2] == "Vaca":
             self.botao3.configure(image = self.imagens.Ivaca, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[2]== "Macaco":
             self.botao3.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[2] == "Pato":
             self.botao3.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[2]== "Cavalo":
             self.botao3.configure(image = self.imagens.Icavalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[2] == "Porco":
-            self.botao3.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)  
+            self.botao3.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95) 
+            Som.play_music(Sporco.play)
             
 
 #Código para verificar se as duas imagens são iguais
@@ -258,7 +280,6 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
-            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click4(self):
@@ -269,6 +290,7 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[3]== "Cachorro":
             self.botao4.configure(image = self.imagens.Icachorro, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[3] == "Gato":
             self.botao4.configure(image = self.imagens.Igato, state = "disabled",width = 102, height = 95)
@@ -317,27 +339,35 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[4]== "Cachorro":
             self.botao5.configure(image = self.imagens.Icachorro, state = "disabled" ,width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[4] == "Gato":
             self.botao5.configure(image = self.imagens.Igato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgato.play)
             
         elif self.jogo.Lista_Embaralhada[4] == "Arara":
             self.botao5.configure(image = self.imagens.Iarara, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[4] == "Vaca":
             self.botao5.configure(image = self.imagens.Ivaca, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[4]== "Macaco":
             self.botao5.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[4] == "Pato":
             self.botao5.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[4]== "Cavalo":
             self.botao5.configure(image = self.imagens.Icavalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[4] == "Porco":
-            self.botao5.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95) 
+            self.botao5.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sporco.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -354,7 +384,6 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
-            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click6(self):
@@ -365,27 +394,35 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão          
         if self.jogo.Lista_Embaralhada[5]== "Cachorro":
             self.botao6.configure(image = self.imagens.Icachorro, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[5] == "Gato":
             self.botao6.configure(image = self.imagens.Igato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgato.play)
             
         elif self.jogo.Lista_Embaralhada[5] == "Arara":
             self.botao6.configure(image = self.imagens.Iarara, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[5] == "Vaca":
             self.botao6.configure(image = self.imagens.Ivaca, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[5]== "Macaco":
             self.botao6.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[5] == "Pato":
             self.botao6.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[5]== "Cavalo":
             self.botao6.configure(image = self.imagens.Icavalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[5] == "Porco":
             self.botao6.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sporco.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -402,7 +439,6 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
-            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click7(self):
@@ -413,27 +449,35 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[6]== "Cachorro":
             self.botao7.configure(image = self.imagens.Icachorro, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[6] == "Gato":
             self.botao7.configure(image = self.imagens.Igato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgato.play)
             
         elif self.jogo.Lista_Embaralhada[6] == "Arara":
             self.botao7.configure(image = self.imagens.Iarara, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[6] == "Vaca":
             self.botao7.configure(image = self.imagens.Ivaca, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[6]== "Macaco":
             self.botao7.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[6] == "Pato":
             self.botao7.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[6]== "Cavalo":
             self.botao7.configure(image = self.imagens.Icavalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[6] == "Porco":
             self.botao7.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sporco.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -450,7 +494,6 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
-            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click8(self):
@@ -461,27 +504,35 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[7]== "Cachorro":
             self.botao8.configure(image = self.imagens.Icachorro, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[7] == "Gato":
             self.botao8.configure(image = self.imagens.Igato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgato.play)
             
         elif self.jogo.Lista_Embaralhada[7] == "Arara":
             self.botao8.configure(image = self.imagens.Iarara, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[7] == "Vaca":
             self.botao8.configure(image = self.imagens.Ivaca, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[7]== "Macaco":
             self.botao8.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[7] == "Pato":
             self.botao8.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[7]== "Cavalo":
             self.botao8.configure(image = self.imagens.Icavalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[7] == "Porco":
             self.botao8.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sporco.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -498,7 +549,6 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
-            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click9(self):
@@ -509,27 +559,35 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[8]== "Cachorro":
             self.botao9.configure(image = self.imagens.Icachorro, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[8] == "Gato":
             self.botao9.configure(image = self.imagens.Igato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgato.play)
             
         elif self.jogo.Lista_Embaralhada[8] == "Arara":
             self.botao9.configure(image = self.imagens.Iarara, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[8] == "Vaca":
             self.botao9.configure(image = self.imagens.Ivaca, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[8]== "Macaco":
             self.botao9.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[8] == "Pato":
             self.botao9.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[8]== "Cavalo":
             self.botao9.configure(image = self.imagens.Icavalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[8] == "Porco":
             self.botao9.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sporco.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -546,7 +604,6 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
-            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click10(self):
@@ -557,27 +614,35 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[9]== "Cachorro":
             self.botao10.configure(image = self.imagens.Icachorro, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[9] == "Gato":
             self.botao10.configure(image = self.imagens.Igato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgato.play)
             
         elif self.jogo.Lista_Embaralhada[9] == "Arara":
             self.botao10.configure(image = self.imagens.Iarara, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[9] == "Vaca":
             self.botao10.configure(image = self.imagens.Ivaca, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[9]== "Macaco":
             self.botao10.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[9] == "Pato":
             self.botao10.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[9]== "Cavalo":
             self.botao10.configure(image = self.imagens.Icavalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[9] == "Porco":
             self.botao10.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sporco.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -594,7 +659,6 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
-            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click11(self):
@@ -605,27 +669,35 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[10]== "Cachorro":
             self.botao11.configure(image = self.imagens.Icachorro, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[10] == "Gato":
             self.botao11.configure(image = self.imagens.Igato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgato.play)
             
         elif self.jogo.Lista_Embaralhada[10] == "Arara":
             self.botao11.configure(image = self.imagens.Iarara, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[10] == "Vaca":
             self.botao11.configure(image = self.imagens.Ivaca, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[10]== "Macaco":
             self.botao11.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[10] == "Pato":
             self.botao11.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[10]== "Cavalo":
             self.botao11.configure(image = self.imagens.Icavalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[10] == "Porco":
             self.botao11.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sporco.play)
 
 
 #Código para verificar se as duas imagens são iguais
@@ -643,7 +715,6 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
-            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click12(self):
@@ -654,27 +725,35 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[11]== "Cachorro":
             self.botao12.configure(image = self.imagens.Icachorro, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[11] == "Gato":
             self.botao12.configure(image = self.imagens.Igato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgato.play)
             
         elif self.jogo.Lista_Embaralhada[11] == "Arara":
             self.botao12.configure(image = self.imagens.Iarara, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[11] == "Vaca":
             self.botao12.configure(image = self.imagens.Ivaca, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[11]== "Macaco":
             self.botao12.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[11] == "Pato":
             self.botao12.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[11]== "Cavalo":
             self.botao12.configure(image = self.imagens.Icavalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[11] == "Porco":
             self.botao12.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sporco.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -691,7 +770,6 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
-            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click13(self):
@@ -702,27 +780,35 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[12]== "Cachorro":
             self.botao13.configure(image = self.imagens.Icachorro, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[12] == "Gato":
             self.botao13.configure(image = self.imagens.Igato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgato.play)
             
         elif self.jogo.Lista_Embaralhada[12] == "Arara":
             self.botao13.configure(image = self.imagens.Iarara, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[12] == "Vaca":
             self.botao13.configure(image = self.imagens.Ivaca, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[12]== "Macaco":
             self.botao13.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[12] == "Pato":
             self.botao13.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[12]== "Cavalo":
             self.botao13.configure(image = self.imagens.Icavalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[12] == "Porco":
             self.botao13.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sporco.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -739,7 +825,6 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
-            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click14(self):
@@ -750,27 +835,35 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[13]== "Cachorro":
             self.botao14.configure(image = self.imagens.Icachorro, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[13] == "Gato":
             self.botao14.configure(image = self.imagens.Igato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgato.play)
             
         elif self.jogo.Lista_Embaralhada[13] == "Arara":
             self.botao14.configure(image = self.imagens.Iarara, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[13] == "Vaca":
             self.botao14.configure(image = self.imagens.Ivaca, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[13]== "Macaco":
             self.botao14.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[13] == "Pato":
             self.botao14.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[13]== "Cavalo":
             self.botao14.configure(image = self.imagens.Icavalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[13] == "Porco":
             self.botao14.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sporco.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -787,7 +880,6 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
-            self.compra.somar_moeda()
             self.jogo.embaralhar()
             
     def click15(self):
@@ -798,27 +890,35 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão  
         if self.jogo.Lista_Embaralhada[14]== "Cachorro":
             self.botao15.configure(image = self.imagens.Icachorro, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[14] == "Gato":
             self.botao15.configure(image = self.imagens.Igato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgato.play)
             
         elif self.jogo.Lista_Embaralhada[14] == "Arara":
             self.botao15.configure(image = self.imagens.Iarara, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[14] == "Vaca":
             self.botao15.configure(image = self.imagens.Ivaca, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[14]== "Macaco":
             self.botao15.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[14] == "Pato":
             self.botao15.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[14]== "Cavalo":
             self.botao15.configure(image = self.imagens.Icavalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[14] == "Porco":
             self.botao15.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sporco.play)
 
 #Código para verificar se as duas imagens são iguais
         if self.jogo.verifica_jogada(self.jogo.Lista_Jogada) == -1:
@@ -835,8 +935,8 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
-            self.compra.somar_moeda()
             self.jogo.embaralhar()
+            print (self.jogo.Tabuleiro)
             
     def click16(self):
         self.jogo.recebe_jogada(3,3)
@@ -846,27 +946,35 @@ class Tabuleiro():
 #Código para aparecer a imagem no botão       
         if self.jogo.Lista_Embaralhada[15]== "Cachorro":
             self.botao16.configure(image = self.imagens.Icachorro, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scachorro.play)
             
         elif self.jogo.Lista_Embaralhada[15] == "Gato":
             self.botao16.configure(image = self.imagens.Igato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sgato.play)
             
         elif self.jogo.Lista_Embaralhada[15] == "Arara":
             self.botao16.configure(image = self.imagens.Iarara, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sarara.play)
             
         elif self.jogo.Lista_Embaralhada[15] == "Vaca":
             self.botao16.configure(image = self.imagens.Ivaca, state = "disabled",width = 102, height = 95)
+            Som.play_music(Svaca.play)
             
         elif self.jogo.Lista_Embaralhada[15]== "Macaco":
             self.botao16.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[15] == "Pato":
             self.botao16.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
+            Som.play_music(Spato.play)
             
         elif self.jogo.Lista_Embaralhada[15]== "Cavalo":
             self.botao16.configure(image = self.imagens.Icavalo, state = "disabled",width = 102, height = 95)
+            Som.play_music(Scavalo.play)
        
         elif self.jogo.Lista_Embaralhada[15] == "Porco":
             self.botao16.configure(image = self.imagens.Iporco, state = "disabled",width = 102, height = 95)
+            Som.play_music(Sporco.play)
 
                     
 #Código para verificar se as duas imagens são iguais
@@ -885,8 +993,8 @@ class Tabuleiro():
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
-            self.compra.somar_moeda()
             self.jogo.embaralhar()
+            print (self.jogo.Tabuleiro)
             
     def limpar_painel(self):
         self.botao1.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)

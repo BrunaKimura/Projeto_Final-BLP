@@ -4,6 +4,8 @@ from imagem_som import Imagens_sons
 
 from Classe_Comprar import Compras
 
+import tkinter.messagebox as tkm
+
 class Loja():
     def __init__(self, login):
         self.login = login        
@@ -30,16 +32,16 @@ class Loja():
         self.label_ajuste1 = tk.Label(self.loja, text = '')
         self.label_ajuste1.grid(row=1, column=0, columnspan=3)
         
-        self.label_preco1 = tk.Label(self.loja, text = 'Preço')
+        self.label_preco1 = tk.Label(self.loja, text = self.compras.preco)
         self.label_preco1.grid(row=3, column=0, columnspan=1 )
         
-        self.label_preco2 = tk.Label(self.loja, text = 'Preço')
+        self.label_preco2 = tk.Label(self.loja, text = self.compras.preco)
         self.label_preco2.grid(row=3, column=2, columnspan=1 )
         
-        self.label_preco3 = tk.Label(self.loja, text = 'Preço')
+        self.label_preco3 = tk.Label(self.loja, text = self.compras.preco)
         self.label_preco3.grid(row=5, column=0, columnspan=1 )
         
-        self.label_preco3 = tk.Label(self.loja, text = 'Preço')
+        self.label_preco3 = tk.Label(self.loja, text = self.compras.preco)
         self.label_preco3.grid(row=5, column=2, columnspan=1 )
                 
 #Botões para comprar
@@ -61,16 +63,53 @@ class Loja():
         self.botao4.grid(row=4, column=2 )
         
     def click1(self):
-        self.botao1.configure(state = 'disabled')
+        if self.compras.comprar(0,0) == 1:
+            self.botao1.configure(state = 'disabled') 
+            
+            self.label_preco1.configure(text = self.compras.preco)
+            self.label_preco2.configure(text = self.compras.preco)
+            self.label_preco3.configure(text = self.compras.preco)
+            self.label_preco4.configure(text = self.compras.preco)
+            
+        else: 
+            tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
+            
         
     def click2(self):
-        self.botao2.configure(state = 'disabled')
+        if self.compras.comprar(0,1) == 1:
+            self.botao2.configure(state = 'disabled')
+                
+            self.label_preco1.configure(text = self.compras.preco)
+            self.label_preco2.configure(text = self.compras.preco)
+            self.label_preco3.configure(text = self.compras.preco)
+            self.label_preco4.configure(text = self.compras.preco)
+            
+        else: 
+            tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
         
     def click3(self):
-        self.botao3.configure(state = 'disabled')
+        if self.compras.comprar(1,0) == 1:
+            self.botao3.configure(state = 'disabled') 
+            
+            self.label_preco1.configure(text = self.compras.preco)
+            self.label_preco2.configure(text = self.compras.preco)
+            self.label_preco3.configure(text = self.compras.preco)
+            self.label_preco4.configure(text = self.compras.preco)
+            
+        else: 
+            tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
         
     def click4(self):
-        self.botao4.configure(state = 'disabled')       
+        if self.compras.comprar(1,1) == 1:
+            self.botao4.configure(state = 'disabled')  
+            
+            self.label_preco1.configure(text = self.compras.preco)
+            self.label_preco2.configure(text = self.compras.preco)
+            self.label_preco3.configure(text = self.compras.preco)
+            self.label_preco4.configure(text = self.compras.preco)
+            
+        else: 
+            tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
     
         
     def fechar_janela(self):
@@ -80,5 +119,3 @@ class Loja():
     def iniciar(self):
         self.loja.geometry('220x340')
         self.loja.mainloop()
-
-        
