@@ -7,12 +7,12 @@ class Compras:
         self.jogo= Jogo(login)
         self.firebase=Firebase() 
         self.cofre=0
-        self.preco=500
+        self.preco=200
         self.ganho=50
         self.compras=["Panda", "Leão", "Elefante", "Galo"]   
         
     def comprar(self, linha, coluna):
-        if self.preco<=self.cofre:
+        if self.cofre>=self.preco:
             self.cofre-=self.preco
             self.preco+=500
             if linha==0:
