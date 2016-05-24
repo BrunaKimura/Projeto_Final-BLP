@@ -72,6 +72,14 @@ class Jogo():
             return "Cavalo"
         elif self.Tabuleiro[linha][coluna]=="Porco":
             return "Porco"
+        elif self.Tabuleiro[linha][coluna]=="Panda":
+            return "Panda"
+        elif self.Tabuleiro[linha][coluna]=="Leão":
+            return "Leão"
+        elif self.Tabuleiro[linha][coluna]=="Elefante":
+            return "Elefante"
+        elif self.Tabuleiro[linha][coluna]=="Galo":
+            return "Galo"
             
     def verifica_jogada(self, Lista_Jogada):
         if len(self.Lista_Jogada)==0:
