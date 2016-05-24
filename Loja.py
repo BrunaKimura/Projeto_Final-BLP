@@ -41,8 +41,8 @@ class Loja():
         self.label_preco3 = tk.Label(self.loja, text = self.compras.preco)
         self.label_preco3.grid(row=5, column=0, columnspan=1 )
         
-        self.label_preco3 = tk.Label(self.loja, text = self.compras.preco)
-        self.label_preco3.grid(row=5, column=2, columnspan=1 )
+        self.label_preco4 = tk.Label(self.loja, text = self.compras.preco)
+        self.label_preco4.grid(row=5, column=2, columnspan=1 )
                 
 #Botões para comprar
         self.botao1 = tk.Button(self.loja, image = self.imagem.Ileao, height = 102, width = 95)
