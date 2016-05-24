@@ -34,8 +34,8 @@ class Tabuleiro():
         self.label_cifrao.grid(row=0, column=0)
         
 #Label da contagem das moedas
-        self.label_moeda = tk.Label(self.tabuleiro, text = 'Moedas')
-        self.label_moeda.grid(row=0, column=1,sticky='w')
+        self.label_moeda = tk.Label(self.tabuleiro, text = self.compra.cofre)
+        self.label_moeda.grid(row=0, column=1)
 
 #Botão para ir à loja
         self.botao_loja = tk.Button(self.tabuleiro, text = 'LOJA', height = 3, width = 30, bg = 'purple')
@@ -160,6 +160,7 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -219,6 +220,7 @@ class Tabuleiro():
                         
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -277,6 +279,7 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -326,6 +329,7 @@ class Tabuleiro():
                         
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -380,7 +384,8 @@ class Tabuleiro():
             self.jogo.limpa_jogada()
 
         if self.jogo.verifica_fim() == 1:
-            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")            
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou") 
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -435,7 +440,8 @@ class Tabuleiro():
             self.jogo.limpa_jogada()
             
         if self.jogo.verifica_fim() == 1:
-            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")        
+            tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -491,6 +497,7 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -546,6 +553,7 @@ class Tabuleiro():
                     
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -601,6 +609,7 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -656,6 +665,7 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -712,6 +722,7 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -767,6 +778,7 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -822,6 +834,7 @@ class Tabuleiro():
                     
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -877,6 +890,7 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -932,11 +946,12 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
             self.jogo.embaralhar()
-            print (self.jogo.Tabuleiro)
+            
             
     def click16(self):
         self.jogo.recebe_jogada(3,3)
@@ -990,11 +1005,12 @@ class Tabuleiro():
             
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
+            self.compra.somar_moeda()
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
             self.jogo.embaralhar()
-            print (self.jogo.Tabuleiro)
+           
             
     def limpar_painel(self):
         self.botao1.configure(image = self.imagens.Icarta, state="normal", height = 95, width = 102)
