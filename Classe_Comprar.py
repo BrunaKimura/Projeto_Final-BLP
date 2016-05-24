@@ -37,6 +37,6 @@ class Compras:
             return -1
             
     def somar_moeda(self):
-        print(self.cofre)
-        self.cofre+=50
+        if self.jogo.verifica_fim==1:
+            self.cofre+=50
      
