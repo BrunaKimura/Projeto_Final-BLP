@@ -71,8 +71,11 @@ class Loja():
             self.label_preco3.configure(text = self.compras.preco)
             self.label_preco4.configure(text = self.compras.preco)
             
+            self.label_moeda.configure(text = self.compras.cofre)
+            
         else: 
             tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
+            self.loja.destroy()
             
         
     def click2(self):
@@ -84,8 +87,11 @@ class Loja():
             self.label_preco3.configure(text = self.compras.preco)
             self.label_preco4.configure(text = self.compras.preco)
             
+            self.label_moeda.configure(text = self.compras.cofre)
+            
         else: 
             tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
+            self.loja.destroy()
         
     def click3(self):
         if self.compras.comprar(1,0) == 1:
@@ -96,8 +102,11 @@ class Loja():
             self.label_preco3.configure(text = self.compras.preco)
             self.label_preco4.configure(text = self.compras.preco)
             
+            self.label_moeda.configure(text = self.compras.cofre)
+            
         else: 
             tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
+            self.loja.destroy()
         
     def click4(self):
         if self.compras.comprar(1,1) == 1:
@@ -108,8 +117,11 @@ class Loja():
             self.label_preco3.configure(text = self.compras.preco)
             self.label_preco4.configure(text = self.compras.preco)
             
+            self.label_moeda.configure(text = self.compras.cofre)
+            
         else: 
             tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
+            self.loja.destroy()
     
         
     def fechar_janela(self):
