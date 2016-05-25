@@ -73,6 +73,8 @@ class Loja():
             
             self.label_moeda.configure(text = self.compras.cofre)
             
+            return 1
+            
         else: 
             tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
             self.loja.destroy()
@@ -89,6 +91,8 @@ class Loja():
             
             self.label_moeda.configure(text = self.compras.cofre)
             
+            return 1
+            
         else: 
             tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
             self.loja.destroy()
@@ -104,6 +108,8 @@ class Loja():
             
             self.label_moeda.configure(text = self.compras.cofre)
             
+            return 1
+            
         else: 
             tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
             self.loja.destroy()
@@ -118,6 +124,8 @@ class Loja():
             self.label_preco4.configure(text = self.compras.preco)
             
             self.label_moeda.configure(text = self.compras.cofre)
+            
+            return 1
             
         else: 
             tkm.showinfo(title = "Loja", message = "Você Não Possui Dinheiro Suficiente")
