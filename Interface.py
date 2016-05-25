@@ -28,19 +28,12 @@ class Tabuleiro():
         self.imagens = Imagens_sons()
         
         self.compra = Compras(self.login)
-        
-#Label com a imagem de um cifrão
-        self.label_cifrao = tk.Label(self.tabuleiro, text = '$', font ='Arial')
-        self.label_cifrao.grid(row=0, column=0)
-        
-#Label da contagem das moedas
-        self.label_moeda = tk.Label(self.tabuleiro, text = self.compra.cofre)
-        self.label_moeda.grid(row=0, column=1)
+           
 
 #Botão para ir à loja
         self.botao_loja = tk.Button(self.tabuleiro, text = 'LOJA', height = 3, width = 30, bg = 'purple')
         self.botao_loja.configure(command = self.abrir_loja)        
-        self.botao_loja.grid(row=0, column=2, columnspan=2)
+        self.botao_loja.grid(row=0, column=0, columnspan=4, sticky = tk.W+tk.E+tk.S+tk.N)
         
 #Botões de jogo     
         self.botao1 = tk.Button(self.tabuleiro, height = 95, width = 102, image = self.imagens.Icarta)

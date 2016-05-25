@@ -7,7 +7,7 @@ class Compras:
         self.jogo= Jogo(login)
         self.firebase=Firebase() 
         self.cofre=self.firebase.moedas(self.jogo.jogador)
-        self.preco=200
+        self.preco=25
         self.ganho=50
         self.compras=["Panda", "Leão", "Elefante", "Galo"]   
         
@@ -17,22 +17,28 @@ class Compras:
             self.preco+=500
             if linha==0:
                 if coluna==1:
-                    self.compras.remove("Panda")
-                    self.jogo.Lista_Animais.append("Panda")
-                    return 1
+                    if self.firebase.Compras(self.jogo.jogador, "Panda")==1:
+                        self.compras.remove("Panda")
+                        self.jogo.Lista_Animais.append("Panda")
+                        return 1
                 elif coluna==0:
-                    self.compras.remove("Leão")
-                    self.jogo.Lista_Animais.append("Leão")
-                    return 1
+                    if self.firebase.Compras(self.jogo.jogador, "Leão")==1:
+                        self.compras.remove("Leão")
+                        self.jogo.Lista_Animais.append("Leão")
+                        print(self.jogo.Lista_Animais)
+                        
+                        return 1
             elif linha==1:
                 if coluna==1:
-                    self.compras.remove("Elefante")
-                    self.jogo.Lista_Animais.append("Elefante")
-                    return 1
+                    if self.firebase.Compras(self.jogo.jogador, "Elefante")==1:
+                        self.compras.remove("Elefante")
+                        self.jogo.Lista_Animais.append("Elefante")
+                        return 1
                 if coluna==0:
-                    self.compras.remove("Galo")
-                    self.jogo.Lista_Animais.append("Galo")
-                    return 1
+                    if self.firebase.Compras(self.jogo.jogador, "Galo")==1:
+                        self.compras.remove("Galo")
+                        self.jogo.Lista_Animais.append("Galo")
+                        return 1
         else:
             return -1
             
@@ -40,4 +46,3 @@ class Compras:
         self.firebase.somar_moedas(self.jogo.jogador, 50)
         self.cofre=self.firebase.moedas(self.jogo.jogador)
         
-     
