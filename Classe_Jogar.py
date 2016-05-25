@@ -86,7 +86,8 @@ class Jogo():
             return "Elefante"
         elif self.Tabuleiro[linha][coluna]=="Galo":
             return "Galo"
-            
+        
+        
     def verifica_jogada(self, Lista_Jogada):
         if len(self.Lista_Jogada)==0:
             return 0
