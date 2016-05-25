@@ -7,7 +7,7 @@ class Compras:
         self.jogo= Jogo(login)
         self.firebase=Firebase() 
         self.cofre=self.firebase.moedas(self.jogo.jogador)
-        self.preco=200
+        self.preco=25
         self.ganho=50
         self.compras=["Panda", "Leão", "Elefante", "Galo"]   
         
