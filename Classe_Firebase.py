@@ -11,7 +11,7 @@ class Firebase:
         self.memoria_firecall.put_sync(point="/Dados_usuario/{0}/senha".format(login), data=senha)
         self.memoria_firecall.put_sync(point="/Dados_usuario/{0}/sexo".format(login), data=sexo)
         self.memoria_firecall.put_sync(point="/Dados_usuario/{0}/idade".format(login), data=idade)
-        self.memoria_firecall.put_sync(point="/Dados_usuario/{0}/compras".format(login), data="0")
+        self.memoria_firecall.put_sync(point="/Dados_usuario/{0}/compras".format(login), data=["Cachorro", "Gato", "Arara", "Vaca", "Macaco", "Pato", "Cavalo", "Porco"])
         self.memoria_firecall.put_sync(point="/Dados_usuario/{0}/moedas".format(login), data=0)
         
     #Checar se o usuário já existe e se sim se sua senha está correta
@@ -39,8 +39,9 @@ class Firebase:
         eval(self.memoria_firecall.put_sync(point="/Dados_usuario/{0}/moedas".format(login), data = a + moeda))
    
    #tirar moedas na compra
-    def comprar (self, login, moeda):
+    def comprar (self, login, moeda, animal):
        a = eval(self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/moedas".format(login)))
+       eval(self.memoria_firecall.put_sync(point="/Dados_usuario/{0}/compras".format(login), data = animal))
        eval(self.memoria_firecall.put_sync(point="/Dados_usuario/{0}/moedas".format(login), data = a - moeda))
        
   
