@@ -65,6 +65,9 @@ class Jogo():
             self.Lista_Botão.append("botao15")
         elif linha==3 and coluna==3:
             self.Lista_Botão.append("botao16")
+        print(self.jogador)
+        print(self.Lista_Animais)
+        print(self.Tabuleiro)
         
         if self.Tabuleiro[linha][coluna]=="Cachorro":
             return "Cachorro"
@@ -90,7 +93,8 @@ class Jogo():
             return "Elefante"
         elif self.Tabuleiro[linha][coluna]=="Galo":
             return "Galo"
-            
+        
+        
     def verifica_jogada(self, Lista_Jogada):
         if len(self.Lista_Jogada)==0:
             return 0
