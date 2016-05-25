@@ -41,8 +41,10 @@ class Firebase:
    #tirar moedas na compra
     def comprar (self, login, moeda, animal):
        a = eval(self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/moedas".format(login)))
-       eval(self.memoria_firecall.put_sync(point="/Dados_usuario/{0}/compras".format(login), data = animal))
+       b = eval(self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/compras".format(login)))
+       c = b.append(animal)
        eval(self.memoria_firecall.put_sync(point="/Dados_usuario/{0}/moedas".format(login), data = a - moeda))
+       eval(self.memoria_firecall.put_sync(point="/Dados_usuario/{0}/compras".format(login), data = c))
        
   
   #guardar a quantidade de vezes que o animal foi esclhido e por qual sexo.
