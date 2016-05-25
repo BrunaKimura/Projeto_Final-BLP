@@ -57,6 +57,12 @@ class Firebase:
             return -1
         else:
             return 1
+            
+    #para saber qual animal já foi comprado
+    def Animais (self, login,):
+        A = eval(self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/compras".format(login)))
+        return A
+        
         
     
 
