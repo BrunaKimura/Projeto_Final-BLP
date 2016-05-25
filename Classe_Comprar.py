@@ -25,6 +25,8 @@ class Compras:
                     if self.firebase.Compras(self.jogo.jogador, "Leão")==1:
                         self.compras.remove("Leão")
                         self.jogo.Lista_Animais.append("Leão")
+                        print(self.jogo.Lista_Animais)
+                        
                         return 1
             elif linha==1:
                 if coluna==1:
@@ -44,4 +46,3 @@ class Compras:
         self.firebase.somar_moedas(self.jogo.jogador, 50)
         self.cofre=self.firebase.moedas(self.jogo.jogador)
         
-     
