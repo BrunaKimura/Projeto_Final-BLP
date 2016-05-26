@@ -7,7 +7,7 @@ class Jogo():
     def __init__(self, login):  
         self.jogador=login
         self.firebase=Firebase()
-        self.Lista_Animais=["Cachorro", "Gato", "Arara", "Vaca", "Macaco", "Pato", "Cavalo", "Porco"] #Lista de animais, já contém os animais iniciais.       
+        self.Lista_Animais=self.firebase.Animais(self.jogador)     
         self.Lista_Escolhida=[]
         self.Lista_Dobrada=[]
         self.Lista_Embaralhada=[]
