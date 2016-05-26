@@ -7,7 +7,7 @@ class Jogo():
     def __init__(self, login):  
         self.jogador=login
         self.firebase=Firebase()
-        self.Lista_Animais=self.firebase.Animais(self.jogador)     
+        self.Lista_Animais=self.firebase.Animais("Start")     
         self.Lista_Escolhida=[]
         self.Lista_Dobrada=[]
         self.Lista_Embaralhada=[]
@@ -16,6 +16,7 @@ class Jogo():
         self.Lista_Botão=[]        
         
     def embaralhar(self):
+        print(self.Lista_Animais)
         self.Lista_Escolhida=np.random.choice(self.Lista_Animais, 8, replace=False)
         for e in self.Lista_Escolhida:
             self.Lista_Dobrada.append(e)
@@ -57,9 +58,6 @@ class Jogo():
             self.Lista_Botão.append("botao15")
         elif linha==3 and coluna==3:
             self.Lista_Botão.append("botao16")
-        print(self.jogador)
-        print(self.Lista_Animais)
-        print(self.Tabuleiro)
         
         if self.Tabuleiro[linha][coluna]=="Cachorro":
             return "Cachorro"
