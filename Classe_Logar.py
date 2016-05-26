@@ -3,10 +3,11 @@ from Classe_Jogar import Jogo
 
 class Login():
     
-    def __init__(self, login):
+    def __init__(self, login, lista):
         self.login=login
+        self.lista=lista
         self.firebase = Firebase()
-        self.jogo=Jogo(self.login)
+        self.jogo=Jogo(self.login, self.lista)
     
     def verifica(self, login, senha):
         if self.firebase.Checar_jogador(login, senha)==1:

@@ -7,14 +7,15 @@ from Classe_Comprar import Compras
 import tkinter.messagebox as tkm
 
 class Loja():
-    def __init__(self, login):
-        self.login = login        
+    def __init__(self, login, lista):
+        self.login = login 
+        self.lista=lista
         self.loja = tk.Toplevel()
         self.loja.title("Jogo da Memória ANIMAL")
         self.loja.resizable ( 0 ,  0 )
         
         self.imagem = Imagens_sons()
-        self.compras = Compras(login)
+        self.compras = Compras(login, lista)
 #Label com a imagem de um cifrão
         self.label_cifrao = tk.Label(self.loja, text = '$', font ='Arial')
         self.label_cifrao.grid(row=0, column=0)
