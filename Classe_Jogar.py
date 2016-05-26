@@ -7,8 +7,7 @@ class Jogo():
     def __init__(self, login):  
         self.jogador=login
         self.firebase=Firebase()
-        self.Lista_Animais=["Cachorro", "Gato", "Arara", "Vaca", "Macaco", "Pato", "Cavalo", "Porco"] #Lista de animais, já contém os animais iniciais.
-        self.atualizar_compras()        
+        self.Lista_Animais=["Cachorro", "Gato", "Arara", "Vaca", "Macaco", "Pato", "Cavalo", "Porco"] #Lista de animais, já contém os animais iniciais.       
         self.Lista_Escolhida=[]
         self.Lista_Dobrada=[]
         self.Lista_Embaralhada=[]
@@ -123,12 +122,3 @@ class Jogo():
         self.Lista_Jogada=[]
         self.Lista_Botão=[]
         
-    def atualizar_compras(self):
-        if self.firebase.Compras(self.jogador, "Panda")==-1:
-            self.Lista_Animais.append("Panda")
-        elif self.firebase.Compras(self.jogador, "Leão")==-1:
-            self.Lista_Animais.append("Leão")
-        elif self.firebase.Compras(self.jogador, "Galo")==-1:
-            self.Lista_Animais.append("Galo")
-        elif self.firebase.Compras(self.jogador, "Elefante")==-1:
-            self.Lista_Animais.append("Elefante") 

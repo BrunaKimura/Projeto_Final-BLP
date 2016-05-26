@@ -17,28 +17,27 @@ class Compras:
             self.preco+=500
             if linha==0:
                 if coluna==1:
-                    if self.firebase.Compras(self.jogo.jogador, "Panda")==1:
-                        self.compras.remove("Panda")
-                        self.jogo.Lista_Animais.append("Panda")
-                        return 1
+                    self.firebase.comprar(self.jogo.jogador, self.preco, "Panda")
+                    self.compras.remove("Panda")
+                    self.jogo.Lista_Animais.append("Panda")
+                    return 1
                 elif coluna==0:
-                    if self.firebase.Compras(self.jogo.jogador, "Leão")==1:
-                        self.compras.remove("Leão")
-                        self.jogo.Lista_Animais.append("Leão")
-                        print(self.jogo.Lista_Animais)
-                        
-                        return 1
+                    self.firebase.comprar(self.jogo.jogador, self.preco, "Leão")
+                    self.compras.remove("Leão")
+                    self.jogo.Lista_Animais.append("Leão")
+                    print(self.jogo.Lista_Animais)
+                    return 1
             elif linha==1:
                 if coluna==1:
-                    if self.firebase.Compras(self.jogo.jogador, "Elefante")==1:
-                        self.compras.remove("Elefante")
-                        self.jogo.Lista_Animais.append("Elefante")
-                        return 1
+                    self.firebase.comprar(self.jogo.jogador, self.preco, "Elefante")
+                    self.compras.remove("Elefante")
+                    self.jogo.Lista_Animais.append("Elefante")
+                    return 1
                 if coluna==0:
-                    if self.firebase.Compras(self.jogo.jogador, "Galo")==1:
-                        self.compras.remove("Galo")
-                        self.jogo.Lista_Animais.append("Galo")
-                        return 1
+                    self.firebase.comprar(self.jogo.jogador, self.preco, "Galo")
+                    self.compras.remove("Galo")
+                    self.jogo.Lista_Animais.append("Galo")
+                    return 1
         else:
             return -1
             
