@@ -51,7 +51,7 @@ class Firebase:
     def Estatistica (self, login, animal):
         sexo = eval(self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/sexo".format(login)))
         a =eval(self.memoria_firecall.get_sync(point="/Animais/{0}/{1}".format(animal, sexo)))
-        eval(self.memoria_firecall.put_sync(point="/animais ecolhidos/{0}/{1}".format(animal, sexo), data = a + 1))
+        eval(self.memoria_firecall.put_sync(point="/Animais/{0}/{1}".format(animal, sexo), data = a + 1))
                    
     #para saber qual animal já foi comprado
     def Animais (self, login):
