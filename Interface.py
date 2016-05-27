@@ -16,18 +16,19 @@ from classe_som import *
 
 
 class Tabuleiro(): 
-    def __init__(self, login):
+    def __init__(self, login, lista):
         self.login = login
+        self.lista = lista
         self.tabuleiro = tk.Tk()
         self.tabuleiro.title("Jogo da Memória ANIMAL")
         self.tabuleiro.resizable ( 0 ,  0 )
         
-        self.jogo = Jogo(self.login)
+        self.jogo = Jogo(self.login, self.lista)
         self.jogo.embaralhar()
         
         self.imagens = Imagens_sons()
         
-        self.compra = Compras(self.login)
+        self.compra = Compras(self.login, self.lista)
            
 
 #Botão para ir à loja
@@ -143,7 +144,7 @@ class Tabuleiro():
             self.botao1.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[0] == "Leao":
+        elif self.jogo.Lista_Embaralhada[0] == "Leão":
             self.botao1.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -218,7 +219,7 @@ class Tabuleiro():
             self.botao2.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[1] == "Leao":
+        elif self.jogo.Lista_Embaralhada[1] == "Leão":
             self.botao2.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -294,7 +295,7 @@ class Tabuleiro():
             self.botao3.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[2] == "Leao":
+        elif self.jogo.Lista_Embaralhada[2] == "Leão":
             self.botao3.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -368,7 +369,7 @@ class Tabuleiro():
             self.botao4.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[3] == "Leao":
+        elif self.jogo.Lista_Embaralhada[3] == "Leão":
             self.botao4.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -441,7 +442,7 @@ class Tabuleiro():
             self.botao5.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[4] == "Leao":
+        elif self.jogo.Lista_Embaralhada[4] == "Leão":
             self.botao5.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -513,7 +514,7 @@ class Tabuleiro():
             self.botao6.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[5] == "Leao":
+        elif self.jogo.Lista_Embaralhada[5] == "Leão":
             self.botao6.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -585,7 +586,7 @@ class Tabuleiro():
             self.botao7.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[6] == "Leao":
+        elif self.jogo.Lista_Embaralhada[6] == "Leão":
             self.botao7.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -657,7 +658,7 @@ class Tabuleiro():
             self.botao8.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[7] == "Leao":
+        elif self.jogo.Lista_Embaralhada[7] == "Leão":
             self.botao8.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -729,7 +730,7 @@ class Tabuleiro():
             self.botao9.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[8] == "Leao":
+        elif self.jogo.Lista_Embaralhada[8] == "Leão":
             self.botao9.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -801,7 +802,7 @@ class Tabuleiro():
             self.botao10.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[9] == "Leao":
+        elif self.jogo.Lista_Embaralhada[9] == "Leão":
             self.botao10.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -873,7 +874,7 @@ class Tabuleiro():
             self.botao11.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[10] == "Leao":
+        elif self.jogo.Lista_Embaralhada[10] == "Leão":
             self.botao11.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -946,7 +947,7 @@ class Tabuleiro():
             self.botao12.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[11] == "Leao":
+        elif self.jogo.Lista_Embaralhada[11] == "Leão":
             self.botao12.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -1018,7 +1019,7 @@ class Tabuleiro():
             self.botao13.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[12] == "Leao":
+        elif self.jogo.Lista_Embaralhada[12] == "Leão":
             self.botao13.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -1090,7 +1091,7 @@ class Tabuleiro():
             self.botao14.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[13] == "Leao":
+        elif self.jogo.Lista_Embaralhada[13] == "Leão":
             self.botao14.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -1162,7 +1163,7 @@ class Tabuleiro():
             self.botao15.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[14] == "Leao":
+        elif self.jogo.Lista_Embaralhada[14] == "Leão":
             self.botao15.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -1235,7 +1236,7 @@ class Tabuleiro():
             self.botao16.configure(image = self.imagens.Ielefante, state = "disabled",width = 102, height = 95)
             Som.play_music(Selefante.play)
             
-        elif self.jogo.Lista_Embaralhada[15] == "Leao":
+        elif self.jogo.Lista_Embaralhada[15] == "Leão":
             self.botao16.configure(image = self.imagens.Ileao, state = "disabled",width = 102, height = 95)
             Som.play_music(Sleao.play)
             
@@ -1800,7 +1801,7 @@ class Tabuleiro():
         
             
     def abrir_loja(self):
-        self.lojinha = Loja(self.login)
+        self.lojinha = Loja(self.login, self.lista)
         self.lojinha.iniciar()        
         
     def iniciar(self):

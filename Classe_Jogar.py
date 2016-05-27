@@ -4,10 +4,10 @@ from Classe_Firebase import Firebase
 
 class Jogo():
 
-    def __init__(self, login):  
+    def __init__(self, login, lista):  
         self.jogador=login
+        self.Lista_Animais=lista
         self.firebase=Firebase()
-        self.Lista_Animais=self.firebase.Animais("Start")     
         self.Lista_Escolhida=[]
         self.Lista_Dobrada=[]
         self.Lista_Embaralhada=[]
@@ -16,7 +16,6 @@ class Jogo():
         self.Lista_Botão=[]        
         
     def embaralhar(self):
-        print(self.Lista_Animais)
         self.Lista_Escolhida=np.random.choice(self.Lista_Animais, 8, replace=False)
         for e in self.Lista_Escolhida:
             self.Lista_Dobrada.append(e)

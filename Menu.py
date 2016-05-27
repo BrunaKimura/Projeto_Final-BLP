@@ -1,4 +1,4 @@
- 
+from Classe_Firebase import Firebase
 
 import tkinter as tk
 
@@ -16,13 +16,15 @@ from imagem_som import Imagens_sons
 
 
 class Menu():
-    def __init__(self, login):
+    def __init__(self, login, lista):
         self.login= login
+        self.lista= lista
+        self.firebase=Firebase()
         self.menu = tk.Tk()
         self.menu.title("Jogo da Memória ANIMAL")
         self.menu.resizable ( 0 ,  0 )
                
-        self.Login = Login(login)
+        self.Login = Login(login, lista)
         
         self.imagem = Imagens_sons()
         
@@ -82,14 +84,14 @@ class Menu():
         
         elif self.Login.verifica(self.login, self.senha) == 1:
             self.abrir_jogo()      
-            
+            self.lista=self.firebase.Animais(self.login)
         
         
     def abrir_jogo(self):
+        self.lista=self.firebase.Animais(self.login)
         self.menu.destroy()
-        self.joguinho = Tabuleiro(self.login)
-        self.joguinho.iniciar()       
-        
+        self.joguinho = Tabuleiro(self.login, self.lista)
+        self.joguinho.iniciar() 
                    
     def abrir_cadastro(self):
         self.cadastrinho = Cadastro()
@@ -99,6 +101,6 @@ class Menu():
         self.menu.geometry('180x230')
         self.menu.mainloop()
         
-entrada = Menu("start")
+entrada = Menu("start", [])
 entrada.iniciar()
     
