@@ -19,7 +19,6 @@ class Compras:
             self.preco=2000
         
     def comprar(self, linha, coluna):
-        print(self.jogo.jogador)
         if self.cofre>=self.preco:
             if linha==0:
                 if coluna==1:

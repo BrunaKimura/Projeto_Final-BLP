@@ -92,7 +92,6 @@ class Menu():
         self.menu.destroy()
         self.joguinho = Tabuleiro(self.login, self.lista)
         self.joguinho.iniciar() 
-        print(self.lista)
                    
     def abrir_cadastro(self):
         self.cadastrinho = Cadastro()

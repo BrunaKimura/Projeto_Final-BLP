@@ -46,22 +46,29 @@ class Loja():
         self.label_preco4.grid(row=5, column=2, columnspan=1 )
                 
 #Botões para comprar
-        self.botao1 = tk.Button(self.loja, image = self.imagem.Ileao, height = 102, width = 95)
+        self.botao1 = tk.Button(self.loja, image = self.imagem.Ileao, height = 102, width = 95)        
         self.botao1.configure(command = self.click1)
         self.botao1.grid(row=2, column=0 )
-        
+        if "Leão" in self.lista:
+            self.botao1.configure(state = 'disabled')
         
         self.botao2 = tk.Button(self.loja, image = self.imagem.Ipanda, height = 102, width = 95) 
         self.botao2.configure(command = self.click2)
         self.botao2.grid(row=2, column=2 )
+        if "Panda" in self.lista:
+            self.botao2.configure(state = 'disabled')
         
         self.botao3 = tk.Button(self.loja, image = self.imagem.Igalo, height = 102, width = 95)
         self.botao3.configure(command = self.click3)        
         self.botao3.grid(row=4, column=0 )
+        if "Galo" in self.lista:
+            self.botao3.configure(state = 'disabled')
         
         self.botao4 = tk.Button(self.loja, image = self.imagem.Ielefante, height = 102, width = 95)
         self.botao4.configure(command = self.click4)        
         self.botao4.grid(row=4, column=2 )
+        if "Elefante" in self.lista:
+            self.botao4.configure(state = 'disabled')
         
     def click1(self):
         if self.compras.comprar(0,0) == 1:

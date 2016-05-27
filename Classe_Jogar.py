@@ -16,7 +16,6 @@ class Jogo():
         self.Lista_Botão=[]        
         
     def embaralhar(self):
-        print(self.Lista_Animais)
         self.Lista_Escolhida=np.random.choice(self.Lista_Animais, 8, replace=False)
         for e in self.Lista_Escolhida:
             self.Lista_Dobrada.append(e)
