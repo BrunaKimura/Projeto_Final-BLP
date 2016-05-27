@@ -61,7 +61,7 @@ class Cadastro():
                        
         elif self.objeto_cadastro.adicionar_cadastro(self.entry_login.get(), self.entry_senha.get(), self.entry_sexo.get(), self.entry_idade.get()) == 0:
             tkm.showinfo(title = "Login", message = "Informe o sexo corretamente. Use 'M' para masculino e 'F' para feminino.")
-            
+        
     def iniciar(self):
         self.cadastro.geometry('190x230')
         self.cadastro.mainloop()

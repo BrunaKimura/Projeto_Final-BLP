@@ -16,5 +16,5 @@ class cadastrar():
             else:
                 return 0
             return 1
-        elif self.firebase.Checar_jogador(login,senha)== (1 or 0):
+        elif self.firebase.Checar_jogador(login,senha)==1 or self.firebase.Checar_jogador(login,senha)==0:
             return -1
