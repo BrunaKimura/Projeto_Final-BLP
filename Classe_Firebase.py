@@ -54,12 +54,12 @@ class Firebase:
         eval(self.memoria_firecall.put_sync(point="/animais ecolhidos/{0}/{1}".format(animal, sexo), data = a + 1))
         
     #guardar os animais já comprados
-    def Compras (self, login, animal):
-        A = eval(self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/compras".format(login)))
-        if animal in A:
-            return -1
-        else:
-            return 1
+   # def Compras (self, login, animal):
+    #    A = eval(self.memoria_firecall.get_sync(point="/Dados_usuario/{0}/compras".format(login)))
+     #   if animal in A:
+      #      return -1
+       # else:
+        #    return 1
             
     #para saber qual animal já foi comprado
     def Animais (self, login,):
