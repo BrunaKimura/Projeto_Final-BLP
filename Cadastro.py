@@ -4,6 +4,8 @@ from Classe_Cadastrar import cadastrar
 
 import tkinter.messagebox as tkm
 
+
+
 class Cadastro():
     def __init__(self):
         self.cadastro = tk.Tk()
@@ -11,35 +13,36 @@ class Cadastro():
         
         
         self.objeto_cadastro = cadastrar()
-        
+               
+    
         
 #Local onde coloca o login a ser criado
         self.label_login = tk.Label(self.cadastro, text = 'Login:')
-        self.label_login.grid(row=0, column=0, sticky='w')
+        self.label_login.grid(row=0, column=0, )
         
         self.entry_login = tk.Entry(self.cadastro)
         self.entry_login.grid(row=1, column=0)
         
 #Local onde coloca a senha a ser criada
         self.label_senha = tk.Label(self.cadastro, text = 'Senha:')
-        self.label_senha.grid(row=2, column=0, sticky='w')
+        self.label_senha.grid(row=2, column=0, )
         
         self.entry_senha = tk.Entry(self.cadastro)
         self.entry_senha.grid(row=3, column=0)
         
 #Local onde coloca o sexo do usuário
         self.label_sexo = tk.Label(self.cadastro, text = 'Sexo:')
-        self.label_sexo.grid(row=4, column=0, sticky='w')        
+        self.label_sexo.grid(row=4, column=0, )        
         
         self.entry_sexo = tk.Entry(self.cadastro)
         self.entry_sexo.grid(row =5, column=0)
         
 #Local onde coloca a idade do usuário
         self.label_idade = tk.Label(self.cadastro, text = 'Idade:')
-        self.label_idade.grid(row=7, column=0, sticky='w')
+        self.label_idade.grid(row=7, column=0, )
         
         self.entry_idade = tk.Entry(self.cadastro)
-        self.entry_idade.grid(row=8, sticky='w')
+        self.entry_idade.grid(row=8, )
         
         self.label_ajuste = tk.Label(self.cadastro)
         self.label_ajuste.grid(row=9)
@@ -66,4 +69,3 @@ class Cadastro():
         self.cadastro.geometry('190x230')
         self.cadastro.mainloop()
         
-
