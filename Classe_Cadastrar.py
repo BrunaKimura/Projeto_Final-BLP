@@ -7,6 +7,8 @@ class cadastrar():
         
     def adicionar_cadastro(self, login, senha, sexo, idade):
         if self.firebase.Checar_jogador(login, senha)== -1:  
+            if type(idade)==str:
+                return 2
             if (sexo=="Masculino" or sexo=="masculino" or sexo=="MASCULINO" or sexo=="m" or sexo=="M"):
                 sexo="M"
                 self.firebase.Salvar_cadastro(login, senha, sexo, idade)
