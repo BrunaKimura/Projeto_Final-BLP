@@ -712,7 +712,7 @@ class Tabuleiro():
             
         elif self.jogo.Lista_Embaralhada[8]== "Macaco":
             self.botao9.configure(image = self.imagens.Imacaco, state = "disabled",width = 102, height = 95)
-            Som.play_music(Svaca.play)
+            Som.play_music(Smacaco.play)
             
         elif self.jogo.Lista_Embaralhada[8] == "Pato":
             self.botao9.configure(image = self.imagens.Ipato, state = "disabled",width = 102, height = 95)
