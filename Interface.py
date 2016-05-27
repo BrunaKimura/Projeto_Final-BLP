@@ -16,18 +16,19 @@ from classe_som import *
 
 
 class Tabuleiro(): 
-    def __init__(self, login):
+    def __init__(self, login, lista):
         self.login = login
+        self.lista = lista
         self.tabuleiro = tk.Tk()
         self.tabuleiro.title("Jogo da Memória ANIMAL")
         self.tabuleiro.resizable ( 0 ,  0 )
         
-        self.jogo = Jogo(self.login)
+        self.jogo = Jogo(self.login, self.lista)
         self.jogo.embaralhar()
         
         self.imagens = Imagens_sons()
         
-        self.compra = Compras(self.login)
+        self.compra = Compras(self.login, self.lista)
            
 
 #Botão para ir à loja
@@ -170,7 +171,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -247,7 +247,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -323,7 +322,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -397,7 +395,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -470,7 +467,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou") 
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -543,7 +539,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -616,7 +611,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -689,7 +683,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -762,7 +755,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -835,7 +827,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -909,7 +900,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -982,7 +972,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -1055,7 +1044,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -1128,7 +1116,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -1201,7 +1188,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -1277,7 +1263,6 @@ class Tabuleiro():
         if self.jogo.verifica_fim() == 1:
             tkm.showinfo(title = "Game Over", message = "O Jogo Acabou")
             self.compra.somar_moeda()
-            self.label_moeda.configure(text = self.compra.cofre)
             self.limpar_painel()
             self.jogo.limpa_jogada()
             self.jogo.limpa_jogo()
@@ -1816,7 +1801,7 @@ class Tabuleiro():
         
             
     def abrir_loja(self):
-        self.lojinha = Loja(self.login)
+        self.lojinha = Loja(self.login, self.lista)
         self.lojinha.iniciar()        
         
     def iniciar(self):

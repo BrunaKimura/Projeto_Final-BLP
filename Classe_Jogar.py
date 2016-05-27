@@ -4,10 +4,10 @@ from Classe_Firebase import Firebase
 
 class Jogo():
 
-    def __init__(self, login):  
+    def __init__(self, login, lista):  
         self.jogador=login
+        self.Lista_Animais=lista
         self.firebase=Firebase()
-        self.Lista_Animais=["Cachorro", "Gato", "Arara", "Vaca", "Macaco", "Pato", "Cavalo", "Porco"] #Lista de animais, já contém os animais iniciais.       
         self.Lista_Escolhida=[]
         self.Lista_Dobrada=[]
         self.Lista_Embaralhada=[]
@@ -57,9 +57,6 @@ class Jogo():
             self.Lista_Botão.append("botao15")
         elif linha==3 and coluna==3:
             self.Lista_Botão.append("botao16")
-        print(self.jogador)
-        print(self.Lista_Animais)
-        print(self.Tabuleiro)
         
         if self.Tabuleiro[linha][coluna]=="Cachorro":
             return "Cachorro"

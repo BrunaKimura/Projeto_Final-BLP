@@ -7,14 +7,15 @@ from Classe_Comprar import Compras
 import tkinter.messagebox as tkm
 
 class Loja():
-    def __init__(self, login):
-        self.login = login        
+    def __init__(self, login, lista):
+        self.login = login 
+        self.lista=lista
         self.loja = tk.Toplevel()
         self.loja.title("Jogo da Memória ANIMAL")
         self.loja.resizable ( 0 ,  0 )
         
         self.imagem = Imagens_sons()
-        self.compras = Compras(login)
+        self.compras = Compras(login, lista)
 #Label com a imagem de um cifrão
         self.label_cifrao = tk.Label(self.loja, text = '$', font ='Arial')
         self.label_cifrao.grid(row=0, column=0)
@@ -45,22 +46,29 @@ class Loja():
         self.label_preco4.grid(row=5, column=2, columnspan=1 )
                 
 #Botões para comprar
-        self.botao1 = tk.Button(self.loja, image = self.imagem.Ileao, height = 102, width = 95)
+        self.botao1 = tk.Button(self.loja, image = self.imagem.Ileao, height = 102, width = 95)        
         self.botao1.configure(command = self.click1)
         self.botao1.grid(row=2, column=0 )
-        
+        if "Leão" in self.lista:
+            self.botao1.configure(state = 'disabled')
         
         self.botao2 = tk.Button(self.loja, image = self.imagem.Ipanda, height = 102, width = 95) 
         self.botao2.configure(command = self.click2)
         self.botao2.grid(row=2, column=2 )
+        if "Panda" in self.lista:
+            self.botao2.configure(state = 'disabled')
         
         self.botao3 = tk.Button(self.loja, image = self.imagem.Igalo, height = 102, width = 95)
         self.botao3.configure(command = self.click3)        
         self.botao3.grid(row=4, column=0 )
+        if "Galo" in self.lista:
+            self.botao3.configure(state = 'disabled')
         
         self.botao4 = tk.Button(self.loja, image = self.imagem.Ielefante, height = 102, width = 95)
         self.botao4.configure(command = self.click4)        
         self.botao4.grid(row=4, column=2 )
+        if "Elefante" in self.lista:
+            self.botao4.configure(state = 'disabled')
         
     def click1(self):
         if self.compras.comprar(0,0) == 1:
