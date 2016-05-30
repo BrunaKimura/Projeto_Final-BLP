@@ -32,7 +32,7 @@ class Menu():
         self.label_fundo.place(x = 0, y = 0)
         
 #Label de boas vindas
-        self.label1 = tk.Label(self.menu, text = 'Bem Vindo !!')
+        self.label1 = tk.Label(self.menu, text = 'Bem Vindo !!', bg = 'pink')
         self.label1.grid(row=0, column=0)
         
 #Label de ajustes 
@@ -43,14 +43,14 @@ class Menu():
         self.label_ajuste2.grid(row=7, column=0)
              
 #Parte para colocar o login do usuário    
-        self.label_login = tk.Label(self.menu, text = 'Login:')
+        self.label_login = tk.Label(self.menu, text = 'Login:', bg = 'pink')
         self.label_login.grid(row=2, column=0)
         
         self.entry_login = tk.Entry(self.menu)
         self.entry_login.grid(row=3, column=0)
         
 #Parte para colocar a senha
-        self.label_senha = tk.Label(self.menu, text = 'Senha:')
+        self.label_senha = tk.Label(self.menu, text = 'Senha:', bg = 'pink')
         self.label_senha.grid(row=4, column=0)
         
         self.entry_senha = tk.Entry(self.menu)
@@ -62,7 +62,7 @@ class Menu():
         self.botao_jogar.grid(row=6, column=0)
         
 #Botao que leva o usuario ao cadastro
-        self.label_cadastrar = tk.Label(self.menu, text = 'Não possui um cadastro ainda ? ')
+        self.label_cadastrar = tk.Label(self.menu, text = 'Não possui um cadastro ainda ? ', bg = 'pink')
         self.label_cadastrar.grid(row=8, column=0)
         
         self.botao_cadastrar = tk.Button(self.menu, text = 'Cadastrar', bg = 'gray')

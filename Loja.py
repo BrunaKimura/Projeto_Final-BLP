@@ -16,12 +16,16 @@ class Loja():
         
         self.imagem = Imagens_sons()
         self.compras = Compras(login, lista)
+        
+        self.label_fundo = tk.Label(self.loja, image = self.imagem.Iloja)
+        self.label_fundo.place(x = 0, y = 0)
+        
 #Label com a imagem de um cifrão
-        self.label_cifrao = tk.Label(self.loja, text = '$', font ='Arial')
+        self.label_cifrao = tk.Label(self.loja, text = '$', font ='Arial',bg = 'yellow')
         self.label_cifrao.grid(row=0, column=0)
         
 #Label da contagem das moedas
-        self.label_moeda = tk.Label(self.loja, text = self.compras.cofre)
+        self.label_moeda = tk.Label(self.loja, text = self.compras.cofre, bg = 'yellow')
         self.label_moeda.grid(row=0, column=1, sticky ='w')   
         
 #Botão para voltar ao jogo
@@ -30,19 +34,19 @@ class Loja():
         self.botao_voltar.grid(row=0, column=2, columnspan=2)
         
 #Label para ajustar os espaçamentos dos botões
-        self.label_ajuste1 = tk.Label(self.loja, text = '')
+        self.label_ajuste1 = tk.Label(self.loja, text = '', bg = 'orange')
         self.label_ajuste1.grid(row=1, column=0, columnspan=3)
         
-        self.label_preco1 = tk.Label(self.loja, text = self.compras.preco)
+        self.label_preco1 = tk.Label(self.loja, text = self.compras.preco, bg = 'orange')
         self.label_preco1.grid(row=3, column=0, columnspan=1 )
         
-        self.label_preco2 = tk.Label(self.loja, text = self.compras.preco)
+        self.label_preco2 = tk.Label(self.loja, text = self.compras.preco, bg = 'orange')
         self.label_preco2.grid(row=3, column=2, columnspan=1 )
         
-        self.label_preco3 = tk.Label(self.loja, text = self.compras.preco)
+        self.label_preco3 = tk.Label(self.loja, text = self.compras.preco, bg = 'orange')
         self.label_preco3.grid(row=5, column=0, columnspan=1 )
         
-        self.label_preco4 = tk.Label(self.loja, text = self.compras.preco)
+        self.label_preco4 = tk.Label(self.loja, text = self.compras.preco, bg = 'orange')
         self.label_preco4.grid(row=5, column=2, columnspan=1 )
                 
 #Botões para comprar
