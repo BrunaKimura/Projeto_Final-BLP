@@ -17,7 +17,8 @@ class Compras:
             self.preco=1000
         elif len(self.jogo.Lista_Animais)==10:
             self.preco=2000
-        
+
+#função utilizada no ato da comprar, recebendo a posição do animal, adicionando ele na lista de animais do usuario, fazendo a estatistica de comra e atualizando a moeda     
     def comprar(self, linha, coluna):
         if self.cofre>=self.preco:
             if linha==0:
@@ -28,7 +29,6 @@ class Compras:
                         if len(self.jogo.Lista_Animais)==9:
                             self.firebase.Estatistica(self.jogo.jogador, self.jogo.Lista_Animais[8])
                         self.cofre-=self.preco
-                        self.preco+=500
                         return 1
                 elif coluna==0:
                     if self.firebase.Compras(self.jogo.jogador, "Leão")==1:
@@ -37,7 +37,6 @@ class Compras:
                         if len(self.jogo.Lista_Animais)==9:
                             self.firebase.Estatistica(self.jogo.jogador, self.jogo.Lista_Animais[8])
                         self.cofre-=self.preco
-                        self.preco+=500
                         return 1
             elif linha==1:
                 if coluna==1:
@@ -47,7 +46,6 @@ class Compras:
                         if len(self.jogo.Lista_Animais)==9:
                             self.firebase.Estatistica(self.jogo.jogador, self.jogo.Lista_Animais[8])
                         self.cofre-=self.preco
-                        self.preco+=500
                         return 1
                 if coluna==0:
                     if self.firebase.Compras(self.jogo.jogador, "Galo")==1:
@@ -56,11 +54,11 @@ class Compras:
                         if len(self.jogo.Lista_Animais)==9:
                             self.firebase.Estatistica(self.jogo.jogador, self.jogo.Lista_Animais[8])
                         self.cofre-=self.preco
-                        self.preco+=500
                         return 1
         else:
             return -1
-            
+
+#Função que soma as moedas para o usuario e atualiza o cofre do jogo            
     def somar_moeda(self):
         self.firebase.somar_moedas(self.jogo.jogador, 50)
         self.cofre=self.firebase.moedas(self.jogo.jogador)

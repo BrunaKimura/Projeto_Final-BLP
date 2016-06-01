@@ -4,7 +4,7 @@ class cadastrar():
     
     def __init__(self):
         self.firebase = Firebase()
-        
+#Função que recebe o login, senha, sexo e idade do usuario e salva no firebase se possivel, alem de retornar numeros para cada situação        
     def adicionar_cadastro(self, login, senha, sexo, idade):
         if self.firebase.Checar_jogador(login, senha)== -1:  
             if (sexo=="Masculino" or sexo=="masculino" or sexo=="MASCULINO" or sexo=="m" or sexo=="M"):

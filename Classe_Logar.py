@@ -8,7 +8,8 @@ class Login():
         self.lista=lista
         self.firebase = Firebase()
         self.jogo=Jogo(self.login, self.lista)
-    
+ 
+#função que recebe o login e a senha do usuario e verifica se estão corretos, e retorna numeros para certas situações   
     def verifica(self, login, senha):
         if self.firebase.Checar_jogador(login, senha)==1:
             self.jogo.jogador=login
