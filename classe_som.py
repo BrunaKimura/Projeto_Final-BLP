@@ -7,7 +7,8 @@ class Som:
         
     def play_music (play):
          ws.PlaySound(play, ws.SND_ASYNC)
-         
+
+#som dos animais         
 Scachorro = Som('scachorro.wav')
 Sgato = Som('sgato.wav')
 Sarara = Som('sarara.wav')

@@ -1,6 +1,8 @@
 from tkinter import PhotoImage
 
 class Imagens_sons:
+#essa classe só reproduz as imagens.
+#O nome possui a palavra "som" ainda apenas para não mudar a importação dessa classe.
 
     def __init__(self):
         
